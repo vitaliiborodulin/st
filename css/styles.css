@@ -1,0 +1,530 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+code,
+form,
+fieldset,
+input,
+textarea,
+p,
+blockquote,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+fieldset,
+img,
+abbr {
+  border: 0;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+  font-style: normal;
+  font-weight: normal;
+}
+
+ul li {
+  list-style: none;
+}
+
+caption,
+th {
+  text-align: left;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: 100%;
+  font-weight: normal;
+}
+
+sup {
+  vertical-align: text-top;
+}
+
+sub {
+  vertical-align: text-bottom;
+}
+
+input,
+textarea,
+select {
+  font-family: inherit;
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+legend {
+  color: #000;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section,
+main {
+  display: block;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding-left: 24px;
+  padding-right: 24px;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Bold.eot');
+  src: url('../fonts/Gilroy-Bold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Bold.woff2') format('woff2'), url('../fonts/Gilroy-Bold.woff') format('woff'), url('../fonts/Gilroy-Bold.ttf') format('truetype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Semibold.eot');
+  src: url('../fonts/Gilroy-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Semibold.woff2') format('woff2'), url('../fonts/Gilroy-Semibold.woff') format('woff'), url('../fonts/Gilroy-Semibold.ttf') format('truetype');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Medium.eot');
+  src: url('../fonts/Gilroy-Medium.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Medium.woff2') format('woff2'), url('../fonts/Gilroy-Medium.woff') format('woff'), url('../fonts/Gilroy-Medium.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Gilroy';
+  src: url('../fonts/Gilroy-Regular.eot');
+  src: url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/Gilroy-Regular.woff2') format('woff2'), url('../fonts/Gilroy-Regular.woff') format('woff'), url('../fonts/Gilroy-Regular.ttf') format('truetype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+body {
+  font-family: 'Gilroy', sans-serif;
+  font-size: 17px;
+  font-weight: 400;
+  color: #3A3A3A;
+  min-width: 320px;
+}
+
+main {
+  min-height: 100vh;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* Наследуем шрифты для инпутов и кнопок */
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+textarea {
+  resize: none;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
+
+*:focus:not(:focus-visible) {
+  outline: none !important;
+}
+
+input[type='submit'] {
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.footer {
+  padding-top: 69px;
+  padding-bottom: 133px;
+  background-color: #121826;
+  color: #fff;
+}
+
+.footer a {
+  color: inherit;
+  text-decoration: none;
+  transition: color 0.5s ease;
+}
+
+.footer a:hover,
+.footer a:active,
+.footer a:focus {
+  color: #FC622C;
+}
+
+.footer svg path {
+  transition: fill 0.5s;
+}
+
+.footer__top {
+  padding: 62px 0;
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  align-items: center;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+}
+
+.footer .footer__logo {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(16.666666666666668% - 30px);
+}
+
+.footer .custom-logo {
+  width: 163px;
+}
+
+.footer__tel {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(83.33333333333334% - 30px);
+  text-align: right;
+}
+
+.footer__tel-link {
+  padding-left: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: 32px;
+  line-height: 1;
+  font-weight: 600;
+}
+
+.footer__tel-link:hover path,
+.footer__tel-link:active path,
+.footer__tel-link:focus path {
+  fill: #FC622C;
+}
+
+.footer__middle {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  padding: 62px 0;
+  justify-content: space-between;
+}
+
+.footer__nav-title,
+.footer .footer__adress-header {
+  margin-bottom: 4px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 1.46;
+  text-transform: uppercase;
+}
+
+.footer__nav {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+  margin-bottom: 24px;
+}
+
+.footer__nav li {
+  padding: 8px 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.46;
+}
+
+.footer__nav:first-child {
+  order: 1;
+}
+
+.footer__nav:nth-child(2) {
+  order: 2;
+}
+
+.footer__nav:nth-child(3) {
+  order: 3;
+}
+
+.footer__adress {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(25% - 30px);
+  order: 4;
+  text-align: right;
+}
+
+.footer__adress-item {
+  padding: 8px 0;
+}
+
+.footer__adress-tel {
+  display: block;
+  margin-top: 5px;
+}
+
+.footer__bottom {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  align-items: center;
+}
+
+.footer__bottom-links {
+  padding: 20px 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+}
+
+.footer__bottom-links li {
+  font-size: 14px;
+  opacity: 0.6;
+}
+
+.footer__bottom-links li a {
+  text-decoration: underline;
+}
+
+.footer__soc {
+  padding: 20px 0;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+  display: flex;
+  justify-content: flex-end;
+}
+
+.footer__soc a + a {
+  margin-left: 18px;
+}
+
+.footer__icon:hover path,
+.footer__icon:active path,
+.footer__icon:focus path {
+  fill: #FC622C;
+}
+
+@media screen and (max-width: 992px) {
+  .footer__nav {
+    width: calc(50% - 30px);
+  }
+
+  .footer__nav:nth-child(2) {
+    order: 3;
+  }
+
+  .footer__nav:nth-child(2) {
+    width: calc(100% - 30px);
+  }
+
+  .footer__nav:nth-child(3) {
+    order: 2;
+  }
+
+  .footer__adress {
+    width: calc(100% - 30px);
+  }
+
+  .footer__adress {
+    text-align: left;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .container {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+
+  .footer {
+    padding-top: 15px;
+    padding-bottom: 35px;
+  }
+
+  .footer__top {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .footer__top {
+    padding: 29px 0;
+  }
+
+  .footer .footer__logo {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer .footer__logo {
+    width: calc(25% - 10px);
+  }
+
+  .footer .custom-logo {
+    width: 75px;
+  }
+
+  .footer__tel {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer__tel {
+    width: calc(75% - 10px);
+  }
+
+  .footer__tel-link {
+    font-size: 17px;
+  }
+
+  .footer__middle {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .footer__middle {
+    padding: 29px 0;
+  }
+
+  .footer__nav-title,
+  .footer .footer__adress-header {
+    font-size: 18px;
+  }
+
+  .footer__nav {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer__nav li {
+    padding: 5px 0;
+  }
+
+  .footer__adress {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer__bottom {
+    margin-left: -5px;
+    margin-right: -5px;
+  }
+
+  .footer__bottom-links {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer__bottom-links {
+    width: calc(100% - 10px);
+  }
+
+  .footer__soc {
+    margin-left: 5px;
+    margin-right: 5px;
+  }
+
+  .footer__soc {
+    width: calc(100% - 10px);
+  }
+
+  .footer__soc {
+    justify-content: flex-start;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    -webkit-animation-duration: 0.01ms !important;
+            animation-duration: 0.01ms !important;
+    -webkit-animation-iteration-count: 1 !important;
+            animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
