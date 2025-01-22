@@ -1,0 +1,223 @@
+.footer {
+    padding-top: 69px;
+    padding-bottom: 133px;
+
+    background-color: #121826;
+    color: #fff;
+
+    .xs-block({
+        padding-top: 15px;
+        padding-bottom: 35px;
+    });
+
+    a {
+        color: inherit;
+        text-decoration: none;
+
+        transition: color 0.5s ease;
+
+        &:hover, &:active, &:focus {
+            color: @accent;
+        }
+    }
+
+    svg {
+        path {
+            transition: fill 0.5s;
+        }
+    }
+
+    &__top {
+        padding: 62px 0;
+        .row-flex();
+
+        // display: flex;
+        // justify-content: space-between;
+        align-items: center;
+
+        border-bottom: 1px solid rgba(255, 255, 255, 0.29);
+
+        .xs-block({
+            padding: 29px 0;
+        });
+    }
+
+    .footer__logo {
+        .col();
+        .size(2);
+        .size-xs(3);
+        // .size-lg(6);
+    }
+
+	.custom-logo {
+        // width: 20%;
+        width: 163px;
+        // filter: grayscale(1) opacity(0.9) invert(100%);
+        .xs(width, 75px);
+    }
+
+    &__tel {
+        .col();
+        .size(10);
+        .size-xs(9);
+        // .size-lg(6);
+        // .shift-left(6);
+        // .shift-lg-left(0);
+        text-align: right;
+
+        &-link {
+            // position: relative;
+
+            padding-left: 30px;
+
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+
+            font-size: 32px;
+            line-height: 1;
+            font-weight: 600;
+
+            .xs(font-size, 17px);
+
+
+            // &::before {
+            //     position: absolute;
+            //     content: '';
+            //     left: 0;
+            //     top: 0;
+            //     width: 30px;
+            //     height: 30px;
+            //     background: url(../img/la_phone.svg) no-repeat center;
+            // }
+
+            &:hover, &:active, &:focus {
+                path {
+                    fill: @accent;
+                }
+            }
+        }
+    }
+
+    &__middle {
+        .row-flex();
+        padding: 62px 0;
+        justify-content: space-between;
+
+        .xs-block({
+            padding: 29px 0;
+        });
+    }
+
+    &__nav-title, .footer__adress-header {
+        margin-bottom: 4px;
+        font-size: 24px;
+        font-weight: 600;
+        line-height: 1.46;
+        text-transform: uppercase;
+
+        .xs(font-size, 18px);
+    }
+
+    &__nav {
+        .col();
+        .size(3);
+        .size-lg(6);
+
+        margin-bottom: 24px;
+
+        li {
+            padding: 8px 0;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.46;
+
+            .xs-block({
+                padding: 5px 0;
+            });
+        }
+    }
+
+    &__nav:first-child {
+        order: 1;
+    }
+
+    &__nav:nth-child(2) {
+        order: 2;
+        .lg(order, 3);
+        .size-lg(12);
+    }
+
+    &__nav:nth-child(3) {
+        order: 3;
+        .lg(order, 2);
+    }
+
+    &__adress {
+        .col();
+        .size(3);
+        .size-lg(12);
+        order: 4;
+        text-align: right;
+
+        .lg(text-align, left);
+
+        &-item {
+            padding: 8px 0;
+        }
+
+        &-tel {
+            display: block;
+            margin-top: 5px;
+        }
+    }
+
+    &__bottom {
+        .row-flex();
+        align-items: center;
+
+        &-links {
+            padding: 20px 0;
+            .col();
+            .size(6);
+            .size-xs(12);
+
+            li {
+                font-size: 14px;
+                opacity: 0.6;
+
+                a {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+    }
+
+    &__soc {
+        padding: 20px 0;
+        .col();
+        .size(6);
+        .size-xs(12);
+
+        display: flex;
+        justify-content: flex-end;
+        .xs(justify-content, flex-start);
+
+        a {
+            // font-size: 0;
+            // filter: grayscale(1) opacity(1) invert(100%);
+        }
+
+        a + a {
+            margin-left: 18px;
+        }
+    }
+
+    &__icon:hover, &__icon:active, &__icon:focus {
+        path {
+            fill: @accent;
+        }
+    }
+    
+}
