@@ -11,6 +11,7 @@
 	<!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml"> -->
 
+	<link rel="stylesheet" href="css/fancybox.css">
 	<link rel="stylesheet" href="css/styles.css?v=2">
 </head>
 
@@ -25,105 +26,103 @@
 	<main>
 
 		<section class="projects">
-			<div class="container">
-				<h2 class="h2">Проекты домов</h2>
-
-				<ul class="projects__list">
-
-					<li class="projects__item">
-						<div class="projects__img">
-							<a href="#" class="projects__link">
-								<img src="img/proj-1.jpg" alt="">
-							</a>
-						</div>
-						<div class="projects__info">
-							<div class="projects__left">
-								<h3 class="projects__name">Блэкберри</h3>
-								<div class="projects__square">102 кв.м</div>
-								<div class="projects__price">от 1 817 329 ₽</div>
-							</div>
-							<div class="projects__right">
-								<!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
-								<ul class="projects__options">
-									<li>1 этаж</li>
-									<li>4 спальни</li>
-									<li>2 санузла</li>
-									<li>терраса</li>
-								</ul>
-							</div>
-						</div>
-						<div class="projects__btns">
-							<a href="#" class="btn btn-blue w-100">Хочу такой дом</a>
-							<a href="#" class="btn btn-blue btn-blue-o w-100">Подробнее</a>
-						</div>
-					</li>
-
-					<li class="projects__item">
-						<div class="projects__img">
-							<a href="#" class="projects__link">
-								<img src="img/proj-2.jpg" alt="">
-							</a>
-						</div>
-						<div class="projects__info">
-							<div class="projects__left">
-								<h3 class="projects__name">Лакоста</h3>
-								<div class="projects__square">226 кв.м</div>
-								<div class="projects__price">от 3 712 150 ₽</div>
-							</div>
-							<div class="projects__right">
-								<!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
-								<ul class="projects__options">
-									<li>2 этажа</li>
-									<li>2 санузла</li>
-									<li>4 комнаты</li>
-									<li>терраса</li>
-								</ul>
-							</div>
-						</div>
-						<div class="projects__btns">
-							<a href="#" class="btn btn-blue w-100">Хочу такой дом</a>
-							<a href="#" class="btn btn-blue btn-blue-o w-100">Подробнее</a>
-						</div>
-					</li>
-
-					<li class="projects__item">
-						<div class="projects__img">
-							<a href="#" class="projects__link">
-								<img src="img/proj-3.jpg" alt="">
-							</a>
-						</div>
-						<div class="projects__info">
-							<div class="projects__left">
-								<h3 class="projects__name">Онтарио</h3>
-								<div class="projects__square">102 кв.м</div>
-								<div class="projects__price">от 1 817 329 ₽</div>
-							</div>
-							<div class="projects__right">
-								<!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
-								<ul class="projects__options">
-									<li>1 этаж</li>
-									<li>4 спальни</li>
-									<li>2 санузла</li>
-									<li>терраса</li>
-								</ul>
-							</div>
-						</div>
-						<div class="projects__btns">
-							<a href="#" class="btn btn-blue w-100">Хочу такой дом</a>
-							<a href="#" class="btn btn-blue btn-blue-o w-100">Подробнее</a>
-						</div>
-					</li>
-
-				</ul>
-
-				<div class="projects__btns-all">
-					<a href="#" class="btn">Посмотреть все дома</a>
-				</div>
-
-			</div>
-		</section>
-
+		    <div class="container">
+		        <h2 class="h2">Проекты домов</h2>
 		
+		        <ul class="projects__list">
+		
+		            <li class="projects__item">
+		                <div class="projects__img">
+		                    <a href="#" class="projects__link">
+		                        <img src="img/proj-1.jpg" alt="">
+		                    </a>
+		                </div>
+		                <div class="projects__info">
+		                    <div class="projects__left">
+		                        <h3 class="projects__name">Блэкберри</h3>
+		                        <div class="projects__square">102 кв.м</div>
+		                        <div class="projects__price">от 1 817 329 ₽</div>
+		                    </div>
+		                    <div class="projects__right">
+		                        <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+		                        <ul class="projects__options">
+		                            <li>1 этаж</li>
+		                            <li>4 спальни</li>
+		                            <li>2 санузла</li>
+		                            <li>терраса</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <div class="projects__btns">
+		                    <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+		                    <a href="#" class="btn btn-blue btn-blue-o w-100">Подробнее</a>
+		                </div>
+		            </li>
+		
+		            <li class="projects__item">
+		                <div class="projects__img">
+		                    <a href="#" class="projects__link">
+		                        <img src="img/proj-2.jpg" alt="">
+		                    </a>
+		                </div>
+		                <div class="projects__info">
+		                    <div class="projects__left">
+		                        <h3 class="projects__name">Лакоста</h3>
+		                        <div class="projects__square">226 кв.м</div>
+		                        <div class="projects__price">от 3 712 150 ₽</div>
+		                    </div>
+		                    <div class="projects__right">
+		                        <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+		                        <ul class="projects__options">
+		                            <li>2 этажа</li>
+		                            <li>2 санузла</li>
+		                            <li>4 комнаты</li>
+		                            <li>терраса</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <div class="projects__btns">
+		                    <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+		                    <a href="#" class="btn btn-blue btn-blue-o w-100">Подробнее</a>
+		                </div>
+		            </li>
+		
+		            <li class="projects__item">
+		                <div class="projects__img">
+		                    <a href="#" class="projects__link">
+		                        <img src="img/proj-3.jpg" alt="">
+		                    </a>
+		                </div>
+		                <div class="projects__info">
+		                    <div class="projects__left">
+		                        <h3 class="projects__name">Онтарио</h3>
+		                        <div class="projects__square">102 кв.м</div>
+		                        <div class="projects__price">от 1 817 329 ₽</div>
+		                    </div>
+		                    <div class="projects__right">
+		                        <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+		                        <ul class="projects__options">
+		                            <li>1 этаж</li>
+		                            <li>4 спальни</li>
+		                            <li>2 санузла</li>
+		                            <li>терраса</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <div class="projects__btns">
+		                    <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+		                    <a href="#" class="btn btn-blue btn-blue-o w-100">Подробнее</a>
+		                </div>
+		            </li>
+		
+		        </ul>
+		
+		        <div class="projects__btns-all">
+		            <a href="#" class="btn">Посмотреть все дома</a>
+		        </div>
+		
+		    </div>
+		</section>
 		<!-- steps -->
 		<section class="steps">
 		    <div class="container">
@@ -170,14 +169,13 @@
 		
 		            <li class="steps__item">
 		                <img src="img/steps-last-img.jpeg" alt="">
-		                <a href="#" class="btn w-100">Заказать проект</a>
+		                <a href="javascript:;" class="btn w-100" data-fancybox data-src="#get-projects">Заказать проект</a>
 		            </li>
 		
 		        </ul>
 		    </div>
 		</section>
 		<!-- end steps -->
-
 		
 	</main>
 
@@ -281,15 +279,30 @@
 	       </div>
 	
 	       <div class="footer__aside">
-	            <p>© 2025 Все права защищены.</p>
+	            <p>&copy; 2025. ООО «Строй Точка» — все права защищены</p>
 	            <p>Внимание! Данный сайт носит информационный характер и ни при каких условиях не является публичной офертой, которая определяется положениями статьи 437 (2) Гражданского кодекса РФ. Для получения подробной информации о наличии и стоимости товаров и (или) услуг, пожалуйста, обращайтесь к нашим менеджерам или укажите ваш контактный номер телефона, и мы сами свяжемся с вами</p>
 	       </div>
 	        
 	    </div>
 	</footer>
 	<!-- end footer -->
+	<div id="get-projects" style="display:none;max-width:500px;">
+	    <h2>Hello, world!</h2>
+	    <p>
+	      Try hitting the tab key and notice how the focus stays within the dialog
+	      itself.
+	    </p>
+	    <p>
+	      To close dialog hit the esc button, click on the overlay or just click the
+	      close button.
+	    </p>
+	    <p>
+	      Element used to launch the modal would receive focus back after closing.
+	    </p>
+	  </div>
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/fancybox.umd.js"></script>
 	<script src="js/scripts.js?v=1"></script>
 	<!-- end scripts -->
 

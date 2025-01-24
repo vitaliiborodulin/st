@@ -1,117 +1,205 @@
-body,
-div,
-dl,
-dt,
-dd,
-ul,
-li,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-pre,
-code,
-form,
-fieldset,
-input,
-textarea,
-p,
-blockquote,
-th,
-td {
-  margin: 0;
-  padding: 0;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
-}
-
-fieldset,
-img,
-abbr {
-  border: 0;
-}
-
-address,
-caption,
-cite,
-code,
-dfn,
-em,
-strong,
-th,
-var {
-  font-style: normal;
-  font-weight: normal;
-}
-
-ul li {
-  list-style: none;
-}
-
-caption,
-th {
-  text-align: left;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-size: 100%;
-  font-weight: normal;
-}
-
-sup {
-  vertical-align: text-top;
-}
-
-sub {
-  vertical-align: text-bottom;
-}
-
-input,
-textarea,
-select {
-  font-family: inherit;
-  font-size: inherit;
-  font-weight: inherit;
-}
-
-legend {
-  color: #000;
-}
-
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section,
-main {
-  display: block;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 *,
 *::before,
 *::after {
   box-sizing: border-box;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -webkit-text-size-adjust: 100%;
+}
+
+*[hidden] {
+  display: none!important;
+}
+
+a,
+address,
+b,
+blockquote,
+body,
+button,
+dd,
+div,
+dl,
+dt,
+em,
+fieldset,
+figure,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+hr,
+html,
+i,
+input,
+ins,
+legend,
+li,
+mark,
+menu,
+ol,
+p,
+strong,
+td,
+textarea,
+th,
+var,
+video,
+ul {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  text-decoration: none;
+  font-size: 1em;
+  font-style: normal;
+  font-weight: inherit;
+  font-family: inherit;
+  text-align: inherit;
+  color: inherit;
+}
+
+button,
+fieldset,
+hr,
+img,
+input,
+textarea {
+  border: none;
+  background-color: transparent;
+}
+
+button::-moz-focus-inner {
+  border: 0;
+}
+
+footer,
+header,
+main {
+  display: block;
+}
+
+li {
+  list-style: none;
+}
+
+html {
+  height: 100%;
+  background-color: #313E48;
+  -webkit-tap-highlight-color: transparent;
+  scroll-behavior: smooth;
+}
+
+body {
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+body > svg {
+  position: absolute;
+}
+
+svg,
+symbol {
+  overflow: visible;
+  fill: currentColor;
+}
+
+button {
+  overflow: visible;
+  cursor: pointer;
+}
+
+button,
+input,
+textarea {
+  line-height: inherit;
+}
+
+a[href^="mailto:"] {
+  white-space: nowrap;
+}
+
+b {
+  font-weight: 700;
+}
+
+p {
+  margin: 1em 0;
+}
+
+table {
+  margin: 1em 0;
+}
+
+p:first-child,
+table:first-child {
+  margin-top: 0!important;
+}
+
+p:last-child,
+table:last-child {
+  margin-bottom: 0!important;
+}
+
+video,
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+figure p {
+  margin: 0!important;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+input::-moz-placeholder,
+textarea::-moz-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+input:-ms-input-placeholder,
+textarea:-ms-input-placeholder {
+  color: inherit;
+  opacity: 0.5;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+input[type="search"]::-ms-clear,
+input[type="search"]::-ms-reveal {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+input[type="search"]::-webkit-search-decoration,
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-results-button,
+input[type="search"]::-webkit-search-results-decoration {
+  display: none;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+*::selection {
+  background-color: #FC622C;
+  color: #fff;
 }
 
 .container {
@@ -177,33 +265,7 @@ main {
   color: #1D263B;
 }
 
-img {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Наследуем шрифты для инпутов и кнопок */
-
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
-
-textarea {
-  resize: none;
-}
-
-strong,
-b {
-  font-weight: 700;
-}
-
-button {
-  border: none;
-  cursor: pointer;
-}
 
 .w-100 {
   width: 100%;
@@ -482,11 +544,6 @@ input[type='submit'] {
   width: calc(50% - 30px);
 }
 
-.projects__left {
-  display: flex;
-  flex-direction: column;
-}
-
 .projects__name {
   font-size: 32px;
   font-weight: 500;
@@ -495,7 +552,6 @@ input[type='submit'] {
 }
 
 .projects__square {
-  margin-top: auto;
   order: 2;
 }
 
@@ -825,7 +881,7 @@ input[type='submit'] {
   }
 
   .steps__descr {
-    min-height: 120px;
+    min-height: 0;
   }
 
   .projects {
@@ -859,7 +915,6 @@ input[type='submit'] {
   }
 
   .projects__square {
-    margin-top: 0;
     margin-bottom: 3px;
     order: 3;
   }
