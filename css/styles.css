@@ -245,11 +245,6 @@ input[type="number"] {
   font-display: swap;
 }
 
-html,
-body {
-  overflow-x: hidden;
-}
-
 body {
   font-family: 'Gilroy', sans-serif;
   font-size: 17px;
@@ -274,6 +269,10 @@ main {
 
 .w-100 {
   width: 100%;
+}
+
+.fancybox-is-open .fancybox-bg {
+  opacity: 0.5;
 }
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
@@ -662,7 +661,7 @@ input[type='submit'] {
 }
 
 .news .slick-dots li.slick-active button:before {
-  background-color: #2579A7;
+  background-color: #FC622C;
 }
 
 .news .slick-arrow {
@@ -681,9 +680,12 @@ input[type='submit'] {
   border: none;
   outline: none;
   background: transparent;
-  background-color: #fff;
   border-radius: 50%;
   z-index: 2;
+}
+
+.news .slick-list {
+  padding: 0 10px;
 }
 
 .news .slick-prev {
@@ -700,7 +702,6 @@ input[type='submit'] {
   content: '';
   font-size: 0;
   line-height: 1;
-  color: #000000;
   width: 40px;
   height: 40px;
 }
@@ -747,7 +748,7 @@ input[type='submit'] {
 
 .page-template-page-about .hero {
   position: relative;
-  background-position: center;
+  background-position: center 70%;
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -780,6 +781,139 @@ input[type='submit'] {
   color: #fff;
   text-align: center;
   text-transform: uppercase;
+}
+
+.contacts {
+  position: relative;
+  padding-top: 115px;
+  padding-bottom: 120px;
+  background-color: #F8F8F8;
+}
+
+.contacts::after {
+  position: absolute;
+  right: 0;
+  top: 100px;
+  content: 'Стройточка';
+  text-transform: uppercase;
+  color: rgba(72, 67, 67, 0.06);
+  font-weight: 700;
+  font-size: 108px;
+}
+
+.contacts .h2 {
+  margin-bottom: 54px;
+}
+
+.contacts__list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.contacts__item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+  font-size: 16px;
+  color: rgba(48, 48, 48, 0.8);
+  padding: 30px 30px 39px;
+  border: 1px solid #000;
+  border-radius: 30px;
+}
+
+.contacts__name {
+  margin-bottom: 24px;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 1;
+  color: #303030;
+}
+
+.contacts__name span {
+  color: #FC622C;
+}
+
+.contacts__adress {
+  position: relative;
+  margin-bottom: 20px;
+  line-height: 1;
+  color: #303030;
+  padding-left: 30px;
+}
+
+.contacts__adress::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: -5px;
+  width: 24px;
+  height: 24px;
+  background: url(../img/basil_location-outline.svg) no-repeat center;
+}
+
+.contacts__tel,
+.contacts__mail {
+  position: relative;
+  padding-left: 30px;
+}
+
+.contacts__tel a,
+.contacts__mail a {
+  transition: color 0.5s ease;
+}
+
+.contacts__tel a:hover,
+.contacts__mail a:hover,
+.contacts__tel a:active,
+.contacts__mail a:active,
+.contacts__tel a:focus,
+.contacts__mail a:focus {
+  color: #FC622C;
+}
+
+.contacts__tel {
+  margin-bottom: 9px;
+}
+
+.contacts__tel::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: -5px;
+  width: 24px;
+  height: 24px;
+  background: url(../img/mynaui_telephone.svg) no-repeat center;
+}
+
+.contacts__mail {
+  margin-bottom: 30px;
+}
+
+.contacts__mail::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 24px;
+  height: 24px;
+  background: url(../img/tabler_mail.svg) no-repeat center;
+}
+
+.contacts__time {
+  margin-bottom: 21px;
+}
+
+.contacts__descr {
+  margin-bottom: 10px;
+}
+
+.contacts .btn {
+  padding: 13px 16px;
+  font-size: 14px;
 }
 
 .footer {
@@ -1027,15 +1161,30 @@ input[type='submit'] {
   }
 }
 
-@media screen and (max-width: 576px) {
-  .container {
-    padding-left: 10px;
-    padding-right: 10px;
+@media screen and (max-width: 768px) {
+  .contacts__item {
+    width: calc(100% - 30px);
   }
 
+  .contacts__item {
+    padding: 22px 0;
+    border-radius: 0;
+    border-color: transparent;
+  }
+
+  .contacts__item:last-child {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+  }
+}
+
+@media screen and (max-width: 576px) {
   .h2 {
     margin-bottom: 17px;
     font-size: 24px;
+  }
+
+  .fancybox-slide--iframe {
+    padding: 44px 5px 5px;
   }
 
   .steps {
@@ -1142,6 +1291,14 @@ input[type='submit'] {
     font-size: 24px;
   }
 
+  .news .slick-arrow {
+    background-color: #fff;
+  }
+
+  .news .slick-list {
+    padding: 0;
+  }
+
   .news .slick-prev {
     left: 0;
   }
@@ -1156,6 +1313,23 @@ input[type='submit'] {
 
   .page-template-page-about h1 {
     font-size: 42px;
+  }
+
+  .contacts {
+    padding: 50px 0;
+  }
+
+  .contacts::after {
+    font-size: 24px;
+    top: 50px;
+  }
+
+  .contacts .h2 {
+    margin-bottom: 0;
+  }
+
+  .contacts__name {
+    font-size: 18px;
   }
 
   .footer {

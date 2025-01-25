@@ -11,6 +11,7 @@
 	<!-- <link rel="icon" href="img/favicon.ico" type="image/x-icon">
     <link rel="icon" href="img/favicon.svg" type="image/svg+xml"> -->
 
+	<link rel="stylesheet" href="css/jquery.fancybox.min.css">
 	<link rel="stylesheet" href="css/slick.css">
 	<link rel="stylesheet" href="css/styles.css?v=4">
 </head>
@@ -81,7 +82,7 @@
 		
 		            <li class="steps__item">
 		                <img src="img/steps-last-img.jpeg" alt="">
-		                <a href="#get-projects" class="btn w-100" >Заказать проект</a>
+		                <a class="btn w-100" data-fancybox data-src="#get-projects" href="javascript:;">Заказать проект</a>
 		            </li>
 		
 		        </ul>
@@ -89,9 +90,44 @@
 		</section>
 		<!-- end steps -->
 
+		<!-- contacts -->
+		<section class="contacts" id="contacts">
+		    <div class="container">
+		        <h2 class="h2">Контакты</h2>
+		
+		        <div class="contacts__list">
+		
+		            <div class="contacts__item">
+		                <h3 class="contacts__name">Офис <span>Санкт-Петербург</span></h3>
+		                <div class="contacts__adress">Набережная канала Грибоедова 19</div>
+		                <div class="contacts__tel"><a href="tel:89110371411">8 911 037 14 11 </a></div>
+		                <div class="contacts__mail"><a href="mailto:info@sk-stroi.ru">info@sk-stroi.ru</a></div>
+		                <div class="contacts__time">График работы: с 11:00 - 19:00 без выходных</div>
+		                <div class="contacts__descr">Встреча по согласованию</div>
+		                <a class="btn" data-fancybox data-type="iframe" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bb7c589826f875851b75348266ca3a1cee09e0b0faae71a28fb1e03094e38b4&amp;source=constructor" href="javascript:;">
+		                    Показать на карте
+		                </a>
+		            </div>
+		
+		            <div class="contacts__item">
+		                <h3 class="contacts__name">Офис <span>Москва</span></h3>
+		                <div class="contacts__adress">Ленинский проспект, 86</div>
+		                <div class="contacts__tel"><a href="tel:84951524614">8 495 152 46 14</a></div>
+		                <div class="contacts__mail"><a href="mailto:info@sk-stroi.ru">info@sk-stroi.ru</a></div>
+		                <div class="contacts__time">График работы: с 11:00 - 19:00 без выходных</div>
+		                <div class="contacts__descr">Встреча по согласованию</div>
+		                <a class="btn" data-fancybox data-type="iframe" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bb7c589826f875851b75348266ca3a1cee09e0b0faae71a28fb1e03094e38b4&amp;source=constructor" href="javascript:;">
+		                    Показать на карте
+		                </a>
+		            </div>
+		
+		        </div>
+		    </div>
+		</section>
+		<!-- end contacts -->
 		<!-- faq -->
 
-		<!-- контакты -->
+		
 
 		<section class="news">
 		    <div class="container">
@@ -159,7 +195,7 @@
 	                    <li><a href="#">Наши работы</a></li>
 	                    <li><a href="#">Новости</a></li>
 	                    <li><a href="#">Отзывы</a></li>
-	                    <li><a href="about.html">Команда</a></li>
+	                    <li><a href="about.html#contacts">Команда</a></li>
 	                </ul>
 	            </div>
 	
@@ -234,7 +270,7 @@
 	    </div>
 	</footer>
 	<!-- end footer -->
-	<div id="get-projects" style="display:none;max-width:500px;">
+	<!-- <div id="get-projects" style="display:none;max-width:500px;">
 	    <h2>Hello, world!</h2>
 	    <p>
 	      Try hitting the tab key and notice how the focus stays within the dialog
@@ -246,10 +282,16 @@
 	    </p>
 	    <p>
 	      Element used to launch the modal would receive focus back after closing.
-	    </p>
+	    </p> -->
+	  </div>
+	
+	  <div style="display: none;" id="get-projects">
+	    <h2>Hello</h2>
+	    <p>You are awesome.</p>
 	  </div>
 	<!-- scripts -->
 	<script src="js/jquery-3.7.1.min.js"></script>
+	<script src="js/jquery.fancybox.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js?v=2"></script>
 	<!-- end scripts -->
