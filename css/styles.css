@@ -935,19 +935,20 @@ input[type='submit'] {
   background-color: #F8F8F8;
 }
 
-.contacts::after {
+.contacts .h2 {
+  position: relative;
+  margin-bottom: 54px;
+}
+
+.contacts .h2::after {
   position: absolute;
   right: 0;
-  top: 100px;
+  top: -50px;
   content: 'Стройточка';
   text-transform: uppercase;
   color: rgba(72, 67, 67, 0.06);
   font-weight: 700;
   font-size: 108px;
-}
-
-.contacts .h2 {
-  margin-bottom: 54px;
 }
 
 .contacts__list {
@@ -1517,13 +1518,13 @@ input[type='submit'] {
     padding: 50px 0;
   }
 
-  .contacts::after {
-    font-size: 24px;
-    top: 50px;
-  }
-
   .contacts .h2 {
     margin-bottom: 0;
+  }
+
+  .contacts .h2::after {
+    font-size: 24px;
+    top: 0;
   }
 
   .contacts__name {
