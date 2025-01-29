@@ -494,6 +494,7 @@ input[type='submit'] {
   margin-right: 15px;
   width: calc(25% - 30px);
   font-size: 14px;
+  color: rgba(102, 102, 102, 0.8);
   order: 2;
 }
 
@@ -532,6 +533,10 @@ input[type='submit'] {
   margin-right: 15px;
   width: calc(16.666666666666668% - 30px);
   order: 5;
+}
+
+.header__btn .btn {
+  padding: 18px 44px;
 }
 
 .header__bottom {
@@ -1577,6 +1582,10 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 992px) {
+  .header__bottom {
+    padding: 0;
+  }
+
   .header__menu {
     display: none;
     position: absolute;
@@ -1701,13 +1710,25 @@ input[type='submit'] {
     width: calc(33.333333333333336% - 30px);
   }
 
+  .header__adress {
+    display: none;
+  }
+
+  .header__soc {
+    width: calc(41.66666666666667% - 30px);
+  }
+
   .header__soc svg {
-    width: 20px;
-    height: 20px;
+    width: 30px;
+    height: 30px;
   }
 
   .header__tel {
-    font-size: 15px;
+    width: calc(58.333333333333336% - 30px);
+  }
+
+  .header__tel {
+    font-size: 18px;
   }
 
   .header__btn {
@@ -1795,18 +1816,6 @@ input[type='submit'] {
   .form__submit {
     width: 100%;
     max-width: 100%;
-  }
-
-  .header__adress {
-    width: calc(33.333333333333336% - 30px);
-  }
-
-  .header__soc {
-    width: calc(25% - 30px);
-  }
-
-  .header__tel {
-    width: calc(41.66666666666667% - 30px);
   }
 
   .header__btn .btn {
