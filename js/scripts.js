@@ -62,8 +62,8 @@ $(function() {
         fade: true,
         cssEase: 'linear',
         dots: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
         // pauseOnFocus: false,
         pauseOnHover: false
     });

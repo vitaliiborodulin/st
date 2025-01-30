@@ -74,6 +74,7 @@
 	            <div class="header__menu">
 	                <nav class="header__nav">
 	                    <ul>
+	                        <li class="menu-item current-menu-item"><a href="#">Главная</a></li>
 	                        <li class="menu-item menu-item-has-children">
 	                            <a href="#">Выбрать проект</a>
 	                            <ul class="sub-menu">
@@ -83,10 +84,9 @@
 	                                <li><a href="#">Каркасные бани</a></li>
 	                            </ul>
 	                        </li>
-	                        <li class="menu-item current-menu-item"><a href="#">Наши работы</a></li>
+	                        <li class="menu-item"><a href="#">Наши работы</a></li>
 	                        <li class="menu-item"><a href="#">Акции</a></li>
 	                        <li class="menu-item"><a href="#">Отзывы</a></li>
-	                        <!-- <li class="menu-item"><a href="#">Как заказать</a></li> -->
 	                        <li class="menu-item"><a href="#">Ипотека и МК</a></li>
 	                        <li class="menu-item"><a href="about.html#contacts">Контакты</a></li>
 	                    </ul>
@@ -106,22 +106,28 @@
 		
 		        <div class="hero__slide" style="background-image: url(img/1-rakurs-11.jpg);">
 		            <div class="hero__content">
-		                <h1 class="h1">Строим <span>и проектируем дома <b>под ключ</b></span></h1>
-		                <a href="#" class="btn">Подробнее</a>
+		                <div class="container">
+		                    <h1 class="h1">Строим <span>и проектируем дома <b>под ключ</b></span></h1>
+		                    <a href="#" class="btn">Подробнее</a>
+		                </div>
 		            </div>
 		        </div>
 		
 		        <div class="hero__slide" style="background-image: url(img/about-bg.jpeg);">
 		            <div class="hero__content">
-		                <div class="h1">Большой выбор <span>проектов <b>под ключ</b></span></div>
-		                <a href="#" class="btn">Смотреть проекты</a>
+		                <div class="container">
+		                    <div class="h1">Большой выбор <span>проектов <b>под ключ</b></span></div>
+		                    <a href="#" class="btn">Смотреть проекты</a>
+		                </div>
 		            </div>
 		        </div>
 		
 		        <div class="hero__slide" style="background-image: url(img/2-rakurs-11.jpg);">
 		            <div class="hero__content">
-		                <div class="h1">Заказывайте <span>проект дома <b>у нас</b></span></div>
-		                <a href="#" class="btn">Заказать</a>
+		                <div class="container">
+		                    <div class="h1">Заказывайте <span>проект дома <b>у нас</b></span></div>
+		                    <a href="#" class="btn">Заказать</a>
+		                </div>
 		            </div>
 		        </div>
 		
@@ -129,6 +135,59 @@
 		    </div>
 		
 		</div>
+		<!-- steps -->
+		<section class="steps">
+		    <div class="container">
+		        <h2 class="h2">Пять простых шагов к дому мечты</h2>
+		        <div class="h2-descr">Срок строительства 25-40 дней.</div>
+		
+		        <ul class="steps__list">
+		
+		            <li class="steps__item">
+		                <img class="steps__icon" src="img/steps-1.svg" alt="">
+		                <h3 class="steps__title">Выбор проекта</h3>
+		                <div class="steps__descr">Вы определяетесь с проектом и комплектацией дома Если проект индивидуальный - делаем расчет его стоимости, если проект с нашего 
+		                    сайта - обсуждаем возможные изменения отправляем вам индивидуальное КП под ваши пожелания.</div>
+		            </li>
+		
+		            <li class="steps__item">
+		                <img class="steps__icon" src="img/steps-2.svg" alt="">
+		                <h3 class="steps__title">Согласуем и заключаем договор</h3>
+		                <div class="steps__descr">Если укладываемся в бюджет - встречаемся в офисе, так же можно заключить договор дистанционно или на вашем участке 
+		                    для обсуждения деталей Обговариваем сроки начала работ. </div>
+		            </li>
+		
+		            <li class="steps__item">
+		                <img class="steps__icon" src="img/steps-4.svg" alt="">
+		                <h3 class="steps__title">Подготовка к строительству</h3>
+		                <div class="steps__descr">Мы готовимся к строительству, комплектуем материал на ваш объект За это время устанавливаем фундамент силами проверенных партнеров.</div>
+		            </li>
+		
+		            <li class="steps__item">
+		                <img class="steps__icon" src="img/steps-5.svg" alt="">
+		                <h3 class="steps__title">Начинаем строительство</h3>
+		                <div class="steps__descr">Поставляется домокомплект на участок.
+		                    Вы оплачиваете 70% от стоимости договора.
+		                    Строители работают и живут на участке.
+		                    Сроки строительства в среднем 25-40 дней.
+		                    Мы контролируем процесс строительства.</div>
+		            </li>
+		
+		            <li class="steps__item">
+		                <img class="steps__icon" src="img/steps-3.svg" alt="">
+		                <h3 class="steps__title">Завершение строительства</h3>
+		                <div class="steps__descr">При завершении строительства подписывается «акт приемки-передачи» Вы оплачиваете 30% по договору ВСЕ. </div>
+		            </li>
+		
+		            <li class="steps__item">
+		                <img src="img/steps-last-img.jpeg" alt="">
+		                <a class="btn w-100" data-fancybox data-src="#get-projects" href="javascript:;">Заказать проект</a>
+		            </li>
+		
+		        </ul>
+		    </div>
+		</section>
+		<!-- end steps -->
 		<section class="projects">
 		    <div class="container">
 		        <h2 class="h2">Проекты домов</h2>
@@ -219,6 +278,34 @@
 		                </div>
 		            </li>
 		
+		            <li class="projects__item">
+		                <div class="projects__img">
+		                    <a href="#" class="projects__link">
+		                        <img src="img/proj-3.jpg" alt="">
+		                    </a>
+		                </div>
+		                <div class="projects__info">
+		                    <div class="projects__left">
+		                        <h3 class="projects__name">Онтарио</h3>
+		                        <div class="projects__square">102 кв.м</div>
+		                        <div class="projects__price">от 1 817 329 ₽</div>
+		                    </div>
+		                    <div class="projects__right">
+		                        <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+		                        <ul class="projects__options">
+		                            <li>1 этаж</li>
+		                            <li>4 спальни</li>
+		                            <li>2 санузла</li>
+		                            <li>терраса</li>
+		                        </ul>
+		                    </div>
+		                </div>
+		                <div class="projects__btns">
+		                    <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+		                    <a class="btn btn-blue btn-blue-o w-100" data-fancybox data-src="#get-projects" href="#">Подробнее</a>
+		                </div>
+		            </li>
+		
 		        </ul>
 		
 		        <div class="projects__btns-all">
@@ -227,59 +314,6 @@
 		
 		    </div>
 		</section>
-		<!-- steps -->
-		<section class="steps">
-		    <div class="container">
-		        <h2 class="h2">Пять простых шагов к дому мечты</h2>
-		        <div class="h2-descr">Срок строительства 25-40 дней.</div>
-		
-		        <ul class="steps__list">
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-1.svg" alt="">
-		                <h3 class="steps__title">Выбор проекта</h3>
-		                <div class="steps__descr">Вы определяетесь с проектом и комплектацией дома Если проект индивидуальный - делаем расчет его стоимости, если проект с нашего 
-		                    сайта - обсуждаем возможные изменения отправляем вам индивидуальное КП под ваши пожелания.</div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-2.svg" alt="">
-		                <h3 class="steps__title">Согласуем и заключаем договор</h3>
-		                <div class="steps__descr">Если укладываемся в бюджет - встречаемся в офисе, так же можно заключить договор дистанционно или на вашем участке 
-		                    для обсуждения деталей Обговариваем сроки начала работ. </div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-4.svg" alt="">
-		                <h3 class="steps__title">Подготовка к строительству</h3>
-		                <div class="steps__descr">Мы готовимся к строительству, комплектуем материал на ваш объект За это время устанавливаем фундамент силами проверенных партнеров.</div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-5.svg" alt="">
-		                <h3 class="steps__title">Начинаем строительство</h3>
-		                <div class="steps__descr">Поставляется домокомплект на участок.
-		                    Вы оплачиваете 70% от стоимости договора.
-		                    Строители работают и живут на участке.
-		                    Сроки строительства в среднем 25-40 дней.
-		                    Мы контролируем процесс строительства.</div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-3.svg" alt="">
-		                <h3 class="steps__title">Завершение строительства</h3>
-		                <div class="steps__descr">При завершении строительства подписывается «акт приемки-передачи» Вы оплачиваете 30% по договору ВСЕ. </div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img src="img/steps-last-img.jpeg" alt="">
-		                <a class="btn w-100" data-fancybox data-src="#get-projects" href="javascript:;">Заказать проект</a>
-		            </li>
-		
-		        </ul>
-		    </div>
-		</section>
-		<!-- end steps -->
 		<!-- feedback -->
 		<section class="feedback">
 		    <div class="container">
