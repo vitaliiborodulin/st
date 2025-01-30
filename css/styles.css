@@ -826,6 +826,43 @@ input[type='submit'] {
   bottom: 0;
 }
 
+.page-template-page-about .hero {
+  position: relative;
+  background-position: center 70%;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.page-template-page-about .hero::before {
+  position: absolute;
+  content: '';
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.page-template-page-about .hero__content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 768px;
+}
+
+.page-template-page-about h1 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+}
+
 .steps {
   padding-top: 138px;
   padding-bottom: 60px;
@@ -1297,43 +1334,6 @@ input[type='submit'] {
   border-radius: 20px;
 }
 
-.page-template-page-about .hero {
-  position: relative;
-  background-position: center 70%;
-  background-size: cover;
-  background-repeat: no-repeat;
-}
-
-.page-template-page-about .hero::before {
-  position: absolute;
-  content: '';
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.3);
-}
-
-.page-template-page-about .hero__content {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  min-height: 768px;
-}
-
-.page-template-page-about h1 {
-  font-size: 64px;
-  font-weight: 700;
-  line-height: 1;
-  color: #fff;
-  text-align: center;
-  text-transform: uppercase;
-}
-
 .contacts {
   position: relative;
   padding-top: 115px;
@@ -1772,6 +1772,10 @@ input[type='submit'] {
     font-size: 17px;
   }
 
+  .page-template-page-about .hero__content {
+    min-height: 500px;
+  }
+
   .steps__item {
     width: calc(50% - 30px);
   }
@@ -1800,10 +1804,6 @@ input[type='submit'] {
 
   .feedback__pic {
     width: calc(50% - 30px);
-  }
-
-  .page-template-page-about .hero__content {
-    min-height: 268px;
   }
 
   .footer__nav {
@@ -1995,6 +1995,14 @@ input[type='submit'] {
     right: 0px;
   }
 
+  .page-template-page-about .hero__content {
+    min-height: 268px;
+  }
+
+  .page-template-page-about h1 {
+    font-size: 42px;
+  }
+
   .steps {
     padding-top: 59px;
     padding-bottom: 14px;
@@ -2180,10 +2188,6 @@ input[type='submit'] {
 
   .leader__pic {
     height: 300px;
-  }
-
-  .page-template-page-about h1 {
-    font-size: 42px;
   }
 
   .contacts {
