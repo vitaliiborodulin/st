@@ -1212,6 +1212,91 @@ input[type='submit'] {
   border: 1px solid rgba(37, 121, 167, 0.35);
 }
 
+.leader {
+  padding-top: 120px;
+  padding-bottom: 130px;
+  background-color: #F9F9F9;
+}
+
+.leader__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+  position: relative;
+}
+
+.leader__info {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(58.333333333333336% - 30px);
+  display: flex;
+  flex-direction: column;
+  padding-right: 5vw;
+}
+
+.leader__title {
+  margin-bottom: 24px;
+  font-size: 36px;
+  font-weight: 600;
+  line-height: 1;
+  color: #333333;
+}
+
+.leader__title span {
+  color: #FC622C;
+}
+
+.leader__descr {
+  margin-bottom: 15px;
+  font-size: 16px;
+  font-weight: 600;
+  color: rgba(48, 48, 48, 0.8);
+}
+
+.leader__text {
+  margin-top: auto;
+  margin-bottom: auto;
+  font-size: 18px;
+  font-weight: 400;
+  color: rgba(1, 1, 1, 0.8);
+}
+
+.leader__sign {
+  margin-top: 14px;
+}
+
+.leader__position {
+  margin-bottom: 10px;
+  font-size: 16px;
+  color: rgba(1, 1, 1, 0.8);
+}
+
+.leader__name {
+  font-size: 18px;
+  color: #010101;
+}
+
+.leader__pic {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(41.66666666666667% - 30px);
+  height: 480px;
+  overflow: hidden;
+}
+
+.leader__pic img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 20px;
+}
+
 .page-template-page-about .hero {
   position: relative;
   background-position: center 70%;
@@ -1830,6 +1915,18 @@ input[type='submit'] {
     border-radius: 20px;
   }
 
+  .leader__info {
+    width: calc(50% - 30px);
+  }
+
+  .leader__pic {
+    width: calc(50% - 30px);
+  }
+
+  .leader__pic {
+    height: 400px;
+  }
+
   .contacts__item {
     width: calc(100% - 30px);
   }
@@ -2038,6 +2135,51 @@ input[type='submit'] {
     padding: 10px 10px 12px 14px;
     font-size: 14px;
     border-radius: 20px;
+  }
+
+  .leader {
+    padding: 50px 0;
+  }
+
+  .leader__content {
+    padding-bottom: 50px;
+  }
+
+  .leader__info {
+    width: calc(100% - 30px);
+  }
+
+  .leader__title {
+    margin-bottom: 14px;
+    font-size: 24px;
+  }
+
+  .leader__descr {
+    line-height: 1.6;
+  }
+
+  .leader__text {
+    margin-bottom: 14px;
+    font-size: 16px;
+  }
+
+  .leader__sign {
+    margin-top: 0;
+    position: absolute;
+    bottom: 0;
+  }
+
+  .leader__position {
+    margin-top: 14px;
+    margin-bottom: 0px;
+  }
+
+  .leader__pic {
+    width: calc(100% - 30px);
+  }
+
+  .leader__pic {
+    height: 300px;
   }
 
   .page-template-page-about h1 {
