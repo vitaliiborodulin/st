@@ -2287,6 +2287,11 @@ input[type='submit'] {
     padding-bottom: 72px;
   }
 
+  .team__title {
+    margin-bottom: 26px;
+    font-size: 24px;
+  }
+
   .team__item {
     width: calc(100% - 30px);
   }
