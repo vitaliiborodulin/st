@@ -205,8 +205,8 @@ input[type="number"] {
 .container {
   max-width: 1400px;
   margin: 0 auto;
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
 }
 
 @font-face {
@@ -2070,14 +2070,6 @@ input[type='submit'] {
     padding: 0;
   }
 
-  .slick-prev {
-    left: 0;
-  }
-
-  .slick-next {
-    right: 0;
-  }
-
   .header__btn .btn {
     font-size: 14px;
     padding: 10px 20px;
@@ -2301,7 +2293,7 @@ input[type='submit'] {
 
   .team__pic {
     margin-bottom: 20px;
-    height: 334px;
+    height: 400px;
   }
 
   .team__name {
