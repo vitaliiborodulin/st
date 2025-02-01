@@ -100,6 +100,25 @@ $(function() {
             }
         ]
       });
+    
+      $('.portfolio-other__slider').slick({
+        slidesToShow: 2.7,
+        slidesToScroll: 1,
+        dots: true,
+        // arrows: true,
+        infinite: true,
+        speed: 500,
+        nextArrow: $('.portfolio-other__arrow .arrow-next'),
+        prevArrow: $('.portfolio-other__arrow .arrow-prev'),
+        responsive: [
+            {
+                breakpoint: 968,
+                settings: {
+                    slidesToShow: 1.7
+                }
+            }
+        ]
+      });
 
     // $(".fancyone").fancybox();
 
