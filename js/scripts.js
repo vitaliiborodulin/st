@@ -101,6 +101,30 @@ $(function() {
         ]
       });
     
+      $('.portfolio__main-slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.portfolio__nav-slider'
+      });
+    
+      $('.portfolio__nav-slider').slick({
+        slidesToShow: 3,
+        asNavFor: '.portfolio__main-slider',
+        // dots: true,
+        centerMode: true,
+        arrows: false,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2
+                }
+            }
+        ]
+      });
+    
       $('.portfolio-other__slider').slick({
         slidesToShow: 2.7,
         slidesToScroll: 1,
