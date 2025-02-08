@@ -1,0 +1,16 @@
+.card-shadow() {
+    transition: all 0.5s ease;
+  
+    &:hover {
+      box-shadow: 0 3px 8px 0 rgba(0,0,0,.3);
+    }
+}
+
+.img-scale() {
+    transition: transform 1s ease;
+    will-change: transform;
+
+    &:hover {
+        transform: scale(1.1);
+    }
+}

@@ -11,13 +11,13 @@
 @userfont: 'Gilroy', sans-serif;
 @systemfont: -apple-system, BlinkMacSystemFont, Arial, sans-serif; // System Font Family
 
-.reset();
+// .reset();
 
-*,
-*::before,
-*::after {
-    box-sizing: border-box;
-}
+// *,
+// *::before,
+// *::after {
+//     box-sizing: border-box;
+// }
 
 .container {
     .wrapper();
@@ -97,11 +97,13 @@
 // }
 
 body {
+    position: relative;
     font-family: @userfont;
     font-size: @fontsize;
     // line-height: @lineheight;
     font-weight: 400;
     color: @black;
+    background-color: #F9F9F9;
     // text-rendering: optimizeSpeed;
     // -webkit-font-smoothing: antialiased;
     // text-rendering: optimizeLegibility;
@@ -114,6 +116,20 @@ main {
     min-height: 100vh;
 }
 
+.h2 {
+    margin-bottom: 38px;
+
+    font-weight: 700;
+    font-size: 60px;
+
+    color: #1D263B;
+
+    .xs-block({
+        margin-bottom: 17px;
+        font-size: 24px;
+    });
+}
+
 // a:link {
 // //     color: @accent;
 //     text-decoration: none;
@@ -124,37 +140,86 @@ main {
 //     text-decoration: none;
 // }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
+// img {
+//     max-width: 100%;
+//     height: auto;
+// }
 
 /* Наследуем шрифты для инпутов и кнопок */
-input,
-button,
-textarea,
-select {
-  font: inherit;
-}
+// input,
+// button,
+// textarea,
+// select {
+//   font: inherit;
+// }
 
-textarea {
-	resize: none;
-}
+// textarea {
+// 	resize: none;
+// }
 
-strong, b {
-    font-weight: 700;
-}
+// strong, b {
+//     font-weight: 700;
+// }
 
-button {
-    border: none;
-    cursor: pointer;
-}
+// button {
+//     border: none;
+//     cursor: pointer;
+// }
 
 // input, textarea { 
 //     field-sizing: content; 
 // }
 
+.w-100 {
+    width: 100%;
+}
 
+.bg-dark {
+    background-color: #121826;
+}
+
+.bg-w {
+    background-color: @white;
+}
+
+.bg-f9 {
+    background-color: #F9F9F9;
+}
+
+.overflow {
+    overflow: hidden;
+}
+
+// fancybox
+
+.fancybox-content {
+    color: #fff;
+    background-color: #121826;
+    border-radius: 30px;
+
+    .xs(border-radius, 20px);
+}
+
+.fancybox-is-open .fancybox-bg {
+    opacity: 0.5;
+}
+
+.fancybox-slide--iframe {
+    .xs-block({
+        padding: 44px 5px 5px;
+    });
+}
+
+.edit_post_link {
+    margin: 10px;
+    padding: 5px;
+}
+
+.error404 {
+    .btn {
+        margin-top: 20px;
+    }
+}
 
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */

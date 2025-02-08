@@ -1,0 +1,128 @@
+.feedback {
+    padding: 120px 0;
+    // background-color: #F9F9F9;
+
+    .md-block({
+        padding-top: 52px;
+        padding-bottom: 60px;
+        background-color: #121826;
+    });
+
+    &__box {
+        .row-flex();
+
+        margin: 14px;
+        // padding: 13px 18px 14px 15px;
+
+        color: #fff;
+
+        outline: 1px solid #163E60;
+        outline-offset: 13px;
+        // border: 1px solid #163E60;
+        border-radius: 10px;
+
+        // background: #121826 url(../img/about-bg.jpeg) no-repeat right center/contain;
+
+        .md-block({
+            margin: 0;
+            outline: 0;
+            outline-offset: 0;
+            border-radius: 0;
+        });
+    }
+
+    &__form {
+        .col();
+        .size(5);
+        .size-lg(6);
+        .size-md(12);
+
+        .md-block({
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        });
+
+        .form {
+            padding: 40px 30px 50px;
+
+            .md(padding, 0);
+        }
+    }
+
+    &__pic {
+        .col();
+        .size(7);
+        .size-lg(6);
+        .size-md(12);
+
+        padding: 23px 0;
+        height: 540px;
+        overflow: hidden;
+
+        .md-block({
+            order: -1;
+            padding: 0;
+            height: 152px;
+            margin-bottom: 22px;
+            width: 100%;
+            margin-left: 0;
+            margin-right: 0;
+        });
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 56px;
+
+            .md(border-radius, 20px);
+        }
+    }
+
+    // блочок
+
+    &__text {
+        padding-top: 44px;
+        padding-bottom: 120px;
+        color: #181619;
+        font-size: 24px;
+        font-weight: 400;
+
+        .md-block({
+            padding: 60px 0;
+            font-size: 18px;
+        });
+
+        li {
+            list-style-position: inside;
+            list-style-type: disc;
+        }
+
+        li + li {
+            margin-top: 20px;
+            .xs(margin-top, 14px);
+        }
+    }
+
+    &__lead {
+        margin-bottom: 20px;
+        font-size: 40px;
+        font-weight: 700;
+
+        .xs(font-size, 24px);
+
+        span {
+            color: @accent;
+        }
+    }
+}
+
+.feedback + .feedback__text {
+    margin-top: -80px;
+    padding-top: 0;
+
+    .md-block({
+        margin-top: 58px;
+    });
+}

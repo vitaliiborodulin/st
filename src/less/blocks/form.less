@@ -1,0 +1,120 @@
+.form {
+    // padding: 40px 30px 50px;
+
+    &__title {
+        margin-bottom: 10px;
+        font-size: 36px;
+        font-weight: 600;
+        text-transform: uppercase;
+        color: #fff;
+
+        .md-block({
+            margin-bottom: 18px;
+            font-size: 18px;
+        });
+    }
+
+    &__descr {
+        margin-bottom: 18px;
+        font-size: 18px;
+        opacity: 0.8;
+    }
+
+    .wpcf7-form-control-wrap {
+        display: block;
+        margin-bottom: 20px;
+    }
+
+    &__input {
+        // margin-bottom: 20px;
+        // display: block;
+        width: 100%;
+        padding: 15px 24px;
+        font-size: 17px;
+        border-radius: 40px;
+        border: none;
+        outline: none;
+
+        color: #fff;
+        background-color: #303644;
+
+        opacity: 0.6;
+
+        &:focus {
+            opacity: 1;
+        }
+    }
+
+    &__submit {
+        // margin-top: 27px;
+        max-width: 266px;
+        border: none;
+        cursor: pointer;
+
+        .xs-block({
+            width: 100%;
+            max-width: 100%;
+        });
+    }
+
+    .wpcf7-not-valid-tip {
+        font-size: 14px;
+    }
+
+    .wpcf7-response-output {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0;
+        margin-top: 10px;
+        font-size: 14px;
+    }
+
+    .acceptance {
+        // margin-top: 16px;
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+        opacity: 0.8;
+
+        .c-w40 {
+            b, a, strong {
+                font-weight: 500;
+                color: @white;
+            }
+
+            a {
+                text-decoration: underline;
+            }
+        }
+
+        label {
+            display: flex;
+            align-items: center;
+        }
+    }
+
+    &__checkbox {
+        display: none;
+    }
+    
+    .custom-checkbox {
+        flex-shrink: 0;
+        margin-right: 8px;
+        display: inline-block;
+        width: 24px;
+        height: 24px;
+        // background-color: #121826;
+        border: 1px solid #fff;
+        cursor: pointer;
+    }
+
+
+    &__checkbox:checked + .custom-checkbox {
+        background: url(../img/check.svg) no-repeat center;
+    }
+
+}
+
+#get-projects {
+    width: 450px;
+}

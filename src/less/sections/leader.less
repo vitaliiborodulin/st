@@ -1,0 +1,121 @@
+.leader {
+    padding-top: 120px;
+    padding-bottom: 130px;
+
+    background-color: #F9F9F9;
+
+    .xs-block({
+        padding: 50px 0;
+    });
+
+    &__content {
+        .row-flex();
+        position: relative;
+
+        .xs-block({
+            padding-bottom: 50px;
+        });
+    }
+
+    &__info {
+        .col();
+        .size(8);
+        .size-md(6);
+        .size-xs(12);
+
+        display: flex;
+        flex-direction: column;
+        // padding-right: 140px;
+        padding-right: 5vw;
+    }
+
+    &__title {
+        margin-bottom: 24px;
+        font-size: 36px;
+        font-weight: 600;
+        line-height: 1;
+        color: #333333;
+
+        .xs-block({
+            margin-bottom: 14px;
+            font-size: 24px;
+        });
+
+        span {
+            color: @accent;
+        }
+    }
+
+    &__descr {
+        margin-bottom: 15px;
+        font-size: 16px;
+        font-weight: 600;
+        color: rgba(48, 48, 48, 0.8);
+
+        .xs-block({
+            line-height: 1.6;
+        });
+    }
+
+    &__text {
+        margin-top: auto;
+        margin-bottom: auto;
+        font-size: 18px;
+        font-weight: 400;
+        color: rgba(1, 1, 1, 0.8);
+
+        .xs-block({
+            margin-bottom: 14px;
+            font-size: 16px;
+        });
+    }
+
+    &__sign {
+       margin-top: 14px;
+
+        .xs-block({
+            margin-top: 0;
+            position: absolute;
+            bottom: 0;
+            // left: 0;
+        });
+    }
+
+    &__position {
+        margin-bottom: 10px;
+        font-size: 16px;
+        color: rgba(1, 1, 1, 0.8);
+
+        .xs-block({
+            margin-top: 14px;
+            margin-bottom: 0px;
+        });
+    }
+
+    &__name {
+        font-size: 18px;
+        color: #010101;
+    }
+
+    &__pic {
+        .col();
+        .size(4);
+        .size-md(6);
+        .size-xs(12);
+
+        height: 480px;
+        // overflow: hidden;
+        border-radius: 20px;
+
+        .md(height, 400px);
+        .xs(height, 300px);
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top;
+            border-radius: inherit;
+        }
+    }
+}

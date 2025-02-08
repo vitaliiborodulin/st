@@ -49,6 +49,12 @@ function scripts() {
 		.pipe(gulpIf(isSync, browserSync.stream()));
 }
 
+function copyCss() {
+	return gulp.src('./src/css/*.css')
+		.pipe(gulp.dest('./build/css'))
+		.pipe(gulpIf(isSync, browserSync.stream()));
+}
+
 function images() {
 	return gulp.src('./src/img/**/*')
 		// size down, webp
@@ -65,11 +71,15 @@ function watch() {
 		browserSync.init({
 			server: {
 				baseDir: "./build/"
-			}
+			},
+			port: 4000,
+			notify: false,
+			ui: false
 		});
 	}
 
 	gulp.watch('./src/less/**/*.less', styles);
+	gulp.watch('./src/css/**/*.css', copyCss);
 	gulp.watch('./src/js/**/*.js', scripts);
 	gulp.watch('./src/**/*.html', html);
 	gulp.watch('./src/img/**/*', images);
@@ -88,7 +98,7 @@ function deploy(done) {
 	ghPages.publish(path.join(process.cwd(), './build/'), done);
 }
 
-let build = gulp.parallel(html, styles, scripts, images, fonts);
+let build = gulp.parallel(html, styles, copyCss, scripts, images, fonts);
 let buildWithClean = gulp.series(clean, build);
 let dev = gulp.series(buildWithClean, watch);
 

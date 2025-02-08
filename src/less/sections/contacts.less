@@ -1,0 +1,156 @@
+.contacts {
+    position: relative;
+    padding-top: 115px;
+    padding-bottom: 120px;
+
+    .xs-block({
+        padding: 50px 0;
+    });
+
+    background-color: #F8F8F8;
+
+    
+
+    .h2 {
+        position: relative;
+        margin-bottom: 54px;
+        .xs(margin-bottom, 0);
+
+        &::after {
+            position: absolute;
+            right: 0;
+            top: -50px;
+            content: 'Стройточка';
+            text-transform: uppercase;
+            color: rgba(72, 67, 67, 0.06);
+            font-weight: 700;
+            font-size: 108px;
+    
+            .xs-block({
+                font-size: 24px;
+                top: 0;
+            });
+        }
+    }
+
+    &__list {
+        .row-flex();
+    }
+
+    &__item {
+        .col();
+        .size(6);
+        .size-md(12);
+
+        font-size: 16px;
+        color: rgba(48, 48, 48, 0.8);
+
+        padding: 30px 30px 39px;
+        border: 1px solid #000;
+        border-radius: 30px;
+
+        .md-block({
+            padding: 22px 0;
+            border-radius: 0;
+            border-color: transparent
+        });
+
+        &:last-child {
+            .md-block({
+                border-top: 1px solid rgba(0, 0, 0, 0.1);
+            });
+        }
+    }
+
+    &__name {
+        margin-bottom: 24px;
+        font-size: 32px;
+        font-weight: 500;
+        line-height: 1;
+        color: #303030;
+
+        .xs(font-size, 18px);
+
+        span {
+            color: @accent
+        }
+    }
+
+    &__adress {
+        position: relative;
+        margin-bottom: 20px;
+        // font-size: 24px;
+        // font-weight: 500;
+        line-height: 1;
+        color: #303030;
+        padding-left: 30px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: -5px;
+            width: 24px;
+            height: 24px;
+            background: url(../img/basil_location-outline.svg) no-repeat center;
+        }
+
+    }
+
+    &__tel, &__mail {
+        position: relative;
+        padding-left: 30px;
+        // font-size: 24px;
+        // font-weight: 500;
+
+        a {
+            transition: color 0.5s ease;
+
+            &:hover, &:active, &:focus {
+                color: @accent;
+            }
+        }
+       
+    }
+
+    &__tel {
+        margin-bottom: 9px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: -5px;
+            width: 24px;
+            height: 24px;
+            background: url(../img/mynaui_telephone.svg) no-repeat center;
+        }
+    }
+
+    &__mail {
+        margin-bottom: 30px;
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            top: 0;
+            width: 24px;
+            height: 24px;
+            background: url(../img/tabler_mail.svg) no-repeat center;
+        }
+    }
+
+    &__time {
+        margin-bottom: 21px;
+    }
+
+    &__descr {
+        margin-bottom: 10px;
+    }
+
+    .btn {
+        padding: 13px 16px;
+        font-size: 14px;
+    }
+}
