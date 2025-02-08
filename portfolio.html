@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 
-<body class="page-template-page-portfolio">
+<body class="post-type-archive-portfolio">
 
 	<!-- header -->
 	<header class="header">
@@ -26,7 +26,7 @@
 	
 	            <div class="header__logo">
 	                <a href="index.html" class="custom-logo-link">
-	                    <img src="img/logo.png" alt="" class="custom-logo">
+	                    <img src="img/logo-st.svg" alt="" class="custom-logo">
 	                </a>
 	           </div>
 	
@@ -74,7 +74,6 @@
 	            <div class="header__menu">
 	                <nav class="header__nav">
 	                    <ul>
-	                        <li class="menu-item current-menu-item"><a href="index.html">Главная</a></li>
 	                        <li class="menu-item menu-item-has-children">
 	                            <a href="#">Выбрать проект</a>
 	                            <ul class="sub-menu">
@@ -85,7 +84,7 @@
 	                            </ul>
 	                        </li>
 	                        <li class="menu-item"><a href="portfolio.html">Наши работы</a></li>
-	                        <li class="menu-item"><a href="#">Акции</a></li>
+	                        <li class="menu-item"><a href="clients.html">Клиентам</a></li>
 	                        <li class="menu-item"><a href="#">Отзывы</a></li>
 	                        <li class="menu-item"><a href="#">Ипотека и МК</a></li>
 	                        <li class="menu-item"><a href="about.html#contacts">Контакты</a></li>
@@ -111,7 +110,7 @@
 		            </span>
 		        </p>
 		
-		        <h1 class="portfolio__title">Реализованные проекты</h2>
+		        <h1 class="portfolio__title">Реализованные проекты</h1>
 		
 		        <div class="portfolio__list">
 		
@@ -201,16 +200,22 @@
 			                <form action="#" class="form">
 			                    <div class="form__title">Рассчитать проект</div>
 			                    <div class="form__descr">Присылайте ваш проект к нам на почту или оставляйте заявку, заполнив форму ниже, мы рассчитаем его, это бесплатно</div>
-			                    <input type="text" name="your-name" id="your-name" class="form__input" placeholder="Ваше имя" required>
-			                    <input type="tel" name="your-tel" id="your-tel" class="form__input" placeholder="Ваш телефон" required>
-			                    <input type="email" name="your-email" id="your-email" class="form__input" placeholder="Ваш e-mail" required>
-			                    <div class="acceptance">
+			                    <span class="wpcf7-form-control-wrap">
+			                        <input type="text" name="your-name" id="your-name" class="form__input" placeholder="Ваше имя" required>
+			                    </span>
+			                    <span class="wpcf7-form-control-wrap">
+			                        <input type="tel" name="your-tel" id="your-tel" class="form__input" placeholder="Ваш телефон" required>
+			                    </span>
+			                    <span class="wpcf7-form-control-wrap">
+			                        <input type="email" name="your-email" id="your-email" class="form__input" placeholder="Ваш e-mail" required>
+			                    </span>
+			                    <!-- <div class="acceptance">
 			                        <label>
 			                            <input type="checkbox" name="accept" class="form__checkbox">
 			                            <span class="custom-checkbox"></span>
 			                            <span class="c-w40">Вы соглашаетесь с <a href="#" target="_blank">политикой конфиденциальности</a></span>
 			                        </label>
-			                    </div>
+			                    </div> -->
 			                    <button type="submit" class="btn form__submit">Оставить заявку</button>
 			                </form>
 			            </div>
@@ -224,15 +229,14 @@
 			    </div>
 			</section>
 			<!-- end feedback -->
-
-			<div class="feedback__text">
-				<div class="container">
-					<p class="feedback__lead">Доставка домкомплекта на участок - <span>бесплатно.</span></p>
-					<ul class="feedback__points">
-						<li>В пределах 100 км от МКАД и КАД. </li>
-						<li>Дальше по 90 р. за каждый км пути, в зависимости от региона.</li>
-					</ul>
-				</div>
+			<div class="feedback__bottom">
+			    <div class="container">
+			        <p class="feedback__lead">Доставка домкомплекта на участок - <span>бесплатно.</span></p>
+			        <ul class="feedback__points">
+			            <li>В пределах 100 км от МКАД и КАД. </li>
+			            <li>Дальше по 90 р. за каждый км пути, в зависимости от региона.</li>
+			        </ul>
+			    </div>
 			</div>
 
 		</div>
@@ -248,7 +252,7 @@
 	
 	           <div class="footer__logo">
 	                <a href="index.html" class="custom-logo-link">
-	                    <img src="img/logo.png" alt="" class="custom-logo">
+	                    <img src="img/logo-st.svg" alt="" class="custom-logo">
 	                </a>
 	           </div>
 	
@@ -314,7 +318,7 @@
 	       <div class="footer__bottom">
 	
 	            <ul class="footer__bottom-links">
-	                <li><a href="#">Политика конфиденциальности</a></li>
+	                <li><a href="content.html">Политика конфиденциальности</a></li>
 	            </ul>
 	
 	            <div class="footer__soc">
@@ -349,9 +353,16 @@
 	<div style="display: none;" id="get-projects">
 	    <form action="#" class="form dark-bg">
 	      <div class="form__title">Рассчитать проект</div>
-	      <input type="text" name="your-name" id="your-name" class="form__input" placeholder="Ваше имя" required>
-	      <input type="tel" name="your-tel" id="your-tel" class="form__input" placeholder="Ваш телефон" required>
-	      <input type="email" name="your-email" id="your-email" class="form__input" placeholder="Ваш e-mail" required>
+	      <div class="form__descr">Присылайте ваш проект к нам на почту или оставляйте заявку, заполнив форму ниже, мы рассчитаем его, это бесплатно</div>
+	      <span class="wpcf7-form-control-wrap">
+	        <input type="text" name="your-name" id="your-name" class="form__input" placeholder="Ваше имя" required>
+	      </span>
+	      <span class="wpcf7-form-control-wrap">
+	        <input type="tel" name="your-tel" id="your-tel" class="form__input" placeholder="Ваш телефон" required>
+	      </span>
+	      <span class="wpcf7-form-control-wrap">
+	        <input type="email" name="your-email" id="your-email" class="form__input" placeholder="Ваш e-mail" required>
+	      </span>
 	      <div class="acceptance">
 	        <label>
 	            <input type="checkbox" name="accept" class="form__checkbox">

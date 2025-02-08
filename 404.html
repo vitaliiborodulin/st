@@ -16,7 +16,7 @@
 	<link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 
-<body class="page-template-page-about">
+<body class="error404">
 
 	<!-- header -->
 	<header class="header">
@@ -99,263 +99,26 @@
 
 	<main>
 
-		<section class="hero" style="background-image: url(img/about-bg.jpeg);">
+		<section class="content">
 			<div class="container">
 
-				<div class="hero__content">
-					<h1>О компании</h1>
+				<p id="breadcrumbs">
+					<span>
+						<span><a href="index.html">Главная страница</a></span>
+						/ 
+						<span class="breadcrumb_last">Наши работы</span>
+					</span>
+				</p>
+
+				<h1 class="content__title">Страница не найдена</h1>
+
+				<div class="content__info">
+					Такой страницы не существует
 				</div>
 
-			</div>
-		</section>
+				<a href="<?php echo home_url(); ?>" class="btn">На главную</a>
 
-		<section class="leader">
-		    <div class="container">
-		
-		        <div class="leader__content">
-		            <div class="leader__info">
-		                <h2 class="leader__title">Компания <span>стройточка</span></h2>
-		                <div class="leader__descr">Молодая строительная компания, но уже с большим опытом в строительстве домов</div>
-		                <div class="leader__text">Я, как руководитель компании, был рожден связан со строительством 
-		                    в виду географического рождения в городе плотников, решил связать свою жизнь 
-		                    в этим делом. В начале карьерного пути работал менеджером по продажам
-		                    в строительной компании. Каждый заключенный договор пропускал через себя, 
-		                    и накопив достаточно опыта в реализации каркасных и Брусовых строениях, решил попробовать свои силы. Мы с командой даем гарантию на каждый построенный нами объект.</div>
-		                <div class="leader__sign">
-		                    <div class="leader__position">Руководитель компании</div>
-		                    <div class="leader__name">Бурякин Артем Сергеевич</div>
-		                </div>
-		            </div>
-		            <div class="leader__pic">
-		                <img src="img/gen.jpg" alt="">
-		            </div>
-		        </div>
-		
-		    </div>
-		</section>
-		<section class="team" id="team">
-		    <div class="container">
-		
-		        <h2 class="team__title">Наша команда</h2>
-		
-		        <div class="team__list">
-		
-		            <div class="team__item">
-		                <div class="team__pic">
-		                    <img src="img/smm.jpg" alt="">
-		                </div>
-		                <div class="team__info">
-		                   <div class="team__sign">
-		                        <div class="team__position">Главный архитектор</div>
-		                        <div class="team__name">Фамилия Имя Отчество</div>
-		                   </div>
-		                   <!-- <div class="team__contact">
-		                        <a href="#">+7 (---) --- -- --</a>
-		                   </div> -->
-		                </div>
-		            </div>
-		
-		            <div class="team__item">
-		                <div class="team__pic">
-		                    <img src="img/glbuh.jpg" alt="">
-		                </div>
-		                <div class="team__info">
-		                   <div class="team__sign">
-		                        <div class="team__position">Менеджер проектов</div>
-		                        <div class="team__name">Фамилия Имя Отчество</div>
-		                   </div>
-		                   <!-- <div class="team__contact">
-		                        <a href="#">+7 (---) --- -- --</a>
-		                   </div> -->
-		                </div>
-		            </div>
-		
-		            <div class="team__item">
-		                <div class="team__pic">
-		                    <img src="img/prod.jpg" alt="">
-		                </div>
-		                <div class="team__info">
-		                   <div class="team__sign">
-		                        <div class="team__position">Прораб</div>
-		                        <div class="team__name">Фамилия Имя Отчество</div>
-		                   </div>
-		                   <!-- <div class="team__contact">
-		                        <a href="#">+7 (---) --- -- --</a>
-		                   </div> -->
-		                </div>
-		            </div>
-		
-		        </div>
-		
-		        <div class="team__all">
-		            <div class="team__pic">
-		                <img src="img/team-all.jpeg" alt="">
-		            </div>
-		            <div class="team__info">
-		                <div class="team__sign">
-		                    <div class="team__name">Строительная бригада</div>
-		                     <div class="team__position">Средний стаж специалиста  10 лет. Все бригады <br>
-		                        работают только на постоянной основе.</div>
-		                </div>
-		             </div>
-		        </div>
-		        
-		    </div>
-		</section>
-		<!-- steps -->
-		<section class="steps">
-		    <div class="container">
-		        <h2 class="h2">Пять простых шагов к дому мечты</h2>
-		        <div class="h2-descr">Срок строительства 25-40 дней.</div>
-		
-		        <ul class="steps__list">
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-1.svg" alt="">
-		                <h3 class="steps__title">Выбор проекта</h3>
-		                <div class="steps__descr">Вы определяетесь с проектом и комплектацией дома Если проект индивидуальный - делаем расчет его стоимости, если проект с нашего 
-		                    сайта - обсуждаем возможные изменения отправляем вам индивидуальное КП под ваши пожелания.</div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-2.svg" alt="">
-		                <h3 class="steps__title">Согласуем и заключаем договор</h3>
-		                <div class="steps__descr">Если укладываемся в бюджет - встречаемся в офисе, так же можно заключить договор дистанционно или на вашем участке 
-		                    для обсуждения деталей Обговариваем сроки начала работ. </div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-4.svg" alt="">
-		                <h3 class="steps__title">Подготовка к строительству</h3>
-		                <div class="steps__descr">Мы готовимся к строительству, комплектуем материал на ваш объект За это время устанавливаем фундамент силами проверенных партнеров.</div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-5.svg" alt="">
-		                <h3 class="steps__title">Начинаем строительство</h3>
-		                <div class="steps__descr">Поставляется домокомплект на участок.
-		                    Вы оплачиваете 70% от стоимости договора.
-		                    Строители работают и живут на участке.
-		                    Сроки строительства в среднем 25-40 дней.
-		                    Мы контролируем процесс строительства.</div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-3.svg" alt="">
-		                <h3 class="steps__title">Завершение строительства</h3>
-		                <div class="steps__descr">При завершении строительства подписывается «акт приемки-передачи» Вы оплачиваете 30% по договору ВСЕ. </div>
-		            </li>
-		
-		            <li class="steps__item">
-		                <img src="img/steps-last-img.jpeg" alt="">
-		                <a class="btn w-100" data-fancybox data-src="#get-projects" href="javascript:;">Заказать проект</a>
-		            </li>
-		
-		        </ul>
-		    </div>
-		</section>
-		<!-- end steps -->
-		<!-- faq -->
-		<section class="faq">
-		    <div class="container">
-		
-		        <h2 class="faq__title">Часто задаваемые <span>вопросы</span></h2>
-		
-		        <div class="faq__items">
-		
-		            <div class="faq__item ">
-		                <div class="faq__ask">Как выбрать размер дома</div>
-		                <div class="faq__answer">
-		                    <p>При выборе размера дома стоит руководствоваться не только своими материальными ресурсами, но и составом семьи. Человеку для комфортного проживания необходимо около 30 кв.м. жилой площади. Это значит, что для семьи из 4 человек достаточно дома площадью 120 кв. м. (хотя исходя из нашей практики достаточно и 100 кв.м.). Если строить дом большей площади, то возможно в дальнейшем часть помещений окажется пустой, 
-		                       а если меньшей, то это может вызвать дискомфорт у его обитателей. Кроме этого, рассматривая вопрос площади дома, не стоит забывать, что все помещения придётся отапливать и тратить время на их уборку. Ещё 10-20 кв. м. уйдёт на коридоры, кладовки, лестницы и гардеробные. Немаловажный момент, на который стоит обратить внимание, – размер участка, на котором стоит дом. Вряд ли целесообразным будет строить большой дом 
-		                       на земле небольшой площади, потому как в теплую погоду участок не менее важен.</p>
-		                </div>
-		            </div>
-		            <div class="faq__item ">
-		                <div class="faq__ask">Нужно ли получать разрешение на строительство частного дома?</div>
-		                <div class="faq__answer">
-		                    <p>При выборе размера дома стоит руководствоваться не только своими материальными ресурсами, но и составом семьи. Человеку для комфортного проживания необходимо около 30 кв.м. жилой площади. Это значит, что для семьи из 4 человек достаточно дома площадью 120 кв. м. (хотя исходя из нашей практики достаточно и 100 кв.м.). Если строить дом большей площади, то возможно в дальнейшем часть помещений окажется пустой</p>
-		                </div>
-		            </div>
-		            <div class="faq__item ">
-		                <div class="faq__ask">Когда лучше начинать строительство загородного дома?</div>
-		                <div class="faq__answer">
-		                    <p>Кроме этого, рассматривая вопрос площади дома, не стоит забывать, что все помещения придётся отапливать и тратить время на их уборку. Ещё 10-20 кв. м. уйдёт на коридоры, кладовки, лестницы и гардеробные. </p>
-		                    <p>Немаловажный момент, на который стоит обратить внимание, – размер участка, на котором стоит дом. Вряд ли целесообразным будет строить большой дом 
-		                        на земле небольшой площади, потому как в теплую погоду участок не менее важен.</p>
-		                </div>
-		            </div>
-		
-		        </div>
-		
-		    </div>
-		</section>
-		<!-- end faq -->
-		<!-- contacts -->
-		<section class="contacts" id="contacts">
-		    <div class="container">
-		        <h2 class="h2">Контакты</h2>
-		
-		        <div class="contacts__list">
-		
-		            <div class="contacts__item">
-		                <h3 class="contacts__name">Офис <span>Санкт-Петербург</span></h3>
-		                <div class="contacts__adress">Набережная канала Грибоедова 19</div>
-		                <div class="contacts__tel"><a href="tel:89110371411">8 911 037 14 11 </a></div>
-		                <div class="contacts__mail"><a href="mailto:info@sk-stroi.ru">info@sk-stroi.ru</a></div>
-		                <div class="contacts__time">График работы: с 11:00 - 19:00 без выходных</div>
-		                <div class="contacts__descr">Встреча по согласованию</div>
-		                <a class="btn" data-fancybox data-type="iframe" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bb7c589826f875851b75348266ca3a1cee09e0b0faae71a28fb1e03094e38b4&amp;source=constructor" href="javascript:;">
-		                    Показать на карте
-		                </a>
-		            </div>
-		
-		            <div class="contacts__item">
-		                <h3 class="contacts__name">Офис <span>Москва</span></h3>
-		                <div class="contacts__adress">Ленинский проспект, 86</div>
-		                <div class="contacts__tel"><a href="tel:84951524614">8 495 152 46 14</a></div>
-		                <div class="contacts__mail"><a href="mailto:info@sk-stroi.ru">info@sk-stroi.ru</a></div>
-		                <div class="contacts__time">График работы: с 11:00 - 19:00 без выходных</div>
-		                <div class="contacts__descr">Встреча по согласованию</div>
-		                <a class="btn" data-fancybox data-type="iframe" data-src="https://yandex.ru/map-widget/v1/?um=constructor%3A5bb7c589826f875851b75348266ca3a1cee09e0b0faae71a28fb1e03094e38b4&amp;source=constructor" href="javascript:;">
-		                    Показать на карте
-		                </a>
-		            </div>
-		
-		        </div>
-		    </div>
-		</section>
-		<!-- end contacts -->
-		<section class="news">
-		    <div class="container">
-		
-		        <h2 class="news__title">Новости</h2>
-		
-		        <div class="news__slider">
-		
-		            <div class="news__slide" style="background-image: url('img/Rectangle-302.jpg');">
-		                <a href="#" class="news__link"><h3 class="news__h3">Названы самые популярные типы домов, которые строили россияне в 2023 году...</h3></a>
-		            </div>
-		
-		            <div class="news__slide" style="background-image: url('img/Rectangle-303.jpg');">
-		                <a href="#" class="news__link"><h3 class="news__h3">Эксперты сравнили изменение стоимости земли и домов в России...</h3></a>
-		            </div>
-		
-		            <div class="news__slide" style="background-image: url('img/Rectangle-304.jpg');">
-		                <a href="#" class="news__link"><h3 class="news__h3">Эксперты сообщили о росте продаж участков без подряда в Подмосковье...</h3></a>
-		            </div>
-		
-		            <div class="news__slide" style="background-image: url('img/Rectangle-303.jpg');">
-		                <a href="#" class="news__link"><h3 class="news__h3">Эксперты сравнили изменение стоимости земли и домов в России...</h3></a>
-		            </div>
-		
-		            <div class="news__slide" style="background-image: url('img/Rectangle-302.jpg');">
-		                <a href="#" class="news__link"><h3 class="news__h3">Названы самые популярные типы домов, которые строили россияне в 2023 году...</h3></a>
-		            </div>
-		
-		          </div>
-		
-		    </div>
+			</div>
 		</section>
 		
 	</main>
