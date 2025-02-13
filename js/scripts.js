@@ -146,4 +146,16 @@ $(function() {
 
     // $(".fancyone").fancybox();
 
+    $('select').niceSelect();
+
+    document.addEventListener( 'wpcf7mailsent', function( event ) {
+        // if(event.detail.contactFormId=="224"){
+        // onclick=yaCounter26043108.reachGoal('formsend'); return true;
+        // }
+    
+        $(".form form").hide();
+        $(".form .form__thank").show();
+    
+    }, false );
+
 });

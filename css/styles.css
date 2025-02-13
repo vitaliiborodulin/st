@@ -349,7 +349,7 @@ input[type='submit'] {
 .btn {
   position: relative;
   display: inline-block;
-  padding: 20px 50px;
+  padding: 15px 24px;
   font-weight: 500;
   font-size: 18px;
   line-height: 1;
@@ -409,6 +409,15 @@ input[type='submit'] {
   pointer-events: none;
 }
 
+.form p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.form .wpcf7-spinner {
+  display: none;
+}
+
 .form__title {
   margin-bottom: 10px;
   font-size: 36px;
@@ -445,9 +454,24 @@ input[type='submit'] {
 }
 
 .form__submit {
-  max-width: 266px;
   border: none;
   cursor: pointer;
+  display: block;
+  width: 100%;
+}
+
+.form__thank {
+  text-align: center;
+}
+
+.form__thank .h1 {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+.form__thank img {
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .form .wpcf7-not-valid-tip {
@@ -463,44 +487,50 @@ input[type='submit'] {
 }
 
 .form .acceptance {
-  font-size: 13px;
-  line-height: 1.5;
-  letter-spacing: -0.01em;
-  opacity: 0.8;
-}
-
-.form .acceptance .c-w40 b,
-.form .acceptance .c-w40 a,
-.form .acceptance .c-w40 strong {
-  font-weight: 500;
-  color: #fff;
-}
-
-.form .acceptance .c-w40 a {
-  text-decoration: underline;
+  margin-bottom: 20px;
 }
 
 .form .acceptance label {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
 }
 
-.form__checkbox {
-  display: none;
+.form .acceptance label a {
+  text-decoration: underline;
 }
 
-.form .custom-checkbox {
-  flex-shrink: 0;
-  margin-right: 8px;
-  display: inline-block;
+.form .acceptance input[type=checkbox] {
+  display: inline-flex;
+  -webkit-appearance: none;
+          appearance: none;
+  cursor: pointer;
   width: 24px;
   height: 24px;
+  flex: 0 0 auto;
+  margin-right: 8px;
   border: 1px solid #fff;
-  cursor: pointer;
+  position: relative;
 }
 
-.form__checkbox:checked + .custom-checkbox {
-  background: url(../img/check.svg) no-repeat center;
+.form .acceptance input[type=checkbox]::before {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  inset-block-start: 50%;
+  inset-inline-start: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+  transition: 0.3s;
+  background: url(../img/check_small.svg) center / contain no-repeat;
+}
+
+.form .acceptance input[type=checkbox]:checked::before {
+  opacity: 1;
+  visibility: visible;
 }
 
 #get-projects {
@@ -624,6 +654,29 @@ input[type='submit'] {
 
 #breadcrumbs .breadcrumb_last {
   opacity: 0.7;
+}
+
+.filter {
+  display: flex;
+}
+
+.filter__select {
+  width: 42%;
+  max-width: 210px;
+  margin-right: 20px;
+  margin-bottom: 18px;
+}
+
+.nice-select {
+  border-radius: 0;
+  border: 1px solid #FC622C;
+}
+
+.filter-btn {
+  width: 42%;
+  max-width: 210px;
+  margin-bottom: 18px;
+  margin-top: -5px;
 }
 
 .header svg path {
@@ -1020,8 +1073,6 @@ input[type='submit'] {
 }
 
 .steps .btn {
-  padding: 26px 30px;
-  font-size: 18px;
   -webkit-animation: pulse 2s infinite;
           animation: pulse 2s infinite;
 }
@@ -1137,10 +1188,6 @@ input[type='submit'] {
 .projects__btns {
   display: flex;
   justify-content: space-between;
-}
-
-.projects__btns .btn {
-  padding: 20px;
 }
 
 .projects__btns .btn + .btn {
@@ -2033,6 +2080,11 @@ input[type='submit'] {
   border-radius: 30px;
   border: 1px solid #2579A7;
   font-size: 16px;
+  transition: all 0.5s ease;
+}
+
+.payment__stage-item:hover {
+  box-shadow: 0 0 30px #2579A7;
 }
 
 .payment__stage-item + .payment__stage-item {
@@ -2062,6 +2114,11 @@ input[type='submit'] {
   flex-direction: column;
   border-radius: 30px;
   border: 1px solid #2579A7;
+  transition: all 0.5s ease;
+}
+
+.payment__meth-item:hover {
+  box-shadow: 0 0 30px #2579A7;
 }
 
 .payment__meth-item + .payment__meth-item {
@@ -2400,6 +2457,10 @@ input[type='submit'] {
 }
 
 @media screen and (max-width: 992px) {
+  .filter {
+    flex-wrap: wrap;
+  }
+
   .header__menu {
     display: none;
     position: absolute;
@@ -2548,6 +2609,19 @@ input[type='submit'] {
     font-size: 18px;
   }
 
+  .filter {
+    justify-content: space-between;
+  }
+
+  .filter__select {
+    margin: 0 5px 10px;
+  }
+
+  .filter-btn {
+    margin: 0 5px 10px;
+    margin-top: -5px;
+  }
+
   .header__logo {
     width: calc(33.333333333333336% - 30px);
   }
@@ -2615,7 +2689,7 @@ input[type='submit'] {
   .feedback__pic {
     order: -1;
     padding: 0;
-    height: 152px;
+    height: 255px;
     margin-bottom: 22px;
     width: 100%;
     margin-left: 0;
@@ -2777,16 +2851,6 @@ input[type='submit'] {
     padding: 44px 5px 5px;
   }
 
-  .btn {
-    font-size: 14px;
-    padding: 10px 20px;
-  }
-
-  .form__submit {
-    width: 100%;
-    max-width: 100%;
-  }
-
   .slick-list {
     padding: 0;
   }
@@ -2908,7 +2972,6 @@ input[type='submit'] {
   }
 
   .projects__btns .btn {
-    padding: 13px 8px;
     font-size: 14px;
   }
 

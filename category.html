@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/styles.css?v=9">
 </head>
 
-<body class="error404">
+<body class="category">
 
 	<!-- header -->
 	<header class="header">
@@ -100,27 +100,161 @@
 
 	<main>
 
-		<section class="content">
-			<div class="container">
+		<section class="projects">
+            <div class="container">
+                <h1 class="h2">Каркасные дома</h1>
 
-				<p id="breadcrumbs">
-					<span>
-						<span><a href="index.html">Главная страница</a></span>
-						/ 
-						<span class="breadcrumb_last">Наши работы</span>
-					</span>
-				</p>
+                <div class="gallery__filter">
+                    <form action="#" method="POST" id="filter" class="filter">
+                        
+                        <select name="size" id="size" class="filter__select">
+                            <option data-display="Размер">Размер</option>
+                            <option value="6x6">6x6</option>
+                            <option value="6x7">6x7</option>
+                            <option value="6x8">6x8</option>
+                            <option value="6x9">6x9</option>
+                        </select>
 
-				<h1 class="content__title">Страница не найдена</h1>
+                        <select name="floor" id="floor" class="filter__select">
+                            <option data-display="Этажность">Этажность</option>
+                            <option value="1">1 этаж</option>
+                            <option value="2">2 этажа</option>
+                        </select>
 
-				<div class="content__info">
-					Такой страницы не существует
-				</div>
+                        <select name="price" id="price" class="filter__select">
+                            <option data-display="Стоимость">Стоимость</option>
+                            <option value="5">до 5 млн</option>
+                            <option value="5-10">5 - 10 млн</option>
+                            <option value="10">больше 10 млн</option>
+                        </select>
 
-				<a href="<?php echo home_url(); ?>" class="btn">На главную</a>
-
-			</div>
-		</section>
+                        <input type="hidden" name="action" value="myfilter">
+                        <button class="btn submit-btn filter-btn" type="submit">Отфильтровать</button>
+                    </form>
+                </div>
+        
+                <ul class="projects__list" id="response">
+        
+                    <li class="projects__item">
+                        <div class="projects__img">
+                            <a href="#" class="projects__link">
+                                <img src="img/proj-1.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="projects__info">
+                            <div class="projects__left">
+                                <h3 class="projects__name">Блэкберри</h3>
+                                <div class="projects__square">102 кв.м</div>
+                                <div class="projects__price">от 1 817 329 ₽</div>
+                            </div>
+                            <div class="projects__right">
+                                <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+                                <ul class="projects__options">
+                                    <li>1 этаж</li>
+                                    <li>4 спальни</li>
+                                    <li>2 санузла</li>
+                                    <li>терраса</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="projects__btns">
+                            <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+                            <a class="btn btn-blue btn-blue-o w-100" data-fancybox data-src="#get-projects" href="#">Подробнее</a>
+                        </div>
+                    </li>
+        
+                    <li class="projects__item">
+                        <div class="projects__img">
+                            <a href="#" class="projects__link">
+                                <img src="img/proj-2.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="projects__info">
+                            <div class="projects__left">
+                                <h3 class="projects__name">Лакоста</h3>
+                                <div class="projects__square">226 кв.м</div>
+                                <div class="projects__price">от 3 712 150 ₽</div>
+                            </div>
+                            <div class="projects__right">
+                                <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+                                <ul class="projects__options">
+                                    <li>2 этажа</li>
+                                    <li>2 санузла</li>
+                                    <li>4 комнаты</li>
+                                    <li>терраса</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="projects__btns">
+                            <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+                            <a class="btn btn-blue btn-blue-o w-100" data-fancybox data-src="#get-projects" href="#">Подробнее</a>
+                        </div>
+                    </li>
+        
+                    <li class="projects__item">
+                        <div class="projects__img">
+                            <a href="#" class="projects__link">
+                                <img src="img/proj-3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="projects__info">
+                            <div class="projects__left">
+                                <h3 class="projects__name">Онтарио</h3>
+                                <div class="projects__square">102 кв.м</div>
+                                <div class="projects__price">от 1 817 329 ₽</div>
+                            </div>
+                            <div class="projects__right">
+                                <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+                                <ul class="projects__options">
+                                    <li>1 этаж</li>
+                                    <li>4 спальни</li>
+                                    <li>2 санузла</li>
+                                    <li>терраса</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="projects__btns">
+                            <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+                            <a class="btn btn-blue btn-blue-o w-100" data-fancybox data-src="#get-projects" href="#">Подробнее</a>
+                        </div>
+                    </li>
+        
+                    <li class="projects__item">
+                        <div class="projects__img">
+                            <a href="#" class="projects__link">
+                                <img src="img/proj-3.jpg" alt="">
+                            </a>
+                        </div>
+                        <div class="projects__info">
+                            <div class="projects__left">
+                                <h3 class="projects__name">Онтарио</h3>
+                                <div class="projects__square">102 кв.м</div>
+                                <div class="projects__price">от 1 817 329 ₽</div>
+                            </div>
+                            <div class="projects__right">
+                                <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
+                                <ul class="projects__options">
+                                    <li>1 этаж</li>
+                                    <li>4 спальни</li>
+                                    <li>2 санузла</li>
+                                    <li>терраса</li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="projects__btns">
+                            <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
+                            <a class="btn btn-blue btn-blue-o w-100" data-fancybox data-src="#get-projects" href="#">Подробнее</a>
+                        </div>
+                    </li>
+        
+                </ul>
+        
+                <!-- <div class="projects__btns-all">
+                    <a href="#" class="btn">Посмотреть все дома</a>
+                </div> -->
+        
+            </div>
+        </section>
 		
 	</main>
 
