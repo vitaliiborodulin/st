@@ -2542,6 +2542,150 @@ input[type='submit'] {
   color: rgba(58, 58, 58, 0.8);
 }
 
+.ipo {
+  padding-top: 108px;
+  padding-bottom: 220px;
+  background: url(../img/ipo-bg.jpg) no-repeat center bottom / cover;
+}
+
+.ipo__title {
+  margin-bottom: 53px;
+  font-size: 64px;
+  font-weight: 700;
+  color: #3A3A3A;
+  text-transform: uppercase;
+}
+
+.ipo__title span {
+  display: block;
+  color: #2579A7;
+}
+
+.ipo__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.ipo__calc {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(58.333333333333336% - 30px);
+}
+
+.ipo__cards {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(41.66666666666667% - 30px);
+}
+
+.ipo__card {
+  padding: 43px 33px 19px 33px;
+  position: relative;
+  color: #fff;
+  border-radius: 30px;
+}
+
+.ipo__card + .ipo__card {
+  margin-top: 24px;
+}
+
+.ipo__card::before {
+  position: relative;
+  display: inline-block;
+}
+
+.ipo__card:nth-child(1)::before {
+  content: url(../img/ipo-1.png);
+}
+
+.ipo__card:nth-child(2)::before {
+  content: url(../img/ipo-2.png);
+}
+
+.ipo__card-title {
+  font-size: 24px;
+  font-weight: 400;
+}
+
+.ipo__card-num {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.ipo__calc {
+  padding: 43px 50px 20px 50px;
+  color: #3A3A3A;
+  background-color: #f9f9f9;
+  border: 1px solid #2579A7;
+  border-radius: 20px;
+}
+
+.ipo__calc .ipo__card-title {
+  margin-bottom: 23px;
+  font-size: 24px;
+  font-weight: 600;
+  color: rgba(58, 58, 58, 0.8);
+}
+
+.ipo__calc p {
+  margin: 0;
+  width: 95%;
+}
+
+.ipo__calc p + p {
+  margin-left: 10px;
+}
+
+.ipo__calc label {
+  margin-bottom: 10px;
+  font-size: 16px;
+  display: block;
+}
+
+.ipo__calc input[type=number] {
+  display: block;
+  width: 100%;
+  padding: 15px 24px;
+  border-radius: 35px;
+  border: 1px solid #2579A7;
+}
+
+.ipo__sum,
+.ipo__total {
+  margin-bottom: 34px;
+  font-size: 36px;
+  font-weight: 700;
+  color: #3A3A3A;
+}
+
+.ipo__text {
+  font-size: 18px;
+  color: rgba(58, 58, 58, 0.8);
+}
+
+.ipo__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.ipo__wrapper + .ipo__wrapper {
+  margin-top: 30px;
+}
+
+.ipo__card:first-child {
+  background: linear-gradient(180deg, #2579A7 0%, #5EA5CC 100%);
+}
+
+.ipo__card:last-child {
+  background: linear-gradient(180deg, #1D263B 0%, #364874 100%);
+}
+
 .footer {
   padding-top: 69px;
   padding-bottom: 133px;
@@ -2921,6 +3065,19 @@ input[type='submit'] {
     margin-right: 0;
   }
 
+  .ipo__calc {
+    width: calc(100% - 30px);
+  }
+
+  .ipo__cards {
+    width: calc(100% - 30px);
+  }
+
+  .ipo__cards {
+    order: -1;
+    margin-bottom: 34px;
+  }
+
   .footer__nav {
     width: calc(50% - 30px);
   }
@@ -3212,6 +3369,10 @@ input[type='submit'] {
 
   .mat__item {
     width: calc(100% - 30px);
+  }
+
+  .ipo__card-num {
+    font-size: 32px;
   }
 }
 
@@ -3754,6 +3915,56 @@ input[type='submit'] {
   .mat .btn {
     width: 100%;
     margin-top: 30px;
+  }
+
+  .ipo {
+    padding-top: 42px;
+    padding-bottom: 50px;
+  }
+
+  .ipo__title {
+    font-size: 24px;
+    margin-bottom: 11px;
+  }
+
+  .ipo__card {
+    padding: 18px 17px 19px 17px;
+    border-radius: 20px;
+  }
+
+  .ipo__calc {
+    padding: 12px 10px 20px 10px;
+  }
+
+  .ipo__calc .ipo__card-title {
+    margin-bottom: 5px;
+  }
+
+  .ipo__calc .ipo__text {
+    margin-bottom: 10px;
+  }
+
+  .ipo__calc p {
+    margin-bottom: 20px;
+    width: 100%;
+  }
+
+  .ipo__calc p + p {
+    margin-left: 0;
+  }
+
+  .ipo__sum,
+  .ipo__total {
+    margin-bottom: 11px;
+    font-size: 24px;
+  }
+
+  .ipo__wrapper {
+    display: block;
+  }
+
+  .ipo-btn {
+    width: 100%;
   }
 
   .footer {
