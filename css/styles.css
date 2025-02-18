@@ -2422,6 +2422,99 @@ input[type='submit'] {
   color: rgba(1, 1, 1, 0.8);
 }
 
+.credit {
+  position: relative;
+  padding-bottom: 150px;
+  overflow: hidden;
+}
+
+.credit__title {
+  margin-bottom: 18px;
+  font-size: 60px;
+  font-weight: 700;
+  color: #1D263B;
+}
+
+.credit__wrapper {
+  position: relative;
+}
+
+.credit__wrapper + .credit__wrapper {
+  margin-top: 100px;
+}
+
+.credit__content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+}
+
+.credit__text {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+  font-size: 16px;
+  color: rgba(58, 58, 58, 0.8);
+}
+
+.credit__text h3 {
+  font-size: 32px;
+}
+
+.credit__text h4 {
+  margin: 1em 0;
+  font-size: 24px;
+}
+
+.credit__text li {
+  margin: 1em 0;
+  list-style-position: inside;
+  list-style-type: disc;
+}
+
+.credit__text li:last-child {
+  margin-bottom: 0;
+}
+
+.credit__image {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 15px;
+  margin-right: 15px;
+  width: calc(50% - 30px);
+  position: absolute;
+  top: 0;
+  border-radius: 44px;
+  height: 100%;
+}
+
+.credit__image img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: inherit;
+}
+
+.credit__wrapper-top .credit__image {
+  right: -50px;
+}
+
+.credit__wrapper-bottom .credit__image {
+  left: -50px;
+}
+
+.credit__wrapper-bottom .credit__text {
+  margin-left: calc(50% + 15px);
+}
+
+.page-template-page-credit {
+  background-color: #fff;
+}
+
 .mat {
   padding-top: 140px;
   padding-bottom: 68px;
@@ -2684,6 +2777,10 @@ input[type='submit'] {
 
 .ipo__card:last-child {
   background: linear-gradient(180deg, #1D263B 0%, #364874 100%);
+}
+
+.page-template-page-about {
+  background-color: #fff;
 }
 
 .footer {
@@ -3367,6 +3464,50 @@ input[type='submit'] {
     width: calc(50% - 30px);
   }
 
+  .credit__title {
+    position: absolute;
+    z-index: 2;
+    top: 120px;
+    width: 100%;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+            transform: translateX(-50%);
+    text-align: center;
+    font-size: 42px;
+    color: #fff;
+    text-shadow: 1px 1px 2px #fff;
+  }
+
+  .credit__wrapper + .credit__wrapper {
+    margin-top: 50px;
+  }
+
+  .credit__text {
+    width: calc(100% - 30px);
+  }
+
+  .credit__text h3 {
+    margin: 1em 0;
+  }
+
+  .credit__image {
+    width: calc(100% - 30px);
+  }
+
+  .credit__image {
+    position: static;
+    height: 220px;
+    border-radius: 0;
+  }
+
+  .credit__wrapper-top .credit__image {
+    order: -1;
+  }
+
+  .credit__wrapper-bottom .credit__text {
+    margin-left: calc(0% + 15px);
+  }
+
   .mat__item {
     width: calc(100% - 30px);
   }
@@ -3869,6 +4010,14 @@ input[type='submit'] {
     width: calc(100% - 30px);
   }
 
+  .credit {
+    padding-bottom: 40px;
+  }
+
+  .credit__text h3 {
+    font-size: 24px;
+  }
+
   .mat {
     padding-top: 60px;
     padding-bottom: 60px;
@@ -3957,6 +4106,10 @@ input[type='submit'] {
   .ipo__total {
     margin-bottom: 11px;
     font-size: 24px;
+  }
+
+  .ipo__wrapper + .ipo__wrapper {
+    margin-top: 20px;
   }
 
   .ipo__wrapper {
