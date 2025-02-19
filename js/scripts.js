@@ -8,6 +8,17 @@ $(function() {
         }
     });
 
+    $('select').niceSelect();
+
+    $('input[type="tel"]').mask("+7 (999) 999-99-99");
+
+    $('.btn-popup').on('click', function () {
+        var text = $(this).attr('data-text');
+        // $('.popup__aim').text(text);
+        // $('#get-projects .form__title').html(text);
+        $('#get-projects input[type=hidden]').val(text);
+    });
+
     $('.faq__ask').on('click', function () {
         const answer = $(this).next();
     
@@ -207,7 +218,6 @@ $(function() {
 
     // $(".fancyone").fancybox();
 
-    $('select').niceSelect();
 
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         // if(event.detail.contactFormId=="224"){
