@@ -1,8 +1,12 @@
 $(function() {
 
     $('[data-fancybox]').fancybox({
-        toolbar  : false,
-        smallBtn : true,
+        // thumbs : { autoStart:true },
+        toolbar: "auto",
+        infobar: true,
+        smallBtn: "auto",
+        protect: true,
+        loop: true,
         iframe : {
             preload : false
         }
@@ -112,6 +116,21 @@ $(function() {
         ]
       });
     
+      $('.single-plan__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        // infinite: true,
+        // speed: 500,
+        // arrows: false,
+        // fade: true,
+        // cssEase: 'linear',
+        // dots: true,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
+        // pauseOnFocus: false,
+        // pauseOnHover: false
+    });
+    
       $('.portfolio__main-slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -154,6 +173,41 @@ $(function() {
             }
         ]
       });
+    let price = $('.price'); //цена комплектации дома
+    let dopPrice = $('.dop-price'); //цена допов
+    let finalPrice = $('.final-price'); //финальная цена
+    
+    let priceNum = price.data('price');
+    let dopPriceNum = dopPrice.data('price');
+    let finalPriceNum = finalPrice.data('price');
+    
+    $('.single-dop__item').on('click', function(){
+       const checkboxDop = $(this).find('input[type=checkbox]');
+       if (checkboxDop.is(':checked')){
+    	    checkboxDop.prop('checked', false);
+            dopPriceNum -= checkboxDop.data('price');
+    
+            dopPrice.text(prettify(dopPriceNum));
+            dopPrice.attr('data-price', dopPriceNum);
+    
+            finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
+            finalPrice.attr('data-price', dopPriceNum + priceNum);
+        } else {
+            checkboxDop.prop('checked', true);
+            dopPriceNum += checkboxDop.data('price');
+    
+            dopPrice.text(prettify(dopPriceNum));
+            dopPrice.attr('data-price', dopPriceNum);
+    
+            finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
+            finalPrice.attr('data-price', dopPriceNum + priceNum);
+        }
+    });
+    
+    function prettify(num) {
+        var n = num.toString();
+        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+    }
     /* Значения из текстовых инпутов */
     const totalCost = document.getElementById('cost'),
         anInitialFee = document.getElementById('initial'),
@@ -208,50 +262,14 @@ $(function() {
             return false;
         } else {
             // totalAmountOfCredit.innerHTML = `${lounAmount} руб.`;
-            totalMonthlyPayment.innerHTML = `${monthlyPaymentArounded} руб. в месяц`;
+            totalMonthlyPayment.innerHTML = `${prettify(monthlyPaymentArounded)} руб. в месяц`;
             // totalRecommendedIncome.innerHTML = `${monthlyPaymentArounded + (monthlyPaymentArounded / 100) * 35} руб.`; //+35%
         }
     }
     
     calculation();
     calcBtn.addEventListener('click', calculation(totalCost.value, anInitialFee.value, creditTerm.value, creditRate.value));
-    let price = $('.price'); //цена комплектации дома
-    let dopPrice = $('.dop-price'); //цена допов
-    let finalPrice = $('.final-price'); //финальная цена
-    
-    let priceNum = price.data('price');
-    let dopPriceNum = dopPrice.data('price');
-    let finalPriceNum = finalPrice.data('price');
-    
-    $('.single-dop__item').on('click', function(){
-       const checkboxDop = $(this).find('input[type=checkbox]');
-       if (checkboxDop.is(':checked')){
-    	    checkboxDop.prop('checked', false);
-            dopPriceNum -= checkboxDop.data('price');
-    
-            dopPrice.text(prettify(dopPriceNum));
-            dopPrice.attr('data-price', dopPriceNum);
-    
-            finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
-            finalPrice.attr('data-price', dopPriceNum + priceNum);
-        } else {
-            checkboxDop.prop('checked', true);
-            dopPriceNum += checkboxDop.data('price');
-    
-            dopPrice.text(prettify(dopPriceNum));
-            dopPrice.attr('data-price', dopPriceNum);
-    
-            finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
-            finalPrice.attr('data-price', dopPriceNum + priceNum);
-        }
-    });
-    
-    function prettify(num) {
-        var n = num.toString();
-        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
-    }
 
-    // $(".fancyone").fancybox();
 
 
     document.addEventListener( 'wpcf7mailsent', function( event ) {
