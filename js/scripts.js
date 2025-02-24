@@ -116,6 +116,31 @@ $(function() {
         ]
       });
     
+      $('.single-main__slider').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        fade: true,
+        asNavFor: '.single-main__nav-slider'
+      });
+    
+      $('.single-main__nav-slider').slick({
+        slidesToShow: 3,
+        asNavFor: '.single-main__slider',
+        // dots: true,
+        centerMode: true,
+        arrows: false,
+        focusOnSelect: true,
+        responsive: [
+            {
+                breakpoint: 768,
+                settings: {
+                  slidesToShow: 2
+                }
+            }
+        ]
+      });
+    
+    
       $('.single-plan__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
@@ -173,6 +198,21 @@ $(function() {
             }
         ]
       });
+    const tabCards = $('.tab__cards .tab__card');
+    
+    tabCards.on('click', function(){
+    
+    	tabCards.removeClass('active');
+    	$(this).addClass('active');
+    
+    	var id = $(this).data('open');
+    
+    	var complTabs = $('.tab__rights .tab__right')
+    
+    	complTabs.slideUp(200);
+    	$('.tab__rights .tab__right[data-id='+id+']').slideDown(200);
+    
+    });
     let price = $('.price'); //цена комплектации дома
     let dopPrice = $('.dop-price'); //цена допов
     let finalPrice = $('.final-price'); //финальная цена
