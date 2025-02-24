@@ -730,6 +730,7 @@ input[type='submit'] {
 }
 
 .tab {
+  margin-bottom: 19px;
   display: flex;
   flex-wrap: wrap;
   margin-left: -10px;
@@ -2172,6 +2173,11 @@ input[type='submit'] {
   font-size: 32px;
 }
 
+.single-main hr {
+  margin: 10px 0;
+  border: 1px solid rgba(46, 46, 72, 0.2);
+}
+
 .single-main__title {
   margin-bottom: 14px;
   font-size: 36px;
@@ -2269,40 +2275,24 @@ input[type='submit'] {
   padding: 10px 15px;
   font-size: 16px;
   color: rgba(48, 48, 48, 0.8);
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
-}
-
-.single-main__about-info-list li > div:first-child {
-  flex-grow: 1;
-}
-
-.single-main__about-info-list li span {
-  position: relative;
-  left: 0;
-  bottom: -8px;
-  background-color: #f9f9f9;
 }
 
 .single-main__about-info-list li::after {
   position: absolute;
   content: '';
   left: 0;
-  top: 23px;
+  top: 50%;
   width: 6px;
   height: 6px;
   border-radius: 50%;
   background-color: #2579A7;
-  margin-bottom: -8px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
 }
 
-.single-main__about-info-list li div:last-child {
+.single-main__about-info-list li span:last-child {
+  margin-left: 20px;
   font-weight: 600;
-}
-
-.single-main__about-info-list-2 li > div:first-child {
-  border-bottom: 2px dotted #7E7E7E;
 }
 
 .single-main__bottom {
@@ -2320,15 +2310,27 @@ input[type='submit'] {
   color: #2579A7;
 }
 
-.single-main details ol li {
+.single-main .btn-more {
+  display: inline-block;
+  padding: 5px;
+  border-radius: 35px;
+  border: 1px solid #FC622C;
+}
+
+.single-main__more ol {
+  -webkit-column-count: 2;
+          column-count: 2;
+}
+
+.single-main__more ol li {
   list-style-type: decimal;
   list-style-position: inside;
 }
 
-.single-main details li {
+.single-main__more li {
   padding: 10px 15px;
   font-size: 16px;
-  color: rgba(48, 48, 48, 0.8);
+  color: #fff;
 }
 
 .single-main summary {
