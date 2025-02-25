@@ -314,6 +314,15 @@ em {
   color: #376CA2;
 }
 
+.popup.fancybox-content {
+  color: #fff;
+  background-color: #121826;
+}
+
+.popup.fancybox-content .form__title {
+  color: #fff;
+}
+
 .edit_post_link {
   margin: 10px;
   padding: 5px;
