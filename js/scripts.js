@@ -230,7 +230,7 @@ $(function() {
     	// 	sum += inputs.data('price');
     	// }
     }
-    checkInputs();
+    // checkInputs();
     
     function checkTab() {
     	let mainPrice = $('.tab__card.active').data('price');
