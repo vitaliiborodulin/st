@@ -315,15 +315,6 @@ em {
   color: #376CA2;
 }
 
-.popup.fancybox-content {
-  color: #fff;
-  background-color: #121826;
-}
-
-.popup.fancybox-content .form__title {
-  color: #fff;
-}
-
 .edit_post_link {
   margin: 10px;
   padding: 5px;
@@ -492,10 +483,8 @@ input[type='submit'] {
   padding: 15px 24px;
   font-size: 17px;
   border-radius: 40px;
-  border: none;
+  border: 1px solid #2579A7;
   outline: none;
-  color: #fff;
-  background-color: #303644;
   opacity: 0.6;
 }
 
@@ -558,7 +547,7 @@ input[type='submit'] {
   height: 24px;
   flex: 0 0 auto;
   margin-right: 8px;
-  border: 1px solid #fff;
+  border: 1px solid #2579A7;
   position: relative;
 }
 
@@ -575,7 +564,7 @@ input[type='submit'] {
   opacity: 0;
   visibility: hidden;
   transition: 0.3s;
-  background: url(../img/check_small.svg) center / contain no-repeat;
+  background: url(../img/check_small-blue.svg) center / contain no-repeat;
 }
 
 .form .acceptance input[type=checkbox]:checked::before {
@@ -1436,6 +1425,19 @@ input[type='submit'] {
 .feedback__top-descr strong {
   font-weight: 500;
   color: #FC622C;
+}
+
+.feedback .form__input {
+  color: #fff;
+  background-color: #303644;
+}
+
+.feedback input[type=checkbox] {
+  border: 1px solid #fff;
+}
+
+.feedback input[type=checkbox]::before {
+  background: url(../img/check_small.svg) center / contain no-repeat;
 }
 
 .feedback__bottom {
@@ -4288,7 +4290,7 @@ input[type='submit'] {
   }
 
   .fancybox-content {
-    padding: 10px;
+    padding: 30px 10px;
     border-radius: 20px;
   }
 
@@ -4314,6 +4316,9 @@ input[type='submit'] {
 
   .nice-select {
     width: 42%;
+    font-size: 14px;
+    border-radius: 23px;
+    height: 46px;
   }
 
   .filter-btn {
@@ -4321,12 +4326,9 @@ input[type='submit'] {
   }
 
   .tab__card {
-    padding: 15px;
+    padding: 10px 20px;
     font-size: 14px;
-  }
-
-  .tab__card + .tab__card {
-    margin-top: 5px;
+    border-radius: 23px;
   }
 
   .header__btn .btn {
