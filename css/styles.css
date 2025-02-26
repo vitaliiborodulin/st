@@ -738,7 +738,7 @@ input[type='submit'] {
   margin-left: -10px;
   margin-right: -10px;
   margin-bottom: 19px;
-  align-items: center;
+  align-items: stretch;
 }
 
 .tab__cards {
@@ -766,7 +766,7 @@ input[type='submit'] {
 }
 
 .tab__card + .tab__card {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 .tab__card.active,
@@ -785,10 +785,14 @@ input[type='submit'] {
 
 .tab__right {
   display: none;
+  height: 100%;
 }
 
 .tab__right.active {
   display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .header svg path {
@@ -2329,7 +2333,6 @@ input[type='submit'] {
 }
 
 .single-main .tab__rights .btn {
-  margin-top: 15px;
   width: 100%;
 }
 
@@ -4325,7 +4328,15 @@ input[type='submit'] {
     width: 42%;
   }
 
+  .tab {
+    margin-bottom: 0;
+  }
+
   .tab__card {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     padding: 10px 20px;
     font-size: 14px;
     border-radius: 23px;
