@@ -3,7 +3,7 @@
     display: inline-block;
 
     // padding: 23px 72px;
-    padding: 20px 50px;
+    padding: 15px 24px;
 
     font-weight: 500;
     // font-size: 24px;
@@ -22,13 +22,14 @@
     cursor: pointer;
     transition: all 0.5s;
 
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    // white-space: nowrap;
+    // overflow: hidden;
+    // text-overflow: ellipsis;
 
     .xs-block({
         font-size: 14px;
         padding: 10px 20px;
+        border-radius: 23px;
     });
 
     &:hover, &:active, a:focus {
@@ -42,11 +43,30 @@
     }
 }
 
+.btn-o {
+    color: @accent;
+    background-color: transparent;
+    border: 1px solid @accent;
+
+    &:hover, &:active, a:focus {
+        color: @white;
+        background-color: @accent;
+    }
+}
+
 .btn-blue {
     background-color: @blue;
 
     &:hover, &:active, a:focus {
         background-color: darken(@blue, 20%);
+    }
+}
+
+.btn-dblue {
+    background-color: #1D263B;
+
+    &:hover, &:active, a:focus {
+        background-color: #2579A7;
     }
 }
 

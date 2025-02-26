@@ -1,6 +1,15 @@
 .form {
     // padding: 40px 30px 50px;
 
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    .wpcf7-spinner {
+        display: none;
+    }
+
     &__title {
         margin-bottom: 10px;
         font-size: 36px;
@@ -32,11 +41,8 @@
         padding: 15px 24px;
         font-size: 17px;
         border-radius: 40px;
-        border: none;
+        border: 1px solid @blue;
         outline: none;
-
-        color: #fff;
-        background-color: #303644;
 
         opacity: 0.6;
 
@@ -47,14 +53,31 @@
 
     &__submit {
         // margin-top: 27px;
-        max-width: 266px;
+        // max-width: 266px;
         border: none;
         cursor: pointer;
+        display: block;
+        width: 100%;
 
-        .xs-block({
-            width: 100%;
-            max-width: 100%;
-        });
+        // .xs-block({
+        //     width: 100%;
+        //     max-width: 100%;
+        // });
+    }
+
+    &__thank {
+        text-align: center;
+
+        .h1 {
+            font-size: 40px;
+            font-weight: 700;
+            // margin-top: 20px;
+        }
+
+        img {
+            margin-left: auto;
+            margin-right: auto;
+        }
     }
 
     .wpcf7-not-valid-tip {
@@ -70,47 +93,55 @@
     }
 
     .acceptance {
-        // margin-top: 16px;
-        font-size: 13px;
-        line-height: 1.5;
-        letter-spacing: -0.01em;
-        opacity: 0.8;
+        margin-bottom: 20px;
+    //     // margin-top: 16px;
+    //     font-size: 13px;
+    //     line-height: 1.5;
+    //     letter-spacing: -0.01em;
+    //     opacity: 0.8;
 
-        .c-w40 {
-            b, a, strong {
-                font-weight: 500;
-                color: @white;
-            }
+        label {
+            display: flex;
+            align-items: flex-start;
 
             a {
                 text-decoration: underline;
             }
         }
 
-        label {
-            display: flex;
-            align-items: center;
+        input[type=checkbox] {
+            display: inline-flex;
+            appearance: none;
+            cursor: pointer;
+            width: 24px;
+            height: 24px;
+            flex: 0 0 auto;
+            margin-right: 8px;
+            // border-radius: 8px;
+            // background-color: #fff;
+            border: 1px solid @blue;
+            position: relative;
         }
-    }
 
-    &__checkbox {
-        display: none;
-    }
-    
-    .custom-checkbox {
-        flex-shrink: 0;
-        margin-right: 8px;
-        display: inline-block;
-        width: 24px;
-        height: 24px;
-        // background-color: #121826;
-        border: 1px solid #fff;
-        cursor: pointer;
-    }
+        input[type=checkbox]::before {
+            content: "";
+            display: block;
+            width: 20px;
+            height: 20px;
+            position: absolute;
+            inset-block-start: 50%;
+            inset-inline-start: 50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: 0.3s;
+            background: url(../img/check_small-blue.svg) center / contain no-repeat;
+        }
 
-
-    &__checkbox:checked + .custom-checkbox {
-        background: url(../img/check.svg) no-repeat center;
+        input[type=checkbox]:checked::before {
+            opacity: 1;
+            visibility: visible;
+        }
     }
 
 }

@@ -191,6 +191,7 @@
             // }
 
             a {
+                position: relative;
                 display: inline-block;
                 width: 100%;
                 // padding: 10px 15px;
@@ -246,37 +247,57 @@
             }
         }
 
-        .current-menu-item {
-            > a {
-                border-bottom: 1px solid @accent;
+        // .current-menu-item {
+        //     > a {
+        //         color: @accent;
 
-                .lg-block({
-                    color: @accent;
-                    border-bottom: 1px solid rgba(54, 54, 54, 0.2);
-                });
-            }
-        }
+        //         // border-bottom: 1px solid @accent;
 
-        .current-page-ancestor {
-            > a {
-                border-bottom: 1px solid @accent;
-            }
+        //         .lg-block({
+        //             // border-bottom: 1px solid rgba(54, 54, 54, 0.2);
+        //         });
+        //     }
+        // }
 
-            // .sub-menu a {
-            //     color: inherit;
-            //     background-color: transparent;
-            //     border-radius: 0;
-            //     transition: all 0.3s ease;
+        // .current-page-ancestor {
+        //     > a {
+        //         color: @accent;
+        //         // border-bottom: 1px solid @accent;
+        //     }
 
-            //     &:hover {
-            //     color: @white;
-            //     // background-color: @light_blue;
-            //     border-radius: 5px;
-            //     }
-            // }
-        }
+        //     // .sub-menu a {
+        //     //     color: inherit;
+        //     //     background-color: transparent;
+        //     //     border-radius: 0;
+        //     //     transition: all 0.3s ease;
+
+        //     //     &:hover {
+        //     //     color: @white;
+        //     //     // background-color: @light_blue;
+        //     //     border-radius: 5px;
+        //     //     }
+        //     // }
+        // }
     }
 
+    &__nav > ul > li > a::before {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: 10px;
+        left: 0;
+        background-color: @accent;
+        visibility: hidden;
+        transition: all 0.5s ease-in-out 0s;
+    }
+
+    &__nav a:hover:before,
+    &__nav li:hover>a:before,
+    &__nav .active:before {
+        visibility: visible;
+        width: 100%;
+    } 
 
     &__burger {
         @toggler-part-height: 3px;

@@ -69,3 +69,27 @@
         border-radius: 10px;
     }
 }
+
+.blog {
+    background-color: #F9F9F9;
+
+
+    .news__wrap {
+        .row-flex();
+    }
+
+    .news__slide {
+        .col();
+        .size(3);
+        .size-lg(4);
+        .size-md(6);
+        .size-xs(12);
+
+        margin-bottom: 20px;
+        transition: box-shadow 0.5s ease;
+        
+        &:hover {
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+        }
+    }
+}

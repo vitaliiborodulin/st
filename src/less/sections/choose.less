@@ -1,0 +1,113 @@
+.choose {
+    padding-top: 144px;
+    padding-bottom: 115px;
+
+    background: url(../img/steps-bg.jpg) no-repeat center bottom/cover;
+
+    .xs-block({
+        padding-top: 50px;
+        padding-bottom: 34px;
+    });
+
+    br {
+        .md(display, none);
+    }
+
+    &__content {
+        // .row-flex();
+        display: flex;
+        .lg(display, block);
+    }
+
+    &__title {
+        // .col();
+        // .size(4);
+        // .size-lg(12);
+        width: 30%;
+        flex-shrink: 0;
+        margin-right: 10px;
+        margin-bottom: 33px;
+        font-size: 48px;
+        color: #303030;
+
+        .lg-block({
+            width: 100%;
+            margin-right: 0;
+        });
+
+        .xs-block({
+            font-size: 24px;
+        });
+    }
+
+    &__list {
+        // .col();
+        // .size(8);
+        // .size-lg(12);
+
+        .row-flex();
+        justify-content: center;
+    }
+
+    &__item {
+        .col();
+        .size(4);
+        .size-md(6);
+        .size-xs(12);
+
+        display: flex;
+        flex-direction: column;
+        min-height: 280px;
+
+        position: relative;
+        margin-bottom: 20px;
+        padding: 20px 20px 23px 20px;
+        background: @white;
+        border-radius: 30px;
+        border: 1px solid rgba(37, 121, 167, 0.3);
+        transition: box-shadow 0.5s ease;
+
+        &:hover {
+            box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+        }
+
+        &::before {
+            position: relative;
+            display: inline-block;
+            // content: url(../img/ch-1.png);
+        }
+
+        &:nth-child(1)::before{
+            content: url(../img/ch-1.png);
+        }
+        &:nth-child(2)::before{
+            content: url(../img/ch-2.png);
+        }
+        &:nth-child(3)::before{
+            content: url(../img/ch-3.png);
+        }
+        &:nth-child(4)::before{
+            content: url(../img/ch-4.png);
+        }
+        &:nth-child(5)::before{
+            content: url(../img/ch-5.png);
+        }
+        &:nth-child(6)::before{
+            content: url(../img/ch-6.png);
+        }
+
+        &-title {
+            margin-bottom: 30px;
+            margin-top: 20px;
+            font-size: 20px;
+            font-weight: 500;
+            color: #010101;
+        }
+
+        &__descr {
+            margin-top: auto;
+            font-size: 15px;
+            color: rgba(1, 1, 1, 0.8);
+        }
+    }
+}

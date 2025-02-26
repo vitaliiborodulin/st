@@ -1,0 +1,76 @@
+.require {
+    padding-top: 117px;
+    padding-bottom: 95px;
+    background: url(../img/req-bg.jpg) no-repeat center top/cover;
+
+    .xs-block({
+        padding: 50px 0;
+    });
+
+    &__title {
+        margin-bottom: 44px;
+        font-size: 60px;
+        font-weight: 700;
+        color: #1D263B;
+
+        .xs-block({
+            margin-bottom: 16px;
+            font-size: 24px;
+        });
+    }
+
+    &__item {
+        margin-bottom: 30px;
+        position: relative;
+        padding-left: 38px;
+        // list-style-position: inside;
+        // list-style-type: disc;
+
+        .xs-block({
+            margin-bottom: 15px;
+            padding-left: 15px;
+        });
+
+        &-title {
+            margin-bottom: 20px;
+            font-size: 24px;
+            font-weight: 500;
+            color: #303030;
+
+            .xs-block({
+                margin-bottom: 7px;
+                font-size: 16px;
+            });
+        }
+
+        &-text {
+            font-size: 16px;
+            font-weight: 500;
+            color: rgba(48, 48, 48, 0.8);
+
+            .xs-block({
+                font-weight: 400;
+                color: #303030;
+            });
+        }
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 0;
+            // top: 50%;
+            top: 5px;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #2579A7;
+            // transform: translate(10px, -50%);
+
+            .xs-block({
+                width: 8px;
+                height: 8px;
+                top: 5px;
+            });
+        }
+    }
+}

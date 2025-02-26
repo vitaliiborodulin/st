@@ -63,7 +63,8 @@
         .md-block({
             order: -1;
             padding: 0;
-            height: 152px;
+            // height: 152px;
+            height: 255px;
             margin-bottom: 22px;
             width: 100%;
             margin-left: 0;
@@ -80,9 +81,58 @@
         }
     }
 
-    // блочок
+    // блочок сверху
+    &__top {
+        padding-top: 100px;
+        // padding-bottom: 122px;
 
-    &__text {
+        .md-block({
+            padding-top: 50px;
+            padding-bottom: 50px;
+        });
+
+        &-title {
+            margin-bottom: 37px;
+            font-size: 44px;
+            font-weight: 700;
+            color: @accent;
+
+            .xs-block({
+                margin-bottom: 20px;
+                font-size: 24px;
+            });
+        }
+
+        &-descr {
+            font-size: 32px;
+            font-weight: 400;
+
+            .xs-block({
+                font-size: 18px;
+            });
+
+            b, strong {
+                font-weight: 500;
+                color: @accent;
+            }
+        }
+    }
+
+    .form__input {
+        color: #fff;
+        background-color: #303644;
+    }
+
+    input[type=checkbox] {
+        border: 1px solid #fff;
+    }
+
+    input[type=checkbox]::before {
+        background: url(../img/check_small.svg) center / contain no-repeat;
+    }
+
+    // блочок снизу
+    &__bottom {
         padding-top: 44px;
         padding-bottom: 120px;
         color: #181619;
@@ -118,7 +168,11 @@
     }
 }
 
-.feedback + .feedback__text {
+// .feedback__top + .feedback {
+//     padding-top: 0;
+// }
+
+.feedback + .feedback__bottom {
     margin-top: -80px;
     padding-top: 0;
 
