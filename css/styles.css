@@ -4342,6 +4342,13 @@ input[type='submit'] {
     border-radius: 23px;
   }
 
+  .tab__rights .btn {
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
   .header__btn .btn {
     font-size: 14px;
     padding: 10px 20px;
