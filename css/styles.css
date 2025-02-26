@@ -1517,6 +1517,31 @@ input[type='submit'] {
   border-radius: 10px;
 }
 
+.blog {
+  background-color: #F9F9F9;
+}
+
+.blog .news__wrap {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.blog .news__slide {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(25% - 20px);
+  margin-bottom: 20px;
+  transition: box-shadow 0.5s ease;
+}
+
+.blog .news__slide:hover {
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.3);
+}
+
 .faq {
   padding-top: 120px;
   padding-bottom: 100px;
@@ -3823,6 +3848,10 @@ input[type='submit'] {
     width: calc(50% - 20px);
   }
 
+  .blog .news__slide {
+    width: calc(33.333333333333336% - 20px);
+  }
+
   .team__list {
     margin-bottom: 20px;
   }
@@ -4041,6 +4070,10 @@ input[type='submit'] {
 
   .feedback + .feedback__bottom {
     margin-top: 58px;
+  }
+
+  .blog .news__slide {
+    width: calc(50% - 20px);
   }
 
   .leader__info {
@@ -4507,6 +4540,10 @@ input[type='submit'] {
 
   .news .slick-arrow {
     background-color: #fff;
+  }
+
+  .blog .news__slide {
+    width: calc(100% - 20px);
   }
 
   .faq {
