@@ -3061,10 +3061,7 @@ input[type='submit'] {
 .control .single-dop__t {
   position: static;
   padding-right: 0;
-}
-
-.control .single-dop__item:last-child .single-dop__t {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .choose {
@@ -5027,12 +5024,8 @@ input[type='submit'] {
     bottom: 15px;
   }
 
-  .control .single-dop__item:last-child .single-dop__info {
-    bottom: 5px;
-  }
-
-  .control .single-dop__item:last-child .single-dop__t {
-    font-size: 14px;
+  .control .single-dop__t {
+    font-size: 16px;
   }
 
   .choose {
