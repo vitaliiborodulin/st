@@ -3012,29 +3012,59 @@ input[type='submit'] {
 
 .control__list li {
   position: relative;
-  padding-left: 80px;
   font-size: 18px;
   line-height: 1.5;
-  color: rgba(1, 1, 1, 0.8);
+  color: #fff;
 }
 
-.control__list li:before {
+.control__list li::after {
   content: '0' counter(num) '.';
   counter-increment: num;
   display: inline-block;
   position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  left: 0;
-  font-size: 32px;
+  top: 23px;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-size: 50px;
   font-weight: 500;
-  color: #2579A7;
+  color: #fff;
   text-align: right;
 }
 
-.control__list li + li {
-  margin-top: 55px;
+.control .single-dop__item {
+  transition: -webkit-transform 0.5s ease;
+  transition: transform 0.5s ease;
+  transition: transform 0.5s ease, -webkit-transform 0.5s ease;
+  bottom: 0;
+}
+
+.control .single-dop__item:hover {
+  -webkit-transform: translateY(-5px);
+          transform: translateY(-5px);
+}
+
+.control .single-dop__item::before {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.control .single-dop__info {
+  position: absolute;
+  bottom: 23px;
+  left: 0;
+  width: 100%;
+  height: auto;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.control .single-dop__t {
+  position: static;
+  padding-right: 0;
+}
+
+.control .single-dop__item:last-child .single-dop__t {
+  font-size: 16px;
 }
 
 .choose {
@@ -4977,19 +5007,32 @@ input[type='submit'] {
   }
 
   .control__list li {
-    padding-left: 40px;
     font-size: 16px;
   }
 
-  .control__list li:before {
+  .control__list li::after {
     font-size: 24px;
-    top: -5px;
-    -webkit-transform: none;
-            transform: none;
+    top: 5px;
   }
 
-  .control__list li + li {
-    margin-top: 17px;
+  .control .single-dop__item {
+    width: calc(100% - 20px);
+  }
+
+  .control .single-dop__item {
+    height: 150px;
+  }
+
+  .control .single-dop__info {
+    bottom: 15px;
+  }
+
+  .control .single-dop__item:last-child .single-dop__info {
+    bottom: 5px;
+  }
+
+  .control .single-dop__item:last-child .single-dop__t {
+    font-size: 14px;
   }
 
   .choose {
