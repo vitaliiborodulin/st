@@ -12,17 +12,21 @@ $(function() {
         }
     });
 
-    $('select').niceSelect();
-
+    
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
-
+    
     $('.btn-popup').on('click', function () {
         var text = $(this).attr('data-text');
         // $('.popup__aim').text(text);
         // $('#get-projects .form__title').html(text);
         $('#get-projects input[type=hidden]').val(text);
     });
-
+    
+    function prettify(num) {
+        var n = num.toString();
+        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+    }
+    
     $('.faq__ask').on('click', function () {
         const answer = $(this).next();
     
@@ -198,6 +202,8 @@ $(function() {
             }
         ]
       });
+    if(document.querySelector('.tab__cards')){
+    
     const tabCards = $('.tab__cards .tab__card');
     
     tabCards.on('click', function(){
@@ -215,35 +221,21 @@ $(function() {
     
     });
     
-    function checkInputs(){
-    	let sum = 0;
-    	let inputs =  querySelectorAll('.single-dop__item input[type=checkbox]');
-    	// $.each(inputs, function(key, val){
-    	// 	console.log(key, val)
-    	// })
-    	console.log(inputs)
-    	// for (index = 0; index < inputs.length; ++index) {
-    	// 	console.log(inputs[index]);
-    	// }
-    	// for (let i = 0; i++)
-    	// if (inputs.is(':checked')){
-    	// 	sum += inputs.data('price');
-    	// }
-    }
-    // checkInputs();
     
+    // проверяет активный tab и ставит по нему цену комплектации и финальную цену
     function checkTab() {
     	let mainPrice = $('.tab__card.active').data('price');
     	$('.price').attr('data-price', mainPrice);
     	$('.price').text(prettify(mainPrice));
     
     	let dopPricce =  $('.dop-price').data('price');
+    	checkSum();
     	
-    	$('.final-price').text(prettify(mainPrice + dopPricce) + ' ₽');
-    	$('.final-price').attr('data-price', mainPrice + dopPricce);
     }
     
-    checkTab();
+    	checkTab();
+    
+    }
     let price = $('.price'); //цена комплектации дома
     let dopPrice = $('.dop-price'); //цена допов
     let finalPrice = $('.final-price'); //финальная цена
@@ -256,33 +248,41 @@ $(function() {
        const checkboxDop = $(this).find('input[type=checkbox]');
        if (checkboxDop.is(':checked')){
     	    checkboxDop.prop('checked', false);
+            $(this).removeClass('active');
+            $(this).css('transform', 'none');
+    
             dopPriceNum -= checkboxDop.data('price');
     
             dopPrice.text(prettify(dopPriceNum));
             dopPrice.attr('data-price', dopPriceNum);
     
-            finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
-            finalPrice.attr('data-price', dopPriceNum + priceNum);
+            checkSum();
         } else {
             checkboxDop.prop('checked', true);
+            $(this).addClass('active');
+            $(this).css('transform', 'scale(0.9)');
+    
             dopPriceNum += checkboxDop.data('price');
     
             dopPrice.text(prettify(dopPriceNum));
             dopPrice.attr('data-price', dopPriceNum);
     
-            finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
-            finalPrice.attr('data-price', dopPriceNum + priceNum);
+            checkSum();
         }
     });
     
-    function prettify(num) {
-        var n = num.toString();
-        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
-    }
+     function checkSum(){
+        let one = $('.price').attr('data-price');
+        let two = $('.dop-price').attr('data-price');
+        // console.log(one, two);
     
-    // setPrice($('.tab__card.active'));
-    // setTimeout(setPrice($('.tab__card.active'), 5000));
-    // setTimeout(setSum, 2000);
+        $('.final-price').text(prettify(parseFloat(one) + parseFloat(two)) + ' ₽');
+    	$('.final-price').attr('data-price', parseFloat(one) + parseFloat(two));
+     }
+    const ipo = document.getElementById('ipo');
+    
+    if(ipo){
+    
     /* Значения из текстовых инпутов */
     const totalCost = document.getElementById('cost'),
         anInitialFee = document.getElementById('initial'),
@@ -312,9 +312,6 @@ $(function() {
     
     const calcBtn = document.querySelector('.ipo-btn');
     
-    
-    
-    
     /* Рассчет кредита */
     const calculation = (totalCost = 2000000, anInitialFee = 50000, creditTerm = 15, currentPercent = 9.5) => {
         /* 
@@ -342,9 +339,12 @@ $(function() {
         }
     }
     
-    calculation();
-    calcBtn.addEventListener('click', calculation(totalCost.value, anInitialFee.value, creditTerm.value, creditRate.value));
-
+    
+        calculation();
+        calcBtn.addEventListener('click', calculation(totalCost.value, anInitialFee.value, creditTerm.value, creditRate.value));
+    }
+    
+    $('select').niceSelect();
 
 
     document.addEventListener( 'wpcf7mailsent', function( event ) {
