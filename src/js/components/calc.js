@@ -1,3 +1,7 @@
+const ipo = document.getElementById('ipo');
+
+if(ipo){
+
 /* Значения из текстовых инпутов */
 const totalCost = document.getElementById('cost'),
     anInitialFee = document.getElementById('initial'),
@@ -27,9 +31,6 @@ for (number of inputsNumber){
 
 const calcBtn = document.querySelector('.ipo-btn');
 
-
-
-
 /* Рассчет кредита */
 const calculation = (totalCost = 2000000, anInitialFee = 50000, creditTerm = 15, currentPercent = 9.5) => {
     /* 
@@ -57,5 +58,7 @@ const calculation = (totalCost = 2000000, anInitialFee = 50000, creditTerm = 15,
     }
 }
 
-calculation();
-calcBtn.addEventListener('click', calculation(totalCost.value, anInitialFee.value, creditTerm.value, creditRate.value));
+
+    calculation();
+    calcBtn.addEventListener('click', calculation(totalCost.value, anInitialFee.value, creditTerm.value, creditRate.value));
+}

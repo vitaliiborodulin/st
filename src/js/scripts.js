@@ -12,24 +12,29 @@ $(function() {
         }
     });
 
-    $('select').niceSelect();
-
+    
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
-
+    
     $('.btn-popup').on('click', function () {
         var text = $(this).attr('data-text');
         // $('.popup__aim').text(text);
         // $('#get-projects .form__title').html(text);
         $('#get-projects input[type=hidden]').val(text);
     });
-
+    
+    function prettify(num) {
+        var n = num.toString();
+        return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
+    }
+    
     //= components/faq.js
     //= components/menu.js
     //= components/slider.js
     //= components/tabs.js
-    //= components/single-dop.js
+    //= components/dop.js
     //= components/calc.js
-
+    
+    $('select').niceSelect();
 
 
     document.addEventListener( 'wpcf7mailsent', function( event ) {

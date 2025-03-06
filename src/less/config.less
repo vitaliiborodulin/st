@@ -244,6 +244,33 @@ i, em {
     }
 }
 
+// pagination
+
+.navigation.pagination {
+    padding: 20px 0;
+    // justify-content: center;
+    // align-items: center;
+    // display: flex;
+    // position: static;
+    // transform: none;
+}
+
+.page-numbers {
+    font-size: 20px;
+    margin-right: 10px;
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.5s ease;
+}
+
+.page-numbers.current {
+    color: @accent;
+}
+  
+.page-numbers:hover {
+    text-decoration: underline;
+}
+
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
 @media (prefers-reduced-motion: reduce) {

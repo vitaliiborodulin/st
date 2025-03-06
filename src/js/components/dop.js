@@ -10,32 +10,37 @@ $('.single-dop__item').on('click', function(){
    const checkboxDop = $(this).find('input[type=checkbox]');
    if (checkboxDop.is(':checked')){
 	    checkboxDop.prop('checked', false);
+        $(this).removeClass('active');
+        $(this).css('transform', 'none');
+
         dopPriceNum -= checkboxDop.data('price');
 
         dopPrice.text(prettify(dopPriceNum));
         dopPrice.attr('data-price', dopPriceNum);
 
-        finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
-        finalPrice.attr('data-price', dopPriceNum + priceNum);
+        checkSum();
     } else {
         checkboxDop.prop('checked', true);
+        $(this).addClass('active');
+        $(this).css('transform', 'scale(0.9)');
+
         dopPriceNum += checkboxDop.data('price');
 
         dopPrice.text(prettify(dopPriceNum));
         dopPrice.attr('data-price', dopPriceNum);
 
-        finalPrice.text(prettify(dopPriceNum + priceNum) + ' ₽');
-        finalPrice.attr('data-price', dopPriceNum + priceNum);
+        checkSum();
     }
 });
 
-function prettify(num) {
-    var n = num.toString();
-    return n.replace(/(\d{1,3}(?=(?:\d\d\d)+(?!\d)))/g, "$1" + ' ');
-}
+ function checkSum(){
+    let one = $('.price').attr('data-price');
+    let two = $('.dop-price').attr('data-price');
+    // console.log(one, two);
 
-// setPrice($('.tab__card.active'));
-// setTimeout(setPrice($('.tab__card.active'), 5000));
-// setTimeout(setSum, 2000);
+    $('.final-price').text(prettify(parseFloat(one) + parseFloat(two)) + ' ₽');
+	$('.final-price').attr('data-price', parseFloat(one) + parseFloat(two));
+ }
+
 
 

@@ -90,7 +90,7 @@
     }
 }
 
-.post-type-archive-portfolio, .blog {
+.post-type-archive-portfolio, .post-type-archive-projects {
 
     &__title {
         color: @blue;
@@ -135,7 +135,7 @@
 
 }
 
-.single-portfolio, .single {
+.single-portfolio, .single, .home {
 
     .portfolio {
         
@@ -391,6 +391,16 @@
         .md-block({
             margin-bottom: 58px;
         });
+    }
+}
+
+.home {
+    .portfolio-other {
+        padding: 80px 0;
+    }
+
+    .arrow-prev path, .arrow-next path {
+        fill: @blue;
     }
 }
 

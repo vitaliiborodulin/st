@@ -6,7 +6,7 @@ $('.hero__slider').slick({
     // arrows: false,
     fade: true,
     cssEase: 'linear',
-    dots: true,
+    // dots: true,
     // autoplay: true,
     // autoplaySpeed: 2000,
     // pauseOnFocus: false,
@@ -57,7 +57,7 @@ $('.news__slider').slick({
     slidesToShow: 3,
     asNavFor: '.single-main__slider',
     // dots: true,
-    centerMode: true,
+    // centerMode: true,
     arrows: false,
     focusOnSelect: true,
     responsive: [
