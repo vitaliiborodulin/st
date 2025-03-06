@@ -80,7 +80,7 @@ $(function() {
         // arrows: false,
         fade: true,
         cssEase: 'linear',
-        dots: true,
+        // dots: true,
         // autoplay: true,
         // autoplaySpeed: 2000,
         // pauseOnFocus: false,
@@ -131,7 +131,7 @@ $(function() {
         slidesToShow: 3,
         asNavFor: '.single-main__slider',
         // dots: true,
-        centerMode: true,
+        // centerMode: true,
         arrows: false,
         focusOnSelect: true,
         responsive: [
