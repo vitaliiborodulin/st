@@ -85,6 +85,61 @@
         }
     }
 
+    &__pics {
+        margin-top: 30px;
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+    }
+
+    &__pics-item {
+        position: relative;
+        margin-right: 5px;
+        margin-bottom: 15px;
+        padding-top: 46px;
+        font-size: 16px;
+        text-align: center;
+
+        .xs-block({
+            padding-top: 35px;
+            font-size: 14px;
+        });
+
+        &::before {
+            position: absolute;
+            content: '';
+            left: 50%;
+            margin-left: -20px;
+            top: 0;
+            width: 40px;
+            height: 40px;
+
+            .xs-block({
+                width: 30px;
+                height: 30px;
+                margin-left: -15px;
+            });
+        }
+
+        &:nth-child(1)::before {
+            background: url(../img/s-1.svg) no-repeat center/contain;
+        }
+        &:nth-child(2)::before{
+            background: url(../img/s-2.svg) no-repeat center/contain;
+        }
+        &:nth-child(3)::before {
+            background: url(../img/s-3.svg) no-repeat center/contain;
+        }
+        &:nth-child(4)::before {
+            background: url(../img/s-4.svg) no-repeat center/contain;
+        }
+        &:nth-child(5)::before {
+            background: url(../img/s-5.svg) no-repeat center/contain;
+        }
+    }
+
+    // справа от слайдеров
+
     &__about {
         .col();
         .size(6);
@@ -231,8 +286,10 @@
             color: @accent;
         }
 
-        p b {
-            font-size: 24px;
+        p, b, em {
+            display: block;
+            margin-bottom: 5px;
+            font-size: 16px;
             color: #303030;
         }
 
@@ -247,7 +304,7 @@
         }
 
         li {
-            margin: 1em 0;
+            margin: 0.5em 0;
             // padding: 10px 15px;
             font-size: 16px;
             color: rgba(48, 48, 48, 0.8);
@@ -389,30 +446,30 @@
         cursor: pointer;
         transition: all 0.5s ease;
 
-        &:nth-child(1){
-            background-image: url(../img/dop-1-1.jpg)!important;
-        }
-        &:nth-child(2){
-            background-image: url(../img/dop-2-1.jpg)!important;
-        }
-        &:nth-child(3){
-            background-image: url(../img/dop-3-1.jpg)!important;
-        }
-        &:nth-child(4){
-            background-image: url(../img/dop-4-1.jpg)!important;
-        }
-        &:nth-child(5){
-            background-image: url(../img/dop-5-1.jpg)!important;
-        }
-        &:nth-child(6){
-            background-image: url(../img/dop-6-1.jpg)!important;
-        }
-        &:nth-child(7){
-            background-image: url(../img/dop-7-1.jpg)!important;
-        }
-        &:nth-child(8){
-            background-image: url(../img/dop-8-1.jpg)!important;
-        }
+        // &:nth-child(1){
+        //     background-image: url(../img/dop-1-1.jpg)!important;
+        // }
+        // &:nth-child(2){
+        //     background-image: url(../img/dop-2-1.jpg)!important;
+        // }
+        // &:nth-child(3){
+        //     background-image: url(../img/dop-3-1.jpg)!important;
+        // }
+        // &:nth-child(4){
+        //     background-image: url(../img/dop-4-1.jpg)!important;
+        // }
+        // &:nth-child(5){
+        //     background-image: url(../img/dop-5-1.jpg)!important;
+        // }
+        // &:nth-child(6){
+        //     background-image: url(../img/dop-6-1.jpg)!important;
+        // }
+        // &:nth-child(7){
+        //     background-image: url(../img/dop-7-1.jpg)!important;
+        // }
+        // &:nth-child(8){
+        //     background-image: url(../img/dop-8-1.jpg)!important;
+        // }
 
         &:hover {
             // transform: scale(0.9);

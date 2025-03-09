@@ -16,10 +16,12 @@ $(function() {
     $('input[type="tel"]').mask("+7 (999) 999-99-99");
     
     $('.btn-popup').on('click', function () {
-        var text = $(this).attr('data-text');
+        const text = $(this).attr('data-title');
         // $('.popup__aim').text(text);
         // $('#get-projects .form__title').html(text);
-        $('#get-projects input[type=hidden]').val(text);
+        // console.log(text);
+        $('#get-projects input[name=project]').val(text);
+        getDops();
     });
     
     function prettify(num) {

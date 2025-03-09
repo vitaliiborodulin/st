@@ -7,6 +7,9 @@ tabCards.on('click', function(){
 	tabCards.removeClass('active');
 	$(this).addClass('active');
 	
+	const open = $(this).attr('data-open');
+	$('#get-projects input[name=complect]').val(open);
+	
 	var id = $(this).data('open');
 	
 	var complTabs = $('.tab__rights .tab__right')

@@ -33,14 +33,28 @@ $('.single-dop__item').on('click', function(){
     }
 });
 
- function checkSum(){
+function getDops() {
+    const dopsArr = [];
+
+    $('.single-dop__item.active').each(function (index, element) {
+        let dop = $(element).find(".single-dop__t").text();
+        dopsArr.push(dop);
+   }); 
+  
+   $('#get-projects input[name=dops]').val(dopsArr);
+    // return number;
+  }
+
+function checkSum(){
     let one = $('.price').attr('data-price');
     let two = $('.dop-price').attr('data-price');
     // console.log(one, two);
 
     $('.final-price').text(prettify(parseFloat(one) + parseFloat(two)) + ' ₽');
-	$('.final-price').attr('data-price', parseFloat(one) + parseFloat(two));
- }
+    $('.final-price').attr('data-price', parseFloat(one) + parseFloat(two));
+}
+
+// for(var i = 0; i <= inputs.length; i++){ 
 
 
 
