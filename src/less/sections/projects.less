@@ -16,11 +16,15 @@
         .size-lg(12);
         .lg(order, -1);
     }
+
+    &__content-w100 {
+        .size(12);
+    }
     
 
     &__list {
         .row-flex();
-        justify-content: space-between;
+        // justify-content: space-between;
         padding-bottom: 50px;
         .xs(padding-bottom, 0);
     }
@@ -38,6 +42,12 @@
         });
     }
 
+    
+    &__list-3 &__item {
+        .size(4);
+        .size-md(6);
+    }
+
     &__img {
         margin-bottom: 23px;
         border-radius: 20px;
@@ -50,7 +60,8 @@
     &__link {
         display: block;
         width: 100%;
-        height: 366px;
+        // height: 366px;
+        height: auto;
         border-radius: 20px;
         overflow: hidden;
 
@@ -93,7 +104,8 @@
     // }
     
     &__name {
-        font-size: 32px;
+        // font-size: 32px;
+        font-size: 27px;
         font-weight: 500;
         color: #010101;
         

@@ -2,14 +2,14 @@ $('.hero__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     infinite: true,
-    speed: 500,
-    // arrows: false,
+    // speed: 500,
+    arrows: false,
     fade: true,
     cssEase: 'linear',
-    // dots: true,
-    // autoplay: true,
-    // autoplaySpeed: 2000,
-    // pauseOnFocus: false,
+    dots: true,
+    autoplay: true,
+    autoplaySpeed: 3000,
+    pauseOnFocus: false,
     pauseOnHover: false
 });
 
@@ -49,6 +49,7 @@ $('.news__slider').slick({
   $('.single-main__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
+    adaptiveHeight: true,
     fade: true,
     asNavFor: '.single-main__nav-slider'
   });
