@@ -56,7 +56,8 @@
             top: 50%;
             margin-top: -21px;
             background: url(../img/ic_round-close.svg) no-repeat center;
-            transition: rotate .5s ease;
+            transform: rotate(45deg);
+            transition: transform 0.5s ease;
 
             .xs-block({
                 width: 33px;
@@ -67,7 +68,7 @@
         }
 
         &.active::after {
-            transform: rotate(45deg);
+            transform: rotate(0);
         }
     }
 

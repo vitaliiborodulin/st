@@ -91,6 +91,7 @@ $('.news__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
+    adaptiveHeight: true,
     asNavFor: '.portfolio__nav-slider'
   });
 
