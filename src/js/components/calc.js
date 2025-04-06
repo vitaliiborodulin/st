@@ -9,7 +9,7 @@ const totalCost = document.getElementById('cost'),
     creditRate = document.getElementById('rate');
 
 /* Все number input */
-const inputsNumber = document.querySelectorAll('input[type="number"]');
+const inputsNumber = ipo.querySelectorAll('input');
 
 /* Итоговые значения */
 const totalMonthlyPayment = document.querySelector('.ipo__sum'),

@@ -76,6 +76,18 @@
 
 @font-face {
     font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-MediumItalic.eot');
+    src: url('../fonts/Gilroy-MediumItalic?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-MediumItalic.woff2') format('woff2'),
+        url('../fonts/Gilroy-MediumItalic.woff') format('woff'),
+        url('../fonts/Gilroy-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
     src: url('../fonts/Gilroy-Regular.eot');
     src: url('../fonts/Gilroy-Regular.eot?#iefix') format('embedded-opentype'),
         url('../fonts/Gilroy-Regular.woff2') format('woff2'),
@@ -83,6 +95,18 @@
         url('../fonts/Gilroy-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gilroy';
+    src: url('../fonts/Gilroy-RegularItalic.eot');
+    src: url('../fonts/Gilroy-RegularItalic.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Gilroy-RegularItalic.woff2') format('woff2'),
+        url('../fonts/Gilroy-RegularItalic.woff') format('woff'),
+        url('../fonts/Gilroy-RegularItalic.ttf') format('truetype');
+    font-weight: 400;
+    font-style: italic;
     font-display: swap;
 }
 
@@ -243,6 +267,37 @@ i, em {
         margin-top: 20px;
     }
 }
+
+.wp-block-quote {
+    padding: 10px 0 10px 15px;
+    border-left: 2px solid @accent;
+    font-weight: 500;
+    font-style: italic;
+
+    p {
+        font-style: inherit;
+        font-weight: inherit;
+    }
+}
+
+strong {
+    font-weight: 600;
+}
+
+.final {
+    background-color: @accent;
+    color: @white;
+    padding: 0.5em;
+    margin: 0!important;
+
+    a {
+        color: @white!important;;
+    }
+}
+
+// .final + .final {
+//     margin-top: 0;
+// }
 
 
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */

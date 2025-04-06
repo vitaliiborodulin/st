@@ -48,9 +48,22 @@
         //     // .xs(margin-top, auto);
         // }
 
-        &.active, &:hover {
+        &.active {
             background-color: @accent;
             color: @white;
+
+            &:hover {
+                cursor: default;
+                background-color: @accent;
+                color: @white;
+                box-shadow: none;
+            }
+        }
+
+        &:hover {
+            color: @black;
+            border-color: transparent;
+            box-shadow: 0 0 30px @blue;
         }
     }
 
