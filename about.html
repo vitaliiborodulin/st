@@ -64,7 +64,7 @@
 	            </div>
 	
 	           <div class="header__btn">
-	                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Рассчитать</a>
+	                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Оставить заявку</a>
 	           </div>
 	
 	           <div class="header__burger"><span></span></div>
@@ -90,6 +90,12 @@
 	                        <li class="menu-item"><a href="credit.html">Ипотека и МК</a></li>
 	                        <li class="menu-item"><a href="about.html#contacts">Контакты</a></li>
 	                    </ul>
+	                    <a href="tel:+78007754514" class="header__nav-tel" target="_blank">
+	                        +7 (800) 775 45-14
+	                    </a>
+	                    <div class="header__nav-btn">
+	                        <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Оставить заявку</a>
+	                    </div>
 	                </nav>
 	            </div>
 	        </div>
@@ -212,27 +218,27 @@
 		        <ul class="steps__list">
 		
 		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-1.svg" alt="">
+		                <img class="steps__icon" src="img/steps-1.svg" alt="" width="48" height="48">
 		                <h3 class="steps__title">Выбор проекта</h3>
 		                <div class="steps__descr">Вы определяетесь с проектом и комплектацией дома Если проект индивидуальный - делаем расчет его стоимости, если проект с нашего 
 		                    сайта - обсуждаем возможные изменения отправляем вам индивидуальное КП под ваши пожелания.</div>
 		            </li>
 		
 		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-2.svg" alt="">
+		                <img class="steps__icon" src="img/steps-2.svg" alt="" width="48" height="48">
 		                <h3 class="steps__title">Согласуем и заключаем договор</h3>
 		                <div class="steps__descr">Если укладываемся в бюджет - встречаемся в офисе, так же можно заключить договор дистанционно или на вашем участке 
 		                    для обсуждения деталей Обговариваем сроки начала работ. </div>
 		            </li>
 		
 		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-4.svg" alt="">
+		                <img class="steps__icon" src="img/steps-4.svg" alt="" width="48" height="48">
 		                <h3 class="steps__title">Подготовка к строительству</h3>
 		                <div class="steps__descr">Мы готовимся к строительству, комплектуем материал на ваш объект За это время устанавливаем фундамент силами проверенных партнеров.</div>
 		            </li>
 		
 		            <li class="steps__item">
-		                <img class="steps__icon" src="img/steps-5.svg" alt="">
+		                <img class="steps__icon" src="img/steps-5.svg" alt="" width="48" height="48">
 		                <h3 class="steps__title">Начинаем строительство</h3>
 		                <div class="steps__descr">Поставляется домокомплект на участок.
 		                    Вы оплачиваете 70% от стоимости договора.
@@ -437,6 +443,13 @@
 	
 	       <div class="footer__bottom">
 	
+	            <div class="footer__req">
+	                ООО «Строй-Точка» <br>
+	                ИНН: 7810996720 <br>
+	                КПП: 781001001 <br>
+	                ОГРН: 1247800028442
+	            </div>
+	
 	            <ul class="footer__bottom-links">
 	                <li><a href="content.html">Политика конфиденциальности</a></li>
 	            </ul>
@@ -491,6 +504,8 @@
 	        </label>
 	      </div>
 	      <input type="hidden" name="project">
+	      <input type="hidden" name="complect">
+	      <input type="hidden" name="dops">
 	      <button type="submit" class="btn form__submit">Оставить заявку</button>
 	    </form>
 	
@@ -504,9 +519,11 @@
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/jquery.maskedinput.js"></script>
+	<!-- <script src="js/jquery.maskedinput.js"></script> -->
+	<script src="js/jquery.inputmask.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js?v=5"></script>
+	<script src="js/filter.js"></script>
 	<!-- end scripts -->
 
 </body>

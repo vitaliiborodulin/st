@@ -64,7 +64,7 @@
 	            </div>
 	
 	           <div class="header__btn">
-	                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Рассчитать</a>
+	                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Оставить заявку</a>
 	           </div>
 	
 	           <div class="header__burger"><span></span></div>
@@ -90,6 +90,12 @@
 	                        <li class="menu-item"><a href="credit.html">Ипотека и МК</a></li>
 	                        <li class="menu-item"><a href="about.html#contacts">Контакты</a></li>
 	                    </ul>
+	                    <a href="tel:+78007754514" class="header__nav-tel" target="_blank">
+	                        +7 (800) 775 45-14
+	                    </a>
+	                    <div class="header__nav-btn">
+	                        <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Оставить заявку</a>
+	                    </div>
 	                </nav>
 	            </div>
 	        </div>
@@ -409,15 +415,15 @@
 		</div>
 
 		<div class="banner-section bg-f9">
-			<div class="container">
-				<div class="banner2">
-				    <div class="container">
-				        <div class="banner2__content">
-				            <div class="banner2__title">КАЖДЫЙ МЕСЯЦ 1,2 ДОП УСЛУГА <br> НА ВЫБОР В ПОДАРОК.</div>
-				            <div class="banner2__text">Успейте заключить договор на строительство вашего дома</div>
-				        </div>
-				    </div>
-				</div>
+			<div class="banner1">
+			    <div class="container">
+			        <div class="banner1__content">
+			            <div class="banner1__title">фиксируем цену на весну</div>
+			            <div class="banner1__text">Успейте заключить договор 
+			            на строительство вашего дома</div>
+			            <a href="catalog.html" class="btn">Выбрать проект</a>
+			        </div>
+			    </div>
 			</div>
 		</div>
 
@@ -497,6 +503,13 @@
 	
 	       <div class="footer__bottom">
 	
+	            <div class="footer__req">
+	                ООО «Строй-Точка» <br>
+	                ИНН: 7810996720 <br>
+	                КПП: 781001001 <br>
+	                ОГРН: 1247800028442
+	            </div>
+	
 	            <ul class="footer__bottom-links">
 	                <li><a href="content.html">Политика конфиденциальности</a></li>
 	            </ul>
@@ -551,6 +564,8 @@
 	        </label>
 	      </div>
 	      <input type="hidden" name="project">
+	      <input type="hidden" name="complect">
+	      <input type="hidden" name="dops">
 	      <button type="submit" class="btn form__submit">Оставить заявку</button>
 	    </form>
 	
@@ -564,9 +579,11 @@
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/jquery.maskedinput.js"></script>
+	<!-- <script src="js/jquery.maskedinput.js"></script> -->
+	<script src="js/jquery.inputmask.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js?v=5"></script>
+	<script src="js/filter.js"></script>
 	<!-- end scripts -->
 
 </body>

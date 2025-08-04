@@ -11,15 +11,17 @@ $(function() {
             preload : false
         }
     });
-
     
-    $('input[type="tel"]').mask("+7 (999) 999-99-99");
+
+    $('input[type="tel"]').inputmask("+7 (999) 999-99-99");
     
     $('.btn-popup').on('click', function () {
-        var text = $(this).attr('data-text');
+        const text = $(this).attr('data-title');
         // $('.popup__aim').text(text);
         // $('#get-projects .form__title').html(text);
-        $('#get-projects input[type=hidden]').val(text);
+        // console.log(text);
+        $('#get-projects input[name=project]').val(text);
+        getDops();
     });
     
     function prettify(num) {
@@ -40,18 +42,31 @@ $(function() {
             answer.slideUp(300);
         }
     });
-    // var menuToggle = 'button.header__menu-toggle';
-    // var navToMenu = 'div.header__menu';
+    function animateNav() {
+        var win_scroll = $(window).scrollTop(),
+                win_height = $(window).height(),
+                main_nav = $('.header'),
+                main_nav_offset = '',
+                scroll_by = 100;
     
-    // if ($(navToMenu).length) {
-    //     $(menuToggle).click(function() {
-    //         $('html').addClass('menu-active');
-    //     });
+        main_nav_offset = $(main_nav).outerHeight();
     
-    //     $('body').append('<div class="menu-overlay"></div><div class="menu"><div class="menu__inner">' + $(navToMenu).html() + '</div></div>');
+        if (win_scroll > scroll_by) {
+                $(main_nav).addClass('sticky-nav');
+                window.setTimeout(function() {
+                        $(main_nav).addClass('fix');
+                }, 200);
+        } else {
+                $(main_nav).removeClass('sticky-nav fix');
+        }
     
+    }
     
-    // }
+    animateNav();
+    
+    $(window).on('load scroll', function() {
+        animateNav();
+    });
     
     const burger = $('.header__burger');
     const menu = $('.header__menu');
@@ -72,20 +87,20 @@ $(function() {
             $('html, body').removeClass('overflow');
         }
     });
-    $('.hero__slider').slick({
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        infinite: true,
-        speed: 500,
-        // arrows: false,
-        fade: true,
-        cssEase: 'linear',
-        // dots: true,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
-        // pauseOnFocus: false,
-        pauseOnHover: false
-    });
+    // $('.hero__slider').slick({
+    //     slidesToShow: 1,
+    //     slidesToScroll: 1,
+    //     // infinite: true,
+    //     // speed: 500,
+    //     arrows: false,
+    //     fade: true,
+    //     cssEase: 'linear',
+    //     dots: true,
+    //     autoplay: true,
+    //     autoplaySpeed: 3000,
+    //     pauseOnFocus: false,
+    //     pauseOnHover: false
+    // });
     
     $('.news__slider').slick({
         slidesToShow: 3,
@@ -123,6 +138,7 @@ $(function() {
       $('.single-main__slider').slick({
         slidesToShow: 1,
         slidesToScroll: 1,
+        adaptiveHeight: true,
         fade: true,
         asNavFor: '.single-main__nav-slider'
       });
@@ -164,6 +180,7 @@ $(function() {
         slidesToShow: 1,
         slidesToScroll: 1,
         fade: true,
+        // adaptiveHeight: true,
         asNavFor: '.portfolio__nav-slider'
       });
     
@@ -184,24 +201,24 @@ $(function() {
         ]
       });
     
-      $('.portfolio-other__slider').slick({
-        slidesToShow: 2.7,
-        slidesToScroll: 1,
-        dots: true,
-        // arrows: true,
-        infinite: true,
-        speed: 500,
-        nextArrow: $('.portfolio-other__arrow .arrow-next'),
-        prevArrow: $('.portfolio-other__arrow .arrow-prev'),
-        responsive: [
-            {
-                breakpoint: 968,
-                settings: {
-                    slidesToShow: 1.7
-                }
-            }
-        ]
-      });
+      // $('.portfolio-other__slider').slick({
+      //   slidesToShow: 2.7,
+      //   slidesToScroll: 1,
+      //   // dots: true,
+      //   // arrows: true,
+      //   infinite: true,
+      //   speed: 500,
+      //   nextArrow: $('.portfolio-other__arrow .arrow-next'),
+      //   prevArrow: $('.portfolio-other__arrow .arrow-prev'),
+      //   responsive: [
+      //       {
+      //           breakpoint: 968,
+      //           settings: {
+      //               slidesToShow: 1.7
+      //           }
+      //       }
+      //   ]
+      // });
     if(document.querySelector('.tab__cards')){
     
     const tabCards = $('.tab__cards .tab__card');
@@ -210,6 +227,9 @@ $(function() {
     
     	tabCards.removeClass('active');
     	$(this).addClass('active');
+    	
+    	const open = $(this).attr('data-open');
+    	$('#get-projects input[name=complect]').val(open);
     	
     	var id = $(this).data('open');
     	
@@ -249,7 +269,7 @@ $(function() {
        if (checkboxDop.is(':checked')){
     	    checkboxDop.prop('checked', false);
             $(this).removeClass('active');
-            $(this).css('transform', 'none');
+            // $(this).css('transform', 'none');
     
             dopPriceNum -= checkboxDop.data('price');
     
@@ -260,7 +280,7 @@ $(function() {
         } else {
             checkboxDop.prop('checked', true);
             $(this).addClass('active');
-            $(this).css('transform', 'scale(0.9)');
+            // $(this).css('transform', 'scale(0.9)');
     
             dopPriceNum += checkboxDop.data('price');
     
@@ -271,14 +291,28 @@ $(function() {
         }
     });
     
-     function checkSum(){
+    function getDops() {
+        const dopsArr = [];
+    
+        $('.single-dop__item.active').each(function (index, element) {
+            let dop = $(element).find(".single-dop__t").text();
+            dopsArr.push(dop);
+       }); 
+      
+       $('#get-projects input[name=dops]').val(dopsArr);
+        // return number;
+      }
+    
+    function checkSum(){
         let one = $('.price').attr('data-price');
         let two = $('.dop-price').attr('data-price');
         // console.log(one, two);
     
         $('.final-price').text(prettify(parseFloat(one) + parseFloat(two)) + ' ₽');
-    	$('.final-price').attr('data-price', parseFloat(one) + parseFloat(two));
-     }
+        $('.final-price').attr('data-price', parseFloat(one) + parseFloat(two));
+    }
+    
+    // for(var i = 0; i <= inputs.length; i++){
     const ipo = document.getElementById('ipo');
     
     if(ipo){
@@ -290,7 +324,7 @@ $(function() {
         creditRate = document.getElementById('rate');
     
     /* Все number input */
-    const inputsNumber = document.querySelectorAll('input[type="number"]');
+    const inputsNumber = ipo.querySelectorAll('input');
     
     /* Итоговые значения */
     const totalMonthlyPayment = document.querySelector('.ipo__sum'),
@@ -345,17 +379,17 @@ $(function() {
     }
     
     $('select').niceSelect();
-
-
+    
+    
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         // if(event.detail.contactFormId=="224"){
-        // onclick=yaCounter26043108.reachGoal('formsend'); return true;
-        // }
-    
-        $(".form form").hide();
-        $(".form .form__thank").show();
-    
+            // onclick=yaCounter26043108.reachGoal('formsend'); return true;
+            // }
+            
+            $(".form form").hide();
+            $(".form .form__thank").show();
+            
     }, false );
-    
-
+        
+        
 });

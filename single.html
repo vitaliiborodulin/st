@@ -17,7 +17,7 @@
 	<link rel="stylesheet" href="css/styles.css?v=10">
 </head>
 
-<body class="single">
+<body class="single single-projects">
 
 	<!-- header -->
 	<header class="header">
@@ -64,7 +64,7 @@
 	            </div>
 	
 	           <div class="header__btn">
-	                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Рассчитать</a>
+	                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Оставить заявку</a>
 	           </div>
 	
 	           <div class="header__burger"><span></span></div>
@@ -90,6 +90,12 @@
 	                        <li class="menu-item"><a href="credit.html">Ипотека и МК</a></li>
 	                        <li class="menu-item"><a href="about.html#contacts">Контакты</a></li>
 	                    </ul>
+	                    <a href="tel:+78007754514" class="header__nav-tel" target="_blank">
+	                        +7 (800) 775 45-14
+	                    </a>
+	                    <div class="header__nav-btn">
+	                        <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Оставить заявку</a>
+	                    </div>
 	                </nav>
 	            </div>
 	        </div>
@@ -123,6 +129,7 @@
 		    
 		                        <div class="single-main__slide"><a data-fancybox="gallery" href="img/port-1.jpeg"><img src="img/port-1.jpeg" alt=""></a></div>
 		                        <div class="single-main__slide"><a data-fancybox="gallery" href="img/port-2.jpeg"><img src="img/port-2.jpeg" alt=""></a></div>
+		                        <div class="single-main__slide"><a data-fancybox="gallery" href="img/dk-22.jpg"><img src="img/dk-22.jpg" alt=""></a></div>
 		                        <div class="single-main__slide"><a data-fancybox="gallery" href="img/proj-1.jpg"><img src="img/proj-1.jpg" alt=""></a></div>
 		                        <div class="single-main__slide"><a data-fancybox="gallery" href="img/port-2.jpeg"><img src="img/port-2.jpeg" alt=""></a></div>
 		    
@@ -132,12 +139,19 @@
 		    
 		                        <div class="single-main__nav-slide"><img src="img/port-1.jpeg" alt=""></div>
 		                        <div class="single-main__nav-slide"><img src="img/port-2.jpeg" alt=""></div>
+		                        <div class="single-main__nav-slide"><img src="img/dk-22.jpg" alt=""></div>
 		                        <div class="single-main__nav-slide"><img src="img/proj-1.jpg" alt=""></div>
 		                        <div class="single-main__nav-slide"><img src="img/port-2.jpeg" alt=""></div>
 		    
 		                    </div>
 		
-		                    
+		                    <div class="single-main__pics">
+		                        <div class="single-main__pics-item">1 этаж</div>
+		                        <div class="single-main__pics-item">Терраса</div>
+		                        <div class="single-main__pics-item">3 комнаты</div>
+		                        <div class="single-main__pics-item">1 санузел</div>
+		                        <!-- <div class="single-main__pics-item"><b>Ипотека</b></div> -->
+		                    </div>
 		    
 		                </div>
 		    
@@ -166,60 +180,62 @@
 		                        <div class="single-main__about-info-title">Выберите желаемую комплектацию:</div>
 		                        <div class="tab">
 		                            <div class="tab__cards">
-		                                <div class="tab__card active" data-open="0" data-price="100">Закрытый контур</div>
-		                                <div class="tab__card" data-open="1" data-price="200">Теплый контур</div>
-		                                <div class="tab__card" data-open="2" data-price="300">Сезонное проживание</div>
-		                                <div class="tab__card" data-open="3" data-price="400">Постоянное проживание</div>
+		                                <div class="tab__card active" data-open="1" data-price="100">Закрытый контур</div>
+		                                <div class="tab__card" data-open="2" data-price="200">Теплый контур</div>
+		                                <div class="tab__card" data-open="3" data-price="300">Сезонное проживание</div>
+		                                <div class="tab__card" data-open="4" data-price="400">Постоянное проживание</div>
 		                            </div>
 		                            <div class="tab__rights">
-		                                <div class="tab__right active" data-id="0">
+		                                <div class="tab__right active" data-id="1">
 		                                    <div class="single-main__price">Цена за выбранную комплектацию: <span class="single-main__price-num">100 ₽</span></div>
 		                                    <a class="btn btn-o" data-fancybox data-src="#single-more-1" href="javascript:;">Смотреть комплектацию подробнее</a>
-		                                    <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Заказать комплектацию</a>
+		                                    <a class="btn btn-popup" data-title="Блэкберри" data-fancybox data-src="#get-projects" href="javascript:;">Заказать комплектацию</a>
 		
 		                                    <div style="display: none;" class="single-main__more" id="single-more-1">
 		                                        <div class="form__title">Подробная комплектация</div>
 		                                        <div class="single-main__content">
-		                                            <p><b>Закрытый контур</b></p>
-		                                            <p><i>в базовую комплектацию дома можно внести любые изменения</i></p>
+		                                            <b>Закрытый контур</b>
+		                                            <em>в базовую комплектацию дома можно внести любые изменения</em>
 		                                            <ol>
-		                                                <li>&nbsp;Обвязка дома — обрезной брус 150х150мм в два ряда<br>&nbsp;Перекрытия 1 и 2 этажа – обрезная доска 40х150мм с шагом 590мм&nbsp;</li>
-		                                                <li>Стропильная система – обрезная доска 40х150мм с шагом 590мм</li>
-		                                                <li>Стена 1 этаж – профилированный брус 140х140мм, Фронтоны и стены 2 этаж — каркас с отделкой имитатором бруса 20мм (камерной сушки)</li>
-		                                                <li>Перегородки 1 этаж – перегородочный брус 90х140мм, 2 этаж — обрезная доска 40х100мм</li><li>Соединение рядов бруса – деревянные нагеля&nbsp;</li>
-		                                                <li>Сборка углов – теплый угол (шип-паз)</li>
-		                                                <li>Кровля – Металочерепица (цвет на выбор)</li><li>Обрешетка и контробрешетка кровли – обрезная доска 20х100мм, брусок 40х50мм</li>
-		                                                <li>Гидроизоляция кровли – ветрозащитная мембрана Ондутис АМ&nbsp;</li><li>Гидроизоляция фронтонов — ветрозащитная мембрана Ондутис D&nbsp;</li>
-		                                                <li>Утепление полов, потолков – <span class="c1">не выполняется</span></li>
-		                                                <li>Внутренняя отделка потолков – <span class="c1">не выполняется</span></li>
-		                                                <li>Пароизоляция полов, потолков – <span class="c1">не выполняется</span></li>
-		                                                <li>Черновой пол 1 этажа – <span class="c1">не выполняется</span></li>
-		                                                <li>Чистовой пол 1 и 2 этажа – <span class="c1">не выполняется</span></li>
-		                                                <li>Окна – проемы с перевязками бруса согласно планировке и размерам&nbsp;</li>
-		                                                <li>Двери – проемы с перевязками бруса согласно планировке и размерам&nbsp;</li>
-		                                                <li>Лестница – не устанавливается&nbsp;</li>
-		                                                <li>Отделка плинтусом и наличником не выполняется&nbsp;</li>
-		                                                <li>Терраса и балкон – столбы из строганного бруса (1 сорт) с компенсационными лифтами (шарнирами)</li>
-		                                                <li>Свесы крыши — вагонка (камерной сушки), ширина 450мм</li>
-		                                                <li>&nbsp;Высота 1 этажа – 2,5м, 2 этажа – 2,3м&nbsp;</li>
-		                                                <li>Сборка – включена в стоимость</li>
-		                                                <li>&nbsp;Доставка и выгрузка материалов – <span class="c2">бесплатно в пределах 100км от КАД</span></li>
-		                                                <li>Проф. брус и силовые элементы — материал естественной влажности</li>
+		                                                 <li>Обвязка дома — 1 ряд обрезной брус 150х150мм, 2 ряд обрезная доска 40х150мм</li>
+		                                                 <li>Перекрытия 1 этажа – обрезная доска 40х150мм с шагом 590мм</li>
+		                                                 <li>Стропильная система – обрезная доска 40х150мм с шагом 590мм</li>
+		                                                 <li>Силовой каркас (стены, фронтоны дома) – обрезная доска 40х150мм</li>
+		                                                 <li>Перегородки 1 этажа – обрезная доска 40х100мм</li>
+		                                                 <li>Кровля – МЧ (цвет на выбор)</li>
+		                                                 <li>Обрешетка и контробрешетка кровли – обрезная доска 20х100мм, брусок 20х50мм</li>
+		                                                 <li>Гидроизоляция кровли – ветрозащитная мембрана Ондутис АМ</li>
+		                                                 <li>Внешняя отделка стен – Имитация бруса (камерной сушки), через обрешетку 20х50мм</li>
+		                                                 <li>Гидроизоляция стен, пола — ветрозащитная мембрана Ондутис D</li>
+		                                                 <li>Утепление стен, пола, потолка – <span class="c2">Не выполняется</span></li>
+		                                                 <li>Утепление перегородок 1 этажа — <span class="c2">Не выполняется</span></li>
+		                                                 <li>Внутренняя отделка стен, перегородок, потолка – <span class="c2">Не выполняется</span></li>
+		                                                 <li>Пароизоляция стен, пола, потолка – мембрана Ондутис R</li>
+		                                                 <li>Черновой пол – обрезная доска 20х100мм</li>
+		                                                 <li>Чистовой пол – <span class="c2">Не выполняется</span></li>
+		                                                 <li>Окна – ПВХ 2-х камерный</li>
+		                                                 <li>Двери – входная металлическая, Российского производства внутренние — <span class="c2">не выполняется</span></li>
+		                                                 <li>Отделка плинтусом и наличником — не включена</li>
+		                                                 <li>Терраса – столбы из строганного бруса, балясины , перила, пол- шпунтованная доска 36мм, потолок вагонка</li>
+		                                                 <li>Высота 1 этажа – 2,5м</li>
+		                                                 <li>Сборка – включена в стоимость</li>
+		                                                 <li>Доставка и выгрузка материалов – бесплатно в пределах 100км от КАД и МКАД</li>
+		                                                 <li>Каркас и силовые элементы — материал Камерной сушки.</li>
 		                                            </ol>
 		                                        </div>
 		                                    </div>
 		                                </div>
-		                                <div class="tab__right" data-id="1">
+		                                <div class="tab__right" data-id="2">
 		                                    <div class="single-main__price">Цена за выбранную комплектацию: <span class="single-main__price-num">200 ₽</span></div>
 		                                    <a class="btn btn-o" data-fancybox data-src="#single-more-1" href="javascript:;">Смотреть комплектацию подробнее</a>
 		                                    <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Заказать комплектацию</a>
 		                                </div>
-		                                <div class="tab__right" data-id="2">
+		                                <div class="tab__right" data-id="3">
 		                                    <div class="single-main__price">Цена за выбранную комплектацию: <span class="single-main__price-num">300 ₽</span></div>
 		                                    <a class="btn btn-o" data-fancybox data-src="#single-more-1" href="javascript:;">Смотреть комплектацию подробнее</a>
 		                                    <a href="#" class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Заказать комплектацию</a>
 		                                </div>
-		                                <div class="tab__right" data-id="3">
+		                                <div class="tab__right" data-id="4">
 		                                    <div class="single-main__price">Цена за выбранную комплектацию: <span class="single-main__price-num">400 ₽</span></div>
 		                                    <a class="btn btn-o" data-fancybox data-src="#single-more-1" href="javascript:;">Смотреть комплектацию подробнее</a>
 		                                    <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Заказать комплектацию</a>
@@ -247,7 +263,7 @@
 		            <div class="single-plan__info">
 		                <h2 class="single-plan__title">Планировка</h2>
 		                <div class="single-plan__descr">Есть возможность бесплатной перепланировки или расчёт вашего проекта</div>
-		                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Рассчитать планировку</a>
+		                <a class="btn btn-popup" data-title="Блэкберри" data-fancybox data-src="#get-projects" href="javascript:;">Рассчитать планировку</a>
 		            </div>
 		
 		            <div class="single-plan__slider-wrapper">
@@ -265,69 +281,141 @@
 		        </div>
 		    </div>
 		</section>
+
+		<section class="compl bg-w">
+		    <div class="container">
+		        <h2 class="compl__header">Сравнение комплектаций</h2>
+		
+		        <ul class="compl__list">
+		            <li class="compl__item bg-f9">
+		                <h3 class="compl__title">Закрытый контур</h3>
+		                <div class="compl__price">3 063 000 ₽</div>
+		                <ul class="compl__opt">
+		                    <li class="compl__opt-item compl__opt-item--plus">Каркас дома 145х45мм</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Кровля М/Ч</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Внешняя отделка Имитация бруса</li>
+		                    <li class="compl__opt-item compl__opt-item--min">Утепление</li>
+		                    <li class="compl__opt-item compl__opt-item--min">Внутренняя отделка</li>
+		                </ul>
+		                <a href="javascript:;" class="btn btn-o btn-popup w-100" data-fancybox data-src="#single-more-1">Подробнее</a>
+		                <a href="javascript:;" class="btn w-100" data-fancybox data-src="#get-projects">Заказать</a>
+		            </li>
+		            <li class="compl__item bg-f9">
+		                <h3 class="compl__title">Теплый контур</h3>
+		                <div class="compl__price">4 120 000 ₽</div>
+		                <ul class="compl__opt">
+		                    <li class="compl__opt-item compl__opt-item--plus">Каркас дома 145х45мм</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Кровля М/Ч</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Внешняя отделка Имитация бруса</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Утепление 150мм Роквул</li>
+		                    <li class="compl__opt-item compl__opt-item--min">Внутренняя отделка</li>
+		                </ul>
+		                <a href="javascript:;" class="btn btn-o btn-popup w-100" data-fancybox data-src="#single-more-1">Подробнее</a>
+		                <a href="javascript:;" class="btn w-100" data-fancybox data-src="#get-projects">Заказать</a>
+		            </li>
+		            <li class="compl__item bg-f9">
+		                <h3 class="compl__title">Сезонное проживание</h3>
+		                <div class="compl__price">4 990 000 ₽</div>
+		                <ul class="compl__opt">
+		                    <li class="compl__opt-item compl__opt-item--plus">Каркас дома 145х45мм</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Кровля М/Ч</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Внешняя отделка Имитация бруса</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Утепление 150мм Роквул</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Внутренняя отделка вагонка</li>
+		                </ul>
+		                <a href="javascript:;" class="btn btn-o btn-popup w-100" data-fancybox data-src="#single-more-1">Подробнее</a>
+		                <a href="javascript:;" class="btn w-100" data-fancybox data-src="#get-projects">Заказать</a>
+		            </li>
+		            <li class="compl__item bg-f9">
+		                <h3 class="compl__title">Постоянное проживание</h3>
+		                <div class="compl__price">5 140 000 ₽</div>
+		                <ul class="compl__opt">
+		                    <li class="compl__opt-item compl__opt-item--plus">Каркас дома 195х45мм</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Кровля М/Ч</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Внешняя отделка Имитация бруса</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Утепление 200мм Роквул</li>
+		                    <li class="compl__opt-item compl__opt-item--plus">Внутренняя отделка имитация бруса</li>
+		                </ul>
+		                <a href="javascript:;" class="btn btn-o btn-popup w-100" data-fancybox data-src="#single-more-1">Подробнее</a>
+		                <a href="javascript:;" class="btn w-100" data-fancybox data-src="#get-projects">Заказать</a>
+		            </li>
+		
+		        </ul>
+		
+		    </div>
+		</section>
 		<section class="single-dop bg-w">
 		    <div class="container">
 		        <h2 class="single-dop__title">Дополнительные опции</h2>
 		        <!-- <div class="single-dop__subtitle">Выберите нужные опции, выделив их кликом</div> -->
 		
 		        <ul class="single-dop__list">
-		            <li class="single-dop__item" style="background-image: url(img/dop-1.jpg);">
+		            <li class="single-dop__item" >
+		                <div class="single-dop__t">ЖБ Сваи</div>
+		                <img src="img/dop-1-1.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">ЖБ Сваи</div>
 		                    <input type="checkbox" name="dop" data-price="10">
 		                    <div class="single-dop__price">10 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-2.jpg);">
+		            <li class="single-dop__item" >
+		                <div class="single-dop__t">Винтовые сваи</div>
+		                <img src="img/dop-2.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Винтовые сваи</div>
 		                    <input type="checkbox" name="dop" data-price="20">
 		                    <div class="single-dop__price">20 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-3.jpg);">
+		            <li class="single-dop__item">
+		                <div class="single-dop__t">Плита</div>
+		                <img src="img/dop-3.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Плита</div>
 		                    <input type="checkbox" name="dop" data-price="30">
 		                    <div class="single-dop__price">30 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-4.jpg);">
+		            <li class="single-dop__item">
+		                <div class="single-dop__t">Покраска фасада</div>
+		                <img src="img/dop-4-1.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Покраска фасада</div>
 		                    <input type="checkbox" name="dop" data-price="40">
 		                    <div class="single-dop__price">40 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-5.jpg);">
+		            <li class="single-dop__item" >
+		                <div class="single-dop__t">ЖБ Сваи</div>
+		                <img src="img/dop-5-1.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Антисептирование элементов каркаса</div>
-		                    <input type="checkbox" name="dop" data-price="50">
-		                    <div class="single-dop__price">50 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="10">
+		                    <div class="single-dop__price">10 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-6.jpg);">
+		            <li class="single-dop__item" >
+		                <div class="single-dop__t">Винтовые сваи</div>
+		                <img src="img/dop-6-1.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Плиты белтермо</div>
-		                    <input type="checkbox" name="dop" data-price="60">
-		                    <div class="single-dop__price">60 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="20">
+		                    <div class="single-dop__price">20 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-7.jpg);">
+		            <li class="single-dop__item">
+		                <div class="single-dop__t">Плита</div>
+		                <img src="img/dop-7-1.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Водосточка</div>
-		                    <input type="checkbox" name="dop" data-price="70">
-		                    <div class="single-dop__price">70 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="30">
+		                    <div class="single-dop__price">30 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-8.jpg);">
+		            <li class="single-dop__item">
+		                <div class="single-dop__t">Покраска фасада</div>
+		                <img src="img/dop-8-1.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Снегозадержание</div>
-		                    <input type="checkbox" name="dop" data-price="80">
-		                    <div class="single-dop__price">80 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="40">
+		                    <div class="single-dop__price">40 ₽</div>
 		                </div>
 		            </li>
-		        </ul>
+		           
+		        </ul> 
 		
 		        <div class="single-dop__box">
 		            <div class="single-dop__wrap">
@@ -341,37 +429,41 @@
 		                <div class="single-dop__sum final-price" data-price="0">0 ₽</div>
 		            </div>
 		            <div class="single-dop__wrap">
-		                <a class="btn" data-fancybox data-src="#get-projects" href="javascript:;">Получить консультацию</a>
+		                <a class="btn btn-popup" data-title="Блэкберри" data-fancybox data-src="#get-projects" href="javascript:;">Получить консультацию</a>
 		            </div>
 		        </div>
 		
 		        <ul class="single-dop__list">
-		            <li class="single-dop__item" style="background-image: url(img/dop-9.jpg);">
+		            <li class="single-dop__item" >
+		                <div class="single-dop__t">ЖБ Сваи</div>
+		                <img src="img/dop-9.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Отопление</div>
-		                    <input type="checkbox" name="dop" data-price="90">
-		                    <div class="single-dop__price">90 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="10">
+		                    <div class="single-dop__price">10 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-10.jpg);">
+		            <li class="single-dop__item" >
+		                <div class="single-dop__t">Винтовые сваи</div>
+		                <img src="img/dop-10.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">ХВС/ГВС</div>
-		                    <input type="checkbox" name="dop" data-price="100">
-		                    <div class="single-dop__price">100 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="20">
+		                    <div class="single-dop__price">20 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-11.jpg);">
+		            <li class="single-dop__item">
+		                <div class="single-dop__t">Плита</div>
+		                <img src="img/dop-11.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Электрика</div>
-		                    <input type="checkbox" name="dop" data-price="110">
-		                    <div class="single-dop__price">110 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="30">
+		                    <div class="single-dop__price">30 ₽</div>
 		                </div>
 		            </li>
-		            <li class="single-dop__item" style="background-image: url(img/dop-12.jpg);">
+		            <li class="single-dop__item">
+		                <div class="single-dop__t">Покраска фасада</div>
+		                <img src="img/dop-12.jpg" alt="">
 		                <div class="single-dop__info">
-		                    <div class="single-dop__t">Вентиляция</div>
-		                    <input type="checkbox" name="dop" data-price="120">
-		                    <div class="single-dop__price">120 ₽</div>
+		                    <input type="checkbox" name="dop" data-price="40">
+		                    <div class="single-dop__price">40 ₽</div>
 		                </div>
 		            </li>
 		        </ul>
@@ -446,116 +538,8 @@
 		
 		    </div>
 		</section>
-		<section class="portfolio-other bg-w">
+
 		
-		    <div class="container">
-		        <div class="portfolio-other__header">
-		            <div class="portfolio-other__title">Посмотрите другие проекты</div>
-		            <div class="portfolio-other__arrow">
-		                <div class="arrow-prev">
-		                    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-		                        <path d="M0.292892 7.2929C-0.0976315 7.68342 -0.0976314 8.31659 0.292893 8.70711L6.65686 15.0711C7.04738 15.4616 7.68054 15.4616 8.07107 15.0711C8.46159 14.6805 8.46159 14.0474 8.07107 13.6569L2.41421 8L8.07107 2.34315C8.46159 1.95262 8.46159 1.31946 8.07107 0.928934C7.68054 0.53841 7.04738 0.53841 6.65685 0.928934L0.292892 7.2929ZM30 7L1 7L1 9L30 9L30 7Z" fill="#303030" fill-opacity="0.8"/>
-		                        </svg>
-		                        
-		                </div>
-		                <div class="arrow-next">
-		                    <svg width="30" height="16" viewBox="0 0 30 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-		                        <path d="M29.7071 8.7071C30.0976 8.31658 30.0976 7.68341 29.7071 7.29289L23.3431 0.92893C22.9526 0.538406 22.3195 0.538406 21.9289 0.92893C21.5384 1.31945 21.5384 1.95262 21.9289 2.34314L27.5858 8L21.9289 13.6569C21.5384 14.0474 21.5384 14.6805 21.9289 15.0711C22.3195 15.4616 22.9526 15.4616 23.3431 15.0711L29.7071 8.7071ZM8.74228e-08 9L29 9L29 7L-8.74228e-08 7L8.74228e-08 9Z" fill="#303030" fill-opacity="0.8"/>
-		                    </svg>
-		                </div>
-		            </div>
-		        </div>
-		    </div>
-		    
-		    <ul class="portfolio-other__slider">
-		
-		        <li class="projects__item">
-		            <div class="projects__img">
-		                <a href="#" class="projects__link">
-		                    <img src="img/proj-3.jpg" alt="">
-		                </a>
-		            </div>
-		            <div class="projects__info">
-		                <div class="projects__left">
-		                    <h3 class="projects__name">Онтарио</h3>
-		                    <div class="projects__square">102 кв.м</div>
-		                    <div class="projects__price">от 1 817 329 ₽</div>
-		                </div>
-		                <div class="projects__right">
-		                    <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
-		                    <ul class="projects__options">
-		                        <li>1 этаж</li>
-		                        <li>4 спальни</li>
-		                        <li>2 санузла</li>
-		                        <li>терраса</li>
-		                    </ul>
-		                </div>
-		            </div>
-		            <div class="projects__btns">
-		                <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
-		                <a class="btn btn-blue-o w-100" href="single.html">Подробнее</a>
-		            </div>
-		        </li>
-		        <li class="projects__item">
-		            <div class="projects__img">
-		                <a href="#" class="projects__link">
-		                    <img src="img/proj-3.jpg" alt="">
-		                </a>
-		            </div>
-		            <div class="projects__info">
-		                <div class="projects__left">
-		                    <h3 class="projects__name">Онтарио</h3>
-		                    <div class="projects__square">102 кв.м</div>
-		                    <div class="projects__price">от 1 817 329 ₽</div>
-		                </div>
-		                <div class="projects__right">
-		                    <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
-		                    <ul class="projects__options">
-		                        <li>1 этаж</li>
-		                        <li>4 спальни</li>
-		                        <li>2 санузла</li>
-		                        <li>терраса</li>
-		                    </ul>
-		                </div>
-		            </div>
-		            <div class="projects__btns">
-		                <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
-		                <a class="btn btn-blue-o w-100" href="single.html">Подробнее</a>
-		            </div>
-		        </li>
-		        <li class="projects__item">
-		            <div class="projects__img">
-		                <a href="#" class="projects__link">
-		                    <img src="img/proj-3.jpg" alt="">
-		                </a>
-		            </div>
-		            <div class="projects__info">
-		                <div class="projects__left">
-		                    <h3 class="projects__name">Онтарио</h3>
-		                    <div class="projects__square">102 кв.м</div>
-		                    <div class="projects__price">от 1 817 329 ₽</div>
-		                </div>
-		                <div class="projects__right">
-		                    <!-- <div class="projects__descr">Дом для семьи из четырех человек, подходит для круглогодичного проживания</div> -->
-		                    <ul class="projects__options">
-		                        <li>1 этаж</li>
-		                        <li>4 спальни</li>
-		                        <li>2 санузла</li>
-		                        <li>терраса</li>
-		                    </ul>
-		                </div>
-		            </div>
-		            <div class="projects__btns">
-		                <a href="javascript:;" class="btn btn-blue w-100" data-fancybox data-src="#get-projects">Хочу такой дом</a>
-		                <a class="btn btn-blue-o w-100" href="single.html">Подробнее</a>
-		            </div>
-		        </li>
-		
-		        
-		
-		    </ul>
-		
-		</section>
 
 		<div class="bg-f0f1f4">
 			<!-- feedback -->
@@ -675,6 +659,13 @@
 	
 	       <div class="footer__bottom">
 	
+	            <div class="footer__req">
+	                ООО «Строй-Точка» <br>
+	                ИНН: 7810996720 <br>
+	                КПП: 781001001 <br>
+	                ОГРН: 1247800028442
+	            </div>
+	
 	            <ul class="footer__bottom-links">
 	                <li><a href="content.html">Политика конфиденциальности</a></li>
 	            </ul>
@@ -729,6 +720,8 @@
 	        </label>
 	      </div>
 	      <input type="hidden" name="project">
+	      <input type="hidden" name="complect">
+	      <input type="hidden" name="dops">
 	      <button type="submit" class="btn form__submit">Оставить заявку</button>
 	    </form>
 	
@@ -742,9 +735,11 @@
 	<script src="js/jquery-3.7.1.min.js"></script>
 	<script src="js/jquery.nice-select.min.js"></script>
 	<script src="js/jquery.fancybox.min.js"></script>
-	<script src="js/jquery.maskedinput.js"></script>
+	<!-- <script src="js/jquery.maskedinput.js"></script> -->
+	<script src="js/jquery.inputmask.min.js"></script>
 	<script src="js/slick.min.js"></script>
 	<script src="js/scripts.js?v=5"></script>
+	<script src="js/filter.js"></script>
 	<!-- end scripts -->
 
 </body>
