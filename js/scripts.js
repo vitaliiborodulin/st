@@ -62,11 +62,11 @@ $(function() {
     
     }
     
-    animateNav();
+    // animateNav();
     
-    $(window).on('load scroll', function() {
-        animateNav();
-    });
+    // $(window).on('load scroll', function() {
+    //     animateNav();
+    // });
     
     const burger = $('.header__burger');
     const menu = $('.header__menu');
@@ -256,6 +256,24 @@ $(function() {
     	checkTab();
     
     }
+    const compls = $('.compl__item');
+    
+    compls.on('click', function(){
+        compls.removeClass('active').find('input[type=checkbox]').prop('checked', false);
+    
+       const checkboxDop = $(this).find('input[type=checkbox]');
+    
+       if (checkboxDop.is(':checked')){
+    	    checkboxDop.prop('checked', false);
+            $(this).removeClass('active');
+    
+           
+        } else {
+            checkboxDop.prop('checked', true);
+            $(this).addClass('active');
+           
+        }
+    });
     let price = $('.price'); //цена комплектации дома
     let dopPrice = $('.dop-price'); //цена допов
     let finalPrice = $('.final-price'); //финальная цена
