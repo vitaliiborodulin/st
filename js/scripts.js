@@ -144,7 +144,7 @@ $(function() {
       });
     
       $('.single-main__nav-slider').slick({
-        slidesToShow: 3,
+        slidesToShow: 5,
         asNavFor: '.single-main__slider',
         // dots: true,
         // centerMode: true,
@@ -154,7 +154,12 @@ $(function() {
             {
                 breakpoint: 768,
                 settings: {
-                  slidesToShow: 2
+                  slidesToShow: 4
+                }
+            }, {
+                breakpoint: 400,
+                settings: {
+                  slidesToShow: 3
                 }
             }
         ]
