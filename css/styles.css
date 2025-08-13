@@ -5521,6 +5521,19 @@ input[type='submit'] {
     margin-left: -15px;
   }
 
+  .single-main__about-t {
+    margin-bottom: 20px;
+  }
+
+  .single-main__base-man {
+    flex-direction: column;
+  }
+
+  .single-main__base-pic {
+    width: 90px;
+    height: 90px;
+  }
+
   .single-main__about-info-list li {
     width: calc(50% - 10px);
   }
