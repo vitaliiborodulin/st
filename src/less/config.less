@@ -127,7 +127,8 @@ body {
     // line-height: @lineheight;
     font-weight: 400;
     color: @black;
-    background-color: #F9F9F9;
+    // background-color: #F9F9F9;
+    background-color: @white;
     // text-rendering: optimizeSpeed;
     // -webkit-font-smoothing: antialiased;
     // text-rendering: optimizeLegibility;
@@ -198,6 +199,10 @@ input, textarea {
     width: 100%;
 }
 
+.pt-0 {
+    padding-top: 0!important;
+}
+
 .bg-dark {
     background-color: #121826;
 }
@@ -225,16 +230,20 @@ i, em {
 // fancybox
 
 .fancybox-content {
-    border-radius: 30px;
+    border-radius: 10px;
     padding: 30px;
 
     .xs-block({
         padding: 30px 10px;
-        border-radius: 20px;
+        // border-radius: 20px;
     });
 
     .form__title {
         color: #376CA2;
+    }
+
+    img {
+        border-radius: 10px;
     }
 }
 

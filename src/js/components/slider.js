@@ -1,17 +1,17 @@
-$('.hero__slider').slick({
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    infinite: true,
-    // speed: 500,
-    arrows: false,
-    fade: true,
-    cssEase: 'linear',
-    dots: true,
-    autoplay: true,
-    autoplaySpeed: 3000,
-    pauseOnFocus: false,
-    pauseOnHover: false
-});
+// $('.hero__slider').slick({
+//     slidesToShow: 1,
+//     slidesToScroll: 1,
+//     // infinite: true,
+//     // speed: 500,
+//     arrows: false,
+//     fade: true,
+//     cssEase: 'linear',
+//     dots: true,
+//     autoplay: true,
+//     autoplaySpeed: 3000,
+//     pauseOnFocus: false,
+//     pauseOnHover: false
+// });
 
 $('.news__slider').slick({
     slidesToShow: 3,
@@ -55,7 +55,7 @@ $('.news__slider').slick({
   });
 
   $('.single-main__nav-slider').slick({
-    slidesToShow: 3,
+    slidesToShow: 5,
     asNavFor: '.single-main__slider',
     // dots: true,
     // centerMode: true,
@@ -65,7 +65,12 @@ $('.news__slider').slick({
         {
             breakpoint: 768,
             settings: {
-              slidesToShow: 2
+              slidesToShow: 4
+            }
+        }, {
+            breakpoint: 400,
+            settings: {
+              slidesToShow: 3
             }
         }
     ]
@@ -91,7 +96,7 @@ $('.news__slider').slick({
     slidesToShow: 1,
     slidesToScroll: 1,
     fade: true,
-    adaptiveHeight: true,
+    // adaptiveHeight: true,
     asNavFor: '.portfolio__nav-slider'
   });
 
@@ -112,21 +117,21 @@ $('.news__slider').slick({
     ]
   });
 
-  $('.portfolio-other__slider').slick({
-    slidesToShow: 2.7,
-    slidesToScroll: 1,
-    dots: true,
-    // arrows: true,
-    infinite: true,
-    speed: 500,
-    nextArrow: $('.portfolio-other__arrow .arrow-next'),
-    prevArrow: $('.portfolio-other__arrow .arrow-prev'),
-    responsive: [
-        {
-            breakpoint: 968,
-            settings: {
-                slidesToShow: 1.7
-            }
-        }
-    ]
-  });
+  // $('.portfolio-other__slider').slick({
+  //   slidesToShow: 2.7,
+  //   slidesToScroll: 1,
+  //   // dots: true,
+  //   // arrows: true,
+  //   infinite: true,
+  //   speed: 500,
+  //   nextArrow: $('.portfolio-other__arrow .arrow-next'),
+  //   prevArrow: $('.portfolio-other__arrow .arrow-prev'),
+  //   responsive: [
+  //       {
+  //           breakpoint: 968,
+  //           settings: {
+  //               slidesToShow: 1.7
+  //           }
+  //       }
+  //   ]
+  // });

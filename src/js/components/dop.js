@@ -11,7 +11,7 @@ $('.single-dop__item').on('click', function(){
    if (checkboxDop.is(':checked')){
 	    checkboxDop.prop('checked', false);
         $(this).removeClass('active');
-        $(this).css('transform', 'none');
+        // $(this).css('transform', 'none');
 
         dopPriceNum -= checkboxDop.data('price');
 
@@ -22,7 +22,7 @@ $('.single-dop__item').on('click', function(){
     } else {
         checkboxDop.prop('checked', true);
         $(this).addClass('active');
-        $(this).css('transform', 'scale(0.9)');
+        // $(this).css('transform', 'scale(0.9)');
 
         dopPriceNum += checkboxDop.data('price');
 

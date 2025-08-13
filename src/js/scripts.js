@@ -32,22 +32,25 @@ $(function() {
     //= components/faq.js
     //= components/menu.js
     //= components/slider.js
-    //= components/tabs.js
+    //= components/tabs-new.js
     //= components/dop.js
     //= components/calc.js
     
     $('select').niceSelect();
-
-
+    
+    
     document.addEventListener( 'wpcf7mailsent', function( event ) {
         // if(event.detail.contactFormId=="224"){
-        // onclick=yaCounter26043108.reachGoal('formsend'); return true;
-        // }
-    
-        $(".form form").hide();
-        $(".form .form__thank").show();
-    
+            // onclick=yaCounter26043108.reachGoal('formsend'); return true;
+            // }
+            
+            $(".form form").hide();
+            $(".form .form__thank").show();
+            
     }, false );
-    
-
+        
+        
 });
+
+
+   

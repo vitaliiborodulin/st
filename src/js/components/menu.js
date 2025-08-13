@@ -1,15 +1,28 @@
-// var menuToggle = 'button.header__menu-toggle';
-// var navToMenu = 'div.header__menu';
+function animateNav() {
+    var win_scroll = $(window).scrollTop(),
+            win_height = $(window).height(),
+            main_nav = $('.header'),
+            main_nav_offset = '',
+            scroll_by = 100;
 
-// if ($(navToMenu).length) {
-//     $(menuToggle).click(function() {
-//         $('html').addClass('menu-active');
-//     });
+    main_nav_offset = $(main_nav).outerHeight();
 
-//     $('body').append('<div class="menu-overlay"></div><div class="menu"><div class="menu__inner">' + $(navToMenu).html() + '</div></div>');
+    if (win_scroll > scroll_by) {
+            $(main_nav).addClass('sticky-nav');
+            window.setTimeout(function() {
+                    $(main_nav).addClass('fix');
+            }, 200);
+    } else {
+            $(main_nav).removeClass('sticky-nav fix');
+    }
 
+}
 
-// }
+// animateNav();
+
+// $(window).on('load scroll', function() {
+//     animateNav();
+// });
 
 const burger = $('.header__burger');
 const menu = $('.header__menu');
