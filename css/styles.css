@@ -2551,8 +2551,13 @@ input[type='submit'] {
   font-size: 20px;
 }
 
-.content__subtitle p {
-  margin: 0;
+.content__subtitle > * {
+  margin: 5px;
+  text-align: center;
+}
+
+.content__subtitle img {
+  display: inline-block;
 }
 
 .content .content__info {
