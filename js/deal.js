@@ -192,7 +192,7 @@ const prizes = [
     // делаем кнопку снова активной
     trigger.disabled = false;
 
-    $(".btn-spin").hide(300);
+    $(".btn-spin").hide();
 
 
     const prize = document.querySelector('.prize.selected .text').textContent;
@@ -207,7 +207,7 @@ const prizes = [
 
     document.querySelector(".more").append(waLink);
 
-    $(".more").show(300);
+    $(".more").show();
 
   });
   
@@ -215,3 +215,12 @@ const prizes = [
   setupWheel();
 
 });
+
+setTimeout(function(){ 
+    // const fancybox = new Fancybox([
+    //     {src: "#deal"}
+    // ]);
+    $.fancybox.open({
+      src  : '#deal'
+    });
+}, 5000);
