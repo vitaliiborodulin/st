@@ -377,6 +377,18 @@ strong {
   color: #fff !important;
 }
 
+.menu-item.new a {
+  display: inline-block;
+  color: #FC622C;
+  font-weight: 700;
+  -webkit-animation: scaleAnimation 2s infinite;
+          animation: scaleAnimation 2s infinite;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out;
+  -webkit-transform-origin: left;
+          transform-origin: left;
+}
+
 /* Удаляем все анимации и переходы для людей, которые предпочитают их не использовать */
 
 *:focus:not(:focus-visible) {
@@ -413,6 +425,66 @@ input[type='submit'] {
 
   100% {
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0);
+  }
+}
+
+@-webkit-keyframes scaleAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    /* Starting size (100%) */
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    /* Scale up to 150% at the midpoint */
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    /* Return to original size */
+  }
+}
+
+@keyframes scaleAnimation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    /* Starting size (100%) */
+  }
+
+  50% {
+    -webkit-transform: scale(1.05);
+            transform: scale(1.05);
+    /* Scale up to 150% at the midpoint */
+  }
+
+  100% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    /* Return to original size */
+  }
+}
+
+@-webkit-keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
+  }
+}
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0.5;
   }
 }
 

@@ -160,8 +160,16 @@
             animation: tick 700ms cubic-bezier(0.34, 1.56, 0.64, 1);
   }
 
+  .page-template-page-deal {
+    background-color: #F9F9F9;
+  }
+
+  #deal {
+    padding-top: 20px;
+    padding-bottom: 50px;
+  }
+
   #deal .more {
-    /* margin: 20px 0; */
     text-align: center;
   }
 
