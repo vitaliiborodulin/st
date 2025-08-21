@@ -380,7 +380,6 @@ strong {
 .menu-item.new a {
   display: inline-block;
   color: #FC622C;
-  font-weight: 700;
   -webkit-animation: scaleAnimation 2s infinite;
           animation: scaleAnimation 2s infinite;
   -webkit-animation-timing-function: ease-in-out;
