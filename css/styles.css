@@ -284,6 +284,13 @@ main {
   color: #1D263B;
 }
 
+.h3 {
+  margin-bottom: 30px;
+  font-weight: 700;
+  font-size: 40px;
+  color: #1D263B;
+}
+
 /* Наследуем шрифты для инпутов и кнопок */
 
 textarea {
@@ -1674,11 +1681,46 @@ input[type='submit'] {
   border-radius: 20px;
 }
 
+.projects__sale {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  z-index: 2;
+  padding: 5px 10px;
+  text-align: center;
+  min-width: 73px;
+  color: #fff;
+  background-color: red;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
+  -webkit-animation: blink 2s infinite;
+          animation: blink 2s infinite;
+}
+
+.projects__price-wrap {
+  margin: 10px 0;
+}
+
 .projects__price {
-  font-size: 24px;
+  font-size: 20px;
   font-weight: 700;
   color: #010101;
   order: 3;
+  display: flex;
+  gap: 5px;
+}
+
+.projects__price-old {
+  font-size: 16px;
+  text-decoration: line-through;
+  opacity: 0.5;
+  font-weight: 400;
+}
+
+.projects__price-future {
+  font-size: 16px;
+  opacity: 0.7;
 }
 
 .projects__descr {
@@ -1691,8 +1733,8 @@ input[type='submit'] {
 }
 
 .projects__btns {
-  display: flex;
-  justify-content: space-between;
+  padding: 10px 20px;
+  text-align: center;
 }
 
 .projects__btns .btn + .btn {
@@ -1723,6 +1765,23 @@ input[type='submit'] {
 .home .projects__item,
 .home .portfolio__item {
   width: calc(33.333333333333336% - 20px);
+}
+
+.page-template-page-deal .h2 {
+  margin-bottom: 20px;
+}
+
+.page-template-page-deal .h2-sub {
+  margin-bottom: 50px;
+  font-size: 18px;
+}
+
+.page-template-page-deal .projects__item {
+  width: calc(33.333333333333336% - 20px);
+}
+
+.page-template-page-deal .projects__price {
+  color: #2579A7;
 }
 
 .category h1 {
@@ -4289,6 +4348,35 @@ input[type='submit'] {
   background-color: #fff;
 }
 
+.sales__dop-list {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+}
+
+.sales__dop-item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(16.666666666666668% - 20px);
+  position: relative;
+  padding: 50px 16px;
+  border-radius: 10px;
+  background: url(../img/sales-dop-1.jpg) no-repeat center / cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.sales__dop-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #fff;
+}
+
 .footer {
   padding-top: 69px;
   padding-bottom: 133px;
@@ -4630,10 +4718,6 @@ input[type='submit'] {
     order: -1;
   }
 
-  .projects__btns {
-    flex-wrap: wrap;
-  }
-
   .projects__btns .btn + .btn {
     margin-top: 5px;
     margin-left: 0;
@@ -4842,8 +4926,26 @@ input[type='submit'] {
     width: calc(50% - 20px);
   }
 
+  .projects__info {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .projects__options {
+    margin-top: 9px;
+  }
+
+  .projects__btns .btn {
+    font-size: 14px;
+    width: 100%;
+  }
+
   .home .projects__item,
   .home .portfolio__item {
+    width: calc(50% - 20px);
+  }
+
+  .page-template-page-deal .projects__item {
     width: calc(50% - 20px);
   }
 
@@ -5151,6 +5253,11 @@ input[type='submit'] {
     font-size: 24px;
   }
 
+  .h3 {
+    margin-bottom: 15px;
+    font-size: 20px;
+  }
+
   .fancybox-content {
     padding: 30px 10px;
   }
@@ -5307,12 +5414,11 @@ input[type='submit'] {
   }
 
   .projects__name {
-    font-size: 16px;
+    font-size: 20px;
+    margin-bottom: 9px;
   }
 
   .projects__price {
-    margin-bottom: 8px;
-    font-size: 16px;
     order: 2;
   }
 
@@ -5320,8 +5426,8 @@ input[type='submit'] {
     margin-bottom: 10px;
   }
 
-  .projects__btns .btn {
-    font-size: 14px;
+  .projects__btns {
+    padding: 10px;
   }
 
   .projects__btns-all .btn {
@@ -5343,6 +5449,19 @@ input[type='submit'] {
   .home .portfolio .h2-sub {
     margin-bottom: 15px;
     font-size: 14px;
+  }
+
+  .page-template-page-deal .h2 {
+    margin-bottom: 17px;
+  }
+
+  .page-template-page-deal .h2-sub {
+    margin-bottom: 15px;
+    font-size: 14px;
+  }
+
+  .page-template-page-deal .projects__item {
+    width: calc(100% - 20px);
   }
 
   .category .banner1 {
