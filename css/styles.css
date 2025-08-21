@@ -1566,7 +1566,7 @@ input[type='submit'] {
   word-wrap: break-word;
   margin-left: 10px;
   margin-right: 10px;
-  width: calc(50% - 20px);
+  width: calc(33.333333333333336% - 20px);
   position: relative;
   margin-bottom: 20px;
   border-radius: 10px;
@@ -1772,11 +1772,6 @@ input[type='submit'] {
   font-size: 18px;
 }
 
-.home .projects__item,
-.home .portfolio__item {
-  width: calc(33.333333333333336% - 20px);
-}
-
 .page-template-page-deal .h2 {
   margin-bottom: 20px;
 }
@@ -1784,10 +1779,6 @@ input[type='submit'] {
 .page-template-page-deal .h2-sub {
   margin-bottom: 50px;
   font-size: 18px;
-}
-
-.page-template-page-deal .projects__item {
-  width: calc(33.333333333333336% - 20px);
 }
 
 .page-template-page-deal .projects__price {
@@ -4925,6 +4916,10 @@ input[type='submit'] {
     display: none;
   }
 
+  .projects__item {
+    width: calc(50% - 20px);
+  }
+
   .projects__item-banner-text {
     width: 100%;
   }
@@ -4940,15 +4935,6 @@ input[type='submit'] {
   .projects__btns .btn {
     font-size: 14px;
     width: 100%;
-  }
-
-  .home .projects__item,
-  .home .portfolio__item {
-    width: calc(50% - 20px);
-  }
-
-  .page-template-page-deal .projects__item {
-    width: calc(50% - 20px);
   }
 
   .feedback {
@@ -5388,6 +5374,10 @@ input[type='submit'] {
     min-height: 0;
   }
 
+  .projects__item {
+    width: calc(100% - 20px);
+  }
+
   .projects__item-banner {
     padding: 5px;
   }
@@ -5404,6 +5394,10 @@ input[type='submit'] {
   .projects__item-banner-descr {
     margin-bottom: 20px;
     font-size: 16px;
+  }
+
+  .projects__list-3 .projects__item {
+    width: calc(100% - 20px);
   }
 
   .projects__info {
@@ -5468,10 +5462,6 @@ input[type='submit'] {
   .page-template-page-deal .h2-sub {
     margin-bottom: 15px;
     font-size: 14px;
-  }
-
-  .page-template-page-deal .projects__item {
-    width: calc(100% - 20px);
   }
 
   .category .banner1 {
