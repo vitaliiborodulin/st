@@ -1700,10 +1700,12 @@ input[type='submit'] {
 
 .projects__price-wrap {
   margin: 10px 0;
+  order: 3;
 }
 
 .projects__price {
   font-size: 20px;
+  line-height: 1;
   font-weight: 700;
   color: #010101;
   order: 3;
@@ -1713,14 +1715,22 @@ input[type='submit'] {
 
 .projects__price-old {
   font-size: 16px;
+  line-height: 1;
   text-decoration: line-through;
   opacity: 0.5;
-  font-weight: 400;
+  font-weight: 500;
+  display: flex;
+  gap: 5px;
 }
 
 .projects__price-future {
   font-size: 16px;
+  font-weight: 600;
+  color: red;
+  line-height: 1;
   opacity: 0.7;
+  display: flex;
+  gap: 5px;
 }
 
 .projects__descr {
@@ -1733,7 +1743,7 @@ input[type='submit'] {
 }
 
 .projects__btns {
-  padding: 10px 20px;
+  padding: 0 20px 10px 20px;
   text-align: center;
 }
 
@@ -1781,6 +1791,7 @@ input[type='submit'] {
 }
 
 .page-template-page-deal .projects__price {
+  margin: 5px 0;
   color: #2579A7;
 }
 
@@ -2748,7 +2759,6 @@ input[type='submit'] {
   font-weight: 600;
   line-height: 1.225;
   color: #303030;
-  text-transform: uppercase;
 }
 
 .single-main__block {
@@ -3073,7 +3083,6 @@ input[type='submit'] {
   font-size: 36px;
   font-weight: 600;
   color: #303030;
-  text-transform: uppercase;
 }
 
 .single-plan__descr {
@@ -3097,7 +3106,6 @@ input[type='submit'] {
   font-size: 36px;
   font-weight: 600;
   color: #303030;
-  text-transform: uppercase;
 }
 
 .compl__descr {
@@ -3248,7 +3256,6 @@ input[type='submit'] {
   font-size: 36px;
   font-weight: 600;
   color: #303030;
-  text-transform: uppercase;
 }
 
 .single-dop__list {
@@ -4931,10 +4938,6 @@ input[type='submit'] {
     text-align: center;
   }
 
-  .projects__options {
-    margin-top: 9px;
-  }
-
   .projects__btns .btn {
     font-size: 14px;
     width: 100%;
@@ -5415,11 +5418,37 @@ input[type='submit'] {
 
   .projects__name {
     font-size: 20px;
-    margin-bottom: 9px;
+  }
+
+  .projects__square {
+    left: 5px;
+    top: 5px;
+  }
+
+  .projects__sale {
+    top: unset;
+    top: 85px;
+    right: 5px;
+  }
+
+  .projects__price-wrap {
+    order: 2;
   }
 
   .projects__price {
     order: 2;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .projects__price-old {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .projects__price-future {
+    flex-direction: column;
+    gap: 0;
   }
 
   .projects__descr {
@@ -5427,7 +5456,7 @@ input[type='submit'] {
   }
 
   .projects__btns {
-    padding: 10px;
+    padding: 0 10px 10px 10px;
   }
 
   .projects__btns-all .btn {
@@ -5458,10 +5487,6 @@ input[type='submit'] {
   .page-template-page-deal .h2-sub {
     margin-bottom: 15px;
     font-size: 14px;
-  }
-
-  .page-template-page-deal .projects__item {
-    width: calc(100% - 20px);
   }
 
   .category .banner1 {
