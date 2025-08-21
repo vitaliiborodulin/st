@@ -4936,11 +4936,6 @@ input[type='submit'] {
     width: calc(50% - 20px);
   }
 
-  .projects__info {
-    flex-direction: column;
-    text-align: center;
-  }
-
   .projects__options {
     margin-top: 8px;
   }
