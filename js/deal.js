@@ -29,7 +29,7 @@ const prizes = [
       color: "#2579A7",
     },
     {
-      text: "Фундамент",
+      text: "Свайный фундамент",
       // color: "hsl(91 43% 54%)",
       color: "#FC622C",
     },

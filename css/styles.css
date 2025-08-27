@@ -4359,20 +4359,30 @@ input[type='submit'] {
   margin-left: 10px;
   margin-right: 10px;
   width: calc(16.666666666666668% - 20px);
+  margin-bottom: 20px;
   position: relative;
-  padding: 50px 16px;
   border-radius: 10px;
-  background: url(../img/sales-dop-1.jpg) no-repeat center / cover;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
+  color: #3A3A3A;
+  background-color: #fff;
+  border: 1px solid rgba(49, 62, 72, 0.2);
+  transition: border 0.5s ease;
+}
+
+.sales__dop-item img {
+  display: block;
+  height: 150px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 }
 
 .sales__dop-title {
-  font-size: 20px;
-  font-weight: 600;
-  color: #fff;
+  padding: 5px;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
 }
 
 .footer {
@@ -4829,6 +4839,10 @@ input[type='submit'] {
     margin-bottom: 34px;
   }
 
+  .sales__dop-item {
+    width: calc(33.333333333333336% - 20px);
+  }
+
   .footer__nav {
     width: calc(50% - 20px);
   }
@@ -5232,6 +5246,10 @@ input[type='submit'] {
 
   .ipo__card-num {
     font-size: 32px;
+  }
+
+  .sales__dop-item {
+    width: calc(50% - 20px);
   }
 }
 
@@ -6125,6 +6143,18 @@ input[type='submit'] {
 
   .ipo-btn {
     width: 100%;
+  }
+
+  .sales__dop-item {
+    margin-bottom: 10px;
+  }
+
+  .sales__dop-title {
+    font-size: 16px;
+  }
+
+  .sales .projects {
+    padding-bottom: 10px;
   }
 
   .footer {
