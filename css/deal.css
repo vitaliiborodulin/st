@@ -166,7 +166,7 @@
 
   #deal {
     padding-top: 20px;
-    padding-bottom: 50px;
+    padding-bottom: 20px;
   }
 
   #deal .more {
@@ -198,6 +198,11 @@
     animation: selected 800ms ease;
   }
   
+
+  .page-template-page-deal .deal-wrapper .h2-sub {
+    margin-bottom: 0;
+  }
+
   /* настраиваем анимацию текста на выпавшем секторе по кадрам */
   @keyframes selected {
     /* что происходит на 25% от начала анимации */
