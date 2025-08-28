@@ -4370,7 +4370,7 @@ input[type='submit'] {
 
 .sales__dop-item img {
   display: block;
-  height: 150px;
+  height: 200px;
   width: 100%;
   -o-object-fit: cover;
      object-fit: cover;
@@ -6147,6 +6147,10 @@ input[type='submit'] {
 
   .sales__dop-item {
     margin-bottom: 10px;
+  }
+
+  .sales__dop-item img {
+    height: 150px;
   }
 
   .sales__dop-title {
