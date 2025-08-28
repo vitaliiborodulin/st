@@ -124,7 +124,7 @@
     transform-origin: center left;
   }
   
-  #deal .btn {
+  /* #deal .btn {
     /* display: block;
     color: white!important;
     background: #FC622C;
@@ -134,9 +134,9 @@
     border-radius: 0.5rem;
     cursor: pointer;
     text-decoration: none;
-    text-align: center; */
+    text-align: center; 
     margin-top: 20px;
-  }
+  } */
 
   .more {
     font-size: 18px;
