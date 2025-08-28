@@ -384,6 +384,15 @@ strong {
   color: #fff !important;
 }
 
+.page-template-page-deal {
+  background-color: #F9F9F9;
+}
+
+.sales__dop {
+  padding-top: 10px;
+  padding-bottom: 120px;
+}
+
 .menu-item.new a {
   display: inline-block;
   color: #FC622C;
@@ -5270,6 +5279,11 @@ input[type='submit'] {
 
   .fancybox-slide--iframe {
     padding: 44px 5px 5px;
+  }
+
+  .sales__dop {
+    padding-top: 0;
+    padding-bottom: 60px;
   }
 
   .btn {
