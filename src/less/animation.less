@@ -9,6 +9,27 @@
     }
 }
 
+@keyframes scaleAnimation {
+      0% {
+        transform: scale(1); /* Starting size (100%) */
+      }
+      50% {
+        transform: scale(1.05); /* Scale up to 150% at the midpoint */
+      }
+      100% {
+        transform: scale(1); /* Return to original size */
+      }
+}
+
+@keyframes blink {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0.5;
+    }
+}
+
 // @keyframes pulse {
 //     0% { transform: scale(1)}
 //     50% { transform: scale(1.25)}

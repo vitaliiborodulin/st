@@ -155,6 +155,20 @@ main {
     });
 }
 
+.h3 {
+    margin-bottom: 30px;
+
+    font-weight: 700;
+    font-size: 40px;
+
+    color: #1D263B;
+
+    .xs-block({
+        margin-bottom: 15px;
+        font-size: 20px;
+    });
+}
+
 // a:link {
 // //     color: @accent;
 //     text-decoration: none;
@@ -171,25 +185,25 @@ main {
 // }
 
 /* Наследуем шрифты для инпутов и кнопок */
-// input,
-// button,
-// textarea,
-// select {
-//   font: inherit;
-// }
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
 
 textarea {
 	resize: none;
 }
 
-// strong, b {
-//     font-weight: 700;
-// }
+strong, b {
+    font-weight: 700;
+}
 
-// button {
-//     border: none;
-//     cursor: pointer;
-// }
+button {
+    border: none;
+    cursor: pointer;
+}
 
 input, textarea { 
     field-sizing: content; 
@@ -225,6 +239,10 @@ input, textarea {
 
 i, em {
     font-style: italic;
+}
+
+.tac {
+    text-align: center;
 }
 
 // fancybox
@@ -303,6 +321,33 @@ strong {
         color: @white!important;;
     }
 }
+
+.page-template-page-deal {
+    background-color: #F9F9F9;
+}
+
+.sales__dop {
+    padding-top: 10px;
+    padding-bottom: 120px;
+    .xs-block({
+        padding-top: 0;
+        padding-bottom: 60px;
+    });
+}
+
+.menu-item.new a {
+    display: inline-block;
+    // background-color: @accent;
+    // color: @white;
+    color: @accent;
+    // font-weight: 700;
+    // text-shadow: 0 0 2px @white;
+    animation: scaleAnimation 2.0s infinite;
+    animation-timing-function: ease-in-out;
+    transform-origin: left;
+}
+
+
 
 // .final + .final {
 //     margin-top: 0;

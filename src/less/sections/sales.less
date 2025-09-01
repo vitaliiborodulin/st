@@ -1,0 +1,77 @@
+.sales {
+
+    &__dop-list {
+        .row-flex();
+        align-items: flex-start
+    }
+
+    &__dop-item {
+        .col();
+        .size(2);
+        .size-lg(4);
+        .size-md(6);
+
+        margin-bottom: 20px;
+        position: relative;
+
+        border-radius: 10px;
+        color: @black;
+        background-color: @white;
+        border: 1px solid rgba(49, 62, 72, .2);
+
+        transition: border 0.5s ease;
+
+        .xs(margin-bottom, 10px);
+
+        img {
+            display: block;
+            // height: 150px;
+            height: 200px;
+            width: 100%;
+            object-fit: cover;
+            // margin-top: 5px;
+            // margin-bottom: 5px;
+            // border-radius: inherit;
+            border-top-left-radius: 10px;
+            border-top-right-radius: 10px;
+
+            .xs(height, 150px);
+        }
+    }
+
+    &__dop-choose {
+        border: 1px solid red;
+
+        &::after {
+            position: absolute;
+            content: 'Ваш выйгрыш';
+            right: 10px;
+            top: 10px;
+            color: @white;
+            background-color: red;
+            z-index: 2;
+            padding: 5px 10px;
+            text-align: center;
+            min-width: 73px;
+            color: #fff;
+            font-size: 14px;
+            font-weight: 700;
+            border-radius: 20px;
+        }
+    }
+
+    &__dop-title {
+        padding: 5px;
+        font-size: 18px;
+        font-weight: 700;
+        text-align: center;
+
+        .xs(font-size, 16px);
+    }
+
+    .projects {
+        .xs-block({
+            padding-bottom: 10px;
+        })
+    }
+}
