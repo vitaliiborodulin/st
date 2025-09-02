@@ -157,7 +157,6 @@ const prizes = [
     const selected = Math.floor(rotation / prizeSlice);
     prizeNodes[selected].classList.add(selectedClass);
   };
-
   
   // отслеживаем нажатие на кнопку
   trigger.addEventListener("click", () => {
@@ -196,6 +195,12 @@ const prizes = [
 
 
     const prize = document.querySelector('.prize.selected .text').textContent;
+
+    const dopsNode = document.querySelectorAll('.sales__dop-item');
+    dopsNode.forEach((dop) => {
+      if (dop.querySelector('.sales__dop-title').textContent == prize) dop.classList.add('sales__dop-choose');
+    });
+
 
 
     const waLink = document.createElement('a');

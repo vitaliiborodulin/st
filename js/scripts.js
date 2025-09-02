@@ -385,6 +385,45 @@ $(function() {
         calculation();
         calcBtn.addEventListener('click', calculation(totalCost.value, anInitialFee.value, creditTerm.value, creditRate.value));
     }
+    function is_fully_shown(target) {
+      var wt = $(window).scrollTop(); 
+      var wh = $(window).height();    
+      var eh = $(target).height();  
+      var et = $(target).offset().top;
+     
+      if (et >= wt && et + eh <= wh + wt){
+        return true;
+      } else {
+        return false;    
+      }
+    }
+    
+     if(window.innerWidth < 576){
+     
+        $(window).scroll(function(){
+        $('.portfolio__catalog-item').each(function(){
+            if (is_fully_shown($(this))) {
+            $(this).find('.portfolio__catalog-text').css({
+                "opacity": "1",
+                "transform": "scale(1)"
+                });
+            }
+        });
+        });
+        
+        $(document).ready(function(){ 
+        $('.portfolio__catalog-item').each(function(){
+            if (is_fully_shown($(this))) {
+            // ...
+            $(this).find('.portfolio__catalog-text').css({
+                "opacity": "1",
+                "transform": "scale(1)"
+                });
+            }
+        });
+        });
+    
+    }
     
     $('select').niceSelect();
     

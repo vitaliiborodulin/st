@@ -293,8 +293,25 @@ main {
 
 /* Наследуем шрифты для инпутов и кнопок */
 
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
 textarea {
   resize: none;
+}
+
+strong,
+b {
+  font-weight: 700;
+}
+
+button {
+  border: none;
+  cursor: pointer;
 }
 
 input,
@@ -333,6 +350,10 @@ textarea {
 i,
 em {
   font-style: italic;
+}
+
+.tac {
+  text-align: center;
 }
 
 .fancybox-content {
@@ -1601,7 +1622,7 @@ input[type='submit'] {
 
 .projects__item-deal::after {
   position: absolute;
-  content: 'Акция';
+  content: 'Хит продаж';
   right: 10px;
   top: 10px;
   background-color: red;
@@ -1687,6 +1708,7 @@ input[type='submit'] {
   font-weight: 400;
   line-height: 1.5;
   color: #3A3A3A;
+  gap: 8px;
 }
 
 .projects__name {
@@ -2246,7 +2268,11 @@ input[type='submit'] {
   font-weight: 600;
   line-height: 1.225;
   color: #303030;
-  text-transform: uppercase;
+}
+
+.portfolio__subtitle {
+  margin-top: -15px;
+  margin-bottom: 30px;
 }
 
 .portfolio__image {
@@ -2262,15 +2288,6 @@ input[type='submit'] {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  will-change: transform;
-}
-
-.portfolio__image img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .portfolio__name {
@@ -2310,6 +2327,75 @@ input[type='submit'] {
           transform: translateX(4px);
 }
 
+.portfolio__catalog {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -10px;
+  margin-right: -10px;
+  padding-bottom: 60px;
+}
+
+.portfolio__catalog-item {
+  box-sizing: border-box;
+  word-wrap: break-word;
+  margin-left: 10px;
+  margin-right: 10px;
+  width: calc(33.333333333333336% - 20px);
+  position: relative;
+  height: 460px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-size: cover;
+  background-position: center;
+}
+
+.portfolio__catalog-link {
+  display: block;
+  width: 100%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.portfolio__catalog-title {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 5px;
+  padding-top: 85px;
+  background: linear-gradient(180deg, rgba(83, 84, 82, 0) 14.93%, #333 90%);
+  border-radius: inherit;
+  color: #fff;
+  font-size: 28px;
+  font-weight: 600;
+}
+
+.portfolio__catalog-text {
+  position: absolute;
+  left: 20px;
+  top: 23px;
+  width: calc(100% - 40px);
+  height: calc(100% - 113px);
+  padding: 30px 20px;
+  opacity: 0;
+  -webkit-transform: scale(0);
+          transform: scale(0);
+  transition: all 0.5s ease-out;
+  font-size: 20px;
+  line-height: 1.2;
+  text-align: center;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  border-radius: inherit;
+}
+
+.portfolio__catalog-item:hover .portfolio__catalog-text {
+  opacity: 1;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
 .post-type-archive-portfolio__title,
 .post-type-archive-projects__title,
 .home__title {
@@ -2323,8 +2409,6 @@ input[type='submit'] {
   font-size: 36px;
   font-weight: 600;
   line-height: 1.225;
-  color: #2579A7;
-  text-transform: uppercase;
 }
 
 .post-type-archive-portfolio .portfolio__list,
@@ -4381,6 +4465,7 @@ input[type='submit'] {
   flex-wrap: wrap;
   margin-left: -10px;
   margin-right: -10px;
+  align-items: flex-start;
 }
 
 .sales__dop-item {
@@ -4406,6 +4491,26 @@ input[type='submit'] {
      object-fit: cover;
   border-top-left-radius: 10px;
   border-top-right-radius: 10px;
+}
+
+.sales__dop-choose {
+  border: 1px solid red;
+}
+
+.sales__dop-choose::after {
+  position: absolute;
+  content: 'Ваш выйгрыш';
+  right: 10px;
+  top: 10px;
+  background-color: red;
+  z-index: 2;
+  padding: 5px 10px;
+  text-align: center;
+  min-width: 73px;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  border-radius: 20px;
 }
 
 .sales__dop-title {
@@ -4785,6 +4890,10 @@ input[type='submit'] {
     height: 400px;
   }
 
+  .portfolio__catalog-item {
+    width: calc(50% - 20px);
+  }
+
   .single-portfolio .portfolio__nav-slide,
   .single .portfolio__nav-slide {
     height: 200px;
@@ -5050,6 +5159,24 @@ input[type='submit'] {
 
   .leader__pic {
     width: calc(50% - 20px);
+  }
+
+  .portfolio__catalog-item {
+    margin-bottom: 12px;
+    height: 255px;
+  }
+
+  .portfolio__catalog-title {
+    font-size: 22px;
+  }
+
+  .portfolio__catalog-text {
+    left: 10px;
+    top: 13px;
+    padding: 10px;
+    width: calc(100% - 20px);
+    height: calc(100% - 50px);
+    font-size: 16px;
   }
 
   .single-portfolio .portfolio__sliders,
@@ -5456,6 +5583,7 @@ input[type='submit'] {
   .projects__info {
     font-size: 12px;
     padding: 10px;
+    gap: 0;
   }
 
   .projects__name {
@@ -5693,6 +5821,10 @@ input[type='submit'] {
 
   .portfolio__link span {
     display: none;
+  }
+
+  .portfolio__catalog-item {
+    width: calc(100% - 20px);
   }
 
   .post-type-archive-portfolio .portfolio__title,
