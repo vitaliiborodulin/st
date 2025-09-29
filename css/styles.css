@@ -2283,21 +2283,21 @@ input[type='submit'] {
   display: block;
 }
 
+.portfolio__image:hover img {
+  -webkit-transform: scale(1.1);
+          transform: scale(1.1);
+}
+
 .portfolio__image img {
+  transition: -webkit-transform 1s ease;
+  transition: transform 1s ease;
+  transition: transform 1s ease, -webkit-transform 1s ease;
+  will-change: transform;
   width: 100%;
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 10px;
-  transition: -webkit-transform 1s ease;
-  transition: transform 1s ease;
-  transition: transform 1s ease, -webkit-transform 1s ease;
-  will-change: transform;
-}
-
-.portfolio__image img:hover {
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
 }
 
 .portfolio__name {
