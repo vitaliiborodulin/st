@@ -398,29 +398,36 @@ $(function() {
       }
     }
     
-     if(window.innerWidth < 576){
+    if(window.innerWidth < 576){
      
         $(window).scroll(function(){
-        $('.portfolio__catalog-item').each(function(){
-            if (is_fully_shown($(this))) {
-            $(this).find('.portfolio__catalog-text').css({
-                "opacity": "1",
-                "transform": "scale(1)"
-                });
-            }
+    
+            $('.portfolio__catalog-item').each(function(){
+                if (is_fully_shown($(this))) {
+                    $(this).find('.portfolio__info').css({
+                        "transform": "translate3d(0, 0, 0)"
+                        }).find('.portfolio__catalog-text').css({
+                        "opacity": "1",
+                        "display": "block"
+                        });
+                    }
+            });
+            
         });
-        });
-        
+    
         $(document).ready(function(){ 
-        $('.portfolio__catalog-item').each(function(){
-            if (is_fully_shown($(this))) {
-            // ...
-            $(this).find('.portfolio__catalog-text').css({
-                "opacity": "1",
-                "transform": "scale(1)"
-                });
-            }
-        });
+    
+            $('.portfolio__catalog-item').each(function(){
+                if (is_fully_shown($(this))) {
+                    $(this).find('.portfolio__info').css({
+                        "transform": "translate3d(0, 0, 0)"
+                        }).find('.portfolio__catalog-text').css({
+                        "opacity": "1",
+                        "display": "block"
+                        });
+                    }
+            });
+            
         });
     
     }
