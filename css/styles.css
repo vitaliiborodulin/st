@@ -2436,6 +2436,8 @@ input[type='submit'] {
   font-size: 20px;
   line-height: 1.2;
   color: #fff;
+  max-height: 100px;
+  overflow-y: auto;
 }
 
 .portfolio__catalog-item:hover .portfolio__info {
