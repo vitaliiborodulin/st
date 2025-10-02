@@ -2354,6 +2354,7 @@ input[type='submit'] {
   margin-left: 10px;
   margin-right: 10px;
   width: calc(50% - 20px);
+  height: 460px;
   position: relative;
   border-radius: 10px;
   cursor: pointer;
