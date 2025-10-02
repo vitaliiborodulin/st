@@ -35,6 +35,7 @@ $(function() {
     //= components/tabs-new.js
     //= components/dop.js
     //= components/calc.js
+    //= components/inView.js
     
     $('select').niceSelect();
     
